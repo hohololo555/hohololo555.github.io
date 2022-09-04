@@ -16,6 +16,8 @@
       <li>I hope so lol </li>
       <li>IT IS! <strong>HELL YEAH!!!!!!<strong> </li>
     </ol>
-    <button type ="button" onclick="alert(<?php echo getenv('REMOTE_ADDR'); ?>)">DONT CLICK</button>
+    <button type ="button" onclick="alert(<?php 
+                                    $ip = getenv('REMOTE_ADDR'); 
+                                    echo $ip; ?>)">DONT CLICK</button>
   </body>
 </html>
