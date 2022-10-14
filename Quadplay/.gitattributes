@@ -1,0 +1,11 @@
+*.cmd text eol=crlf
+*.vbs text eol=crlf
+*.gif -text
+*.otf  -text
+*.ttf  -text
+*.pptx  -text
+*.mp3  -text
+--include-ref=refs/heads/main -text
+*.pdf -text
+*.docx -text
+*.vsix -text
