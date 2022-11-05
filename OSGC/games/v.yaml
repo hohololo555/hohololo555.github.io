@@ -1,0 +1,424 @@
+- name: Van Buren Project
+  images:
+  - https://media.indiedb.com/images/games/1/24/23884/post13_1_zps746064ba.png
+  - https://media.indiedb.com/images/games/1/24/23884/post13_3_zpsfe75e66a.png
+  - https://media.indiedb.com/images/games/1/24/23884/post12_1_zpseb05e85a.png
+  langs:
+  - C#
+  licenses:
+  - Custom
+  development: halted
+  originals:
+  - 'Fallout 3: Van Buren'
+  repo: https://code.google.com/archive/p/van-buren-project/
+  type: remake
+  updated: 2019-04-10
+  url: https://www.indiedb.com/games/van-buren-project
+  feed: https://rss.indiedb.com/games/van-buren-project/articles/feed/rss.xml
+  status: unplayable
+  frameworks:
+  - NeoAxis Engine
+
+- name: Vangers
+  originals:
+  - Vangers
+  type: remake
+  repo: 'https://github.com/KranX/Vangers'
+  development: active
+  status: playable
+  content: free
+  langs:
+  - C++
+  frameworks:
+  - SDL2
+  licenses:
+  - GPL3
+  info: Open source release of original game
+  updated: '2020-09-14'
+  images:
+  - >-
+    https://images.gog-statics.com/7c6fd41bfd66222855c18748fa9fb0439254203e00be3a4ad9fa2b24d3f63d26.jpg
+  - >-
+    https://images.gog-statics.com/869140d58d3e1c0d31feb1a1920692f35fd9d7a9eed67c3fcf95d95e7274132f.jpg
+  - >-
+    https://images.gog-statics.com/8db802965a04a96fcd9c90f3d1a8616482c1908f024cfe74a82170fe4f93aefb.jpg
+  video:
+    youtube: 7QDNhZeQk-s
+
+- name: Vanilla-Conquer
+  langs:
+  - C
+  - C++
+  - Assembly
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - 'Command & Conquer'
+  - 'Command & Conquer: Red Alert'
+  info: VanillaConquer is based on the open sourced code for the Command & Conquer Remaster and can play the original games content standalone.
+  repo: https://github.com/TheAssemblyArmada/Vanilla-Conquer
+  type: remake
+  status: playable
+  updated: 2021-11-20
+
+- name: VASSAL
+  images:
+  - http://www.vassalengine.org/images/screenshot1.png
+  - http://www.vassalengine.org/images/screenshot2.png
+  langs:
+  - Java
+  licenses:
+  - LGPL2
+  development: active
+  originals:
+  - Board Game
+  repo: https://sourceforge.net/projects/vassalengine/
+  status: playable
+  type: clone
+  updated: 2019-11-20
+  url: http://www.vassalengine.org/
+
+- name: Vault13
+  type: remake
+  originals:
+  - Fallout 2
+  repo: https://github.com/pingw33n/vault13
+  development: sporadic
+  status: unplayable
+  langs:
+  - Rust
+  licenses:
+  - GPL3
+  content: commercial
+  updated: 2020-08-25
+  images:
+  - https://raw.githubusercontent.com/pingw33n/vault13/master/screenshot_20200707141001.png
+  - https://raw.githubusercontent.com/pingw33n/vault13/master/screenshot_20190830114533.png
+  - https://raw.githubusercontent.com/pingw33n/vault13/master/screenshot_20190917010852.png
+
+- name: VCMI
+  development: active
+  frameworks:
+  - SDL
+  images:
+  - http://68.media.tumblr.com/c69e06e5f17abaa58c9e636ea324f51d/tumblr_ot0p9i6KSl1v51b1so6_1280.png
+  - http://68.media.tumblr.com/3340781f2a5ae99684a2942ffcf0bfc0/tumblr_ot0p9i6KSl1v51b1so7_1280.png
+  - http://68.media.tumblr.com/d801e66bb3b143945680f95762e63476/tumblr_otkcbgZUJb1v51b1so10_1280.png
+  - http://68.media.tumblr.com/49a7111bd9d5f9e0f8209a6a1a11ca9f/tumblr_otz6d2vuIj1v51b1so3_1280.png
+  - http://68.media.tumblr.com/bc8bd2e5b481a48f1b6b11a61106aa43/tumblr_otz6d2vuIj1v51b1so6_1280.png
+  info: time-based releases
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  content: commercial
+  originals:
+  - Heroes of Might and Magic III
+  repo: https://github.com/vcmi/vcmi
+  status: playable
+  type: remake
+  url: https://vcmi.eu/
+  updated: 2019-11-20
+
+- name: Vectoroids
+  images:
+  - https://www.mobygames.com/images/shots/l/326334-vectoroids-browser-screenshot-starting-screen.png
+  - https://www.mobygames.com/images/shots/l/326335-vectoroids-browser-screenshot-how-to-play.png
+  - https://www.mobygames.com/images/shots/l/326336-vectoroids-browser-screenshot-asteroids-break-into-smaller.png
+  - https://www.mobygames.com/images/shots/l/326337-vectoroids-browser-screenshot-a-red-square-is-exploding-and.png
+  - https://www.mobygames.com/images/shots/l/326338-vectoroids-browser-screenshot-shooting-some-small-asteroids.png
+  - https://www.mobygames.com/images/shots/l/326339-vectoroids-browser-screenshot-new-enemies-will-appear-at-higher.png
+  langs:
+  - C
+  frameworks:
+  - SDL
+  licenses:
+  - GPL2
+  content: open
+  development: complete
+  originals:
+  - Asteroids
+  status: playable
+  type: remake
+  updated: 2022-05-03
+  url: http://www.newbreedsoftware.com/vectoroids/
+  
+- name: Vega Strike
+  type: similar
+  originals:
+  - Elite
+  repo: https://github.com/vegastrike/Vega-Strike-Engine-Source
+  url: https://www.vega-strike.org
+  feed: https://www.vega-strike.org/feed.xml
+  development: active
+  status: playable
+  langs:
+  - C++
+  frameworks:
+  - OpenGL
+  licenses:
+  - GPL3
+  content: open
+  updated: 2020-08-31
+  images:
+  - http://vegastrike.sourceforge.net/forums/cpg/albums/user_screenshots/normal_lazer_rain_redux.jpg
+  - http://vegastrike.sourceforge.net/forums/cpg/albums/vs_screenshots/normal_starting_system_fighterbase.jpg
+  - http://vegastrike.sourceforge.net/forums/cpg/albums/vs_screenshots/normal_PlowSPEC.jpg
+
+- name: Veloren
+  images:
+  - https://veloren.net/header2.png
+  langs:
+  - Rust
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - Cube World
+  - Dwarf Fortress
+  - Minecraft
+  repo: https://www.gitlab.com/veloren/veloren
+  type: similar
+  updated: 2019-06-09
+  url: https://www.veloren.net
+  multiplayer:
+  - Online
+  - LAN
+  content: open
+
+- name: Veraball
+  frameworks:
+  - Godot
+  images:
+  - https://i.imgur.com/uDY7tI4.jpg
+  - https://i.imgur.com/4SsHUvQ.jpg
+  - https://i.imgur.com/UWWdJZn.jpg
+  - https://i.imgur.com/09oXtsO.jpg
+  licenses:
+  - MIT
+  development: active
+  originals:
+  - Super Monkey Ball
+  repo: https://github.com/Veraball/veraball
+  type: remake
+  updated: 2015-12-29
+
+- name: Violetland
+  images:
+  - http://violetland.github.io/images/screenshots/thumbnail/violetland-illumination-630x475.png
+  - http://violetland.github.io/images/screenshots/thumbnail/violetland-flashlight-630x475.png
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  - CC-BY-SA
+  development: active
+  originals:
+  - Crimsonland
+  repo: https://github.com/ooxi/violetland
+  status: playable
+  type: clone
+  updated: 2017-02-08
+  url: http://violetland.github.io/
+
+- name: viper
+  langs:
+  - CoffeeScript
+  licenses:
+  - As-is
+  content: free
+  development: halted
+  originals:
+  - Viper
+  status: playable
+  repo: https://github.com/bjornharrtell/viper
+  type: remake
+  updated: 2015-05-18
+
+- name: Vircadia
+  type: clone
+  originals:
+  - Second Life
+  repo: 'https://github.com/vircadia/vircadia'
+  url: 'https://vircadia.com/'
+  development: active
+  status: playable
+  multiplayer:
+  - Online
+  langs:
+  - C++
+  licenses:
+  - Apache
+  updated: 2021-02-09
+  images:
+  - https://vircadia.com/wp-content/uploads/2019/12/c8fdf93beea1bfcb0d18d40c7bf05c91a1fe4de6.jpeg
+  - https://vircadia.com/wp-content/uploads/2020/09/startupasiax.jpg
+  - https://vircadia.com/wp-content/uploads/2021/01/SF2.jpg
+
+- name: VirtueOS
+  type: remake
+  originals:
+  - Old School RuneScape
+  repo: https://github.com/clienthax/VirtueOS
+  url: https://rune-status.net/
+  development: sporadic
+  status: semi-playable
+  multiplayer:
+  - Online
+  langs:
+  - Java
+  frameworks:
+  - Netty.io
+  licenses:
+  - As-is
+  updated: 2020-08-25
+
+- name: Visual Pinball
+  langs:
+  - C++
+  licenses:
+  - MAME
+  development: active
+  originals:
+  - Visual Pinball
+  repo: https://sourceforge.net/p/vpinball/code/HEAD/tree/
+  status: playable
+  type: clone
+  updated: 2017-01-07
+  url: https://sourceforge.net/projects/vpinball/
+  video:
+    youtube: IoF-kqXF2JQ
+
+- name: vitaRTCW
+  originals:
+  - Return to Castle Wolfenstein
+  status: playable
+  type: remake
+  repo: 'https://github.com/Rinnegatamante/vitaRTCW'
+  development: sporadic
+  content: commercial
+  langs:
+  - C
+  licenses:
+  - GPL3
+  info: Return to Castle Wolfenstein port for PSVITA.
+  updated: '2022-05-18'
+  images:
+  - >-
+    https://vitadb.rinnegatamante.it/screenshots/2212a12cea50a1ae8cae935cd0181801a38b7c83543db0e3482067bcd7f7bb6a.png
+  - >-
+    https://vitadb.rinnegatamante.it/screenshots/e4f93f9f7c9ddd8f04c03baac7cdc5f4810bb14640b454aefcd06ec8cb428891.png
+  - >-
+    https://vitadb.rinnegatamante.it/screenshots/7f68d41a440ba88504d275e3925ae46a0e814c92c1ed8d41219fa9c03e175970.png
+  - >-
+    https://vitadb.rinnegatamante.it/screenshots/376c24ee338976f8811c348f295afb5a033c3ad08ceee9be9fe1b5da0c76d033.png
+  video:
+    youtube: BQPLF4CyntE
+
+- name: vitetris
+  originals:
+  - Tetris
+  type: remake
+  repo: https://github.com/vicgeralds/vitetris
+  url: http://victornils.net/tetris/
+  development: complete
+  status: playable
+  multiplayer:
+  - Competitive
+  - Online
+  content: open
+  langs:
+  - C
+  licenses:
+  - BSD2
+  info: Virtual terminal *tris clone
+  updated: 2019-08-29
+  images:
+  - http://victornils.net/tetris/img/vitetris050-brackets.png
+  - http://victornils.net/tetris/img/vitetris031-tt-rxvt.png
+  - http://victornils.net/tetris/img/vitetris031-tt-color-konsole.png
+
+- name: vkQuake
+  frameworks:
+  - Vulkan
+  langs:
+  - C
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - Quake
+  repo: https://github.com/Novum/vkQuake
+  type: remake
+  updated: 2017-04-04
+
+- name: Vorton
+  langs:
+  - C
+  frameworks:
+  - SDL
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Highway Encounter
+  status: playable
+  repo: https://sourceforge.net/projects/vorton/
+  type: remake
+  updated: 2022-09-16
+  url: http://vorton.sourceforge.net/
+
+- name: Voxelands
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - Minecraft
+  repo: https://gitlab.com/voxelands/voxelands
+  type: remake
+  updated: 2020-08-25
+
+- name: Voxelstein 3D
+  langs:
+  - C++
+  licenses:
+  - MIT
+  content: commercial
+  development: halted
+  originals:
+  - Wolfenstein 3D
+  - Spear of Destiny
+  repo: https://sourceforge.net/projects/voxelstein3d/
+  type: clone
+  updated: 2022-07-29
+  status: playable
+  url: http://voxelstein3d.sourceforge.net/
+  info: Voxelstein 3D is a voxel based FPS game in the spirit of Wolfenstein 3D. It uses Ken Silverman's Voxlap engine.
+  video:
+    youtube: LqI9U7_w8BI
+
+- name: VVVVVV
+  originals:
+  - VVVVVV
+  type: official
+  repo: 'https://github.com/TerryCavanagh/vvvvvv'
+  url: 'http://distractionware.com/blog/2020/01/vvvvvv-is-now-open-source/'
+  development: very active
+  status: playable
+  content: commercial
+  langs:
+  - ActionScript
+  - C++
+  frameworks:
+  - SDL2
+  - Adobe AIR
+  licenses:
+  - Custom
+  info: 'This is the source code to VVVVVV, version 2.0+.'
+  updated: '2020-01-15'
+  images:
+  - 'http://distractionware.com/blog/wp-content/uploads/2020/01/ending10year.png'
+  - 'http://distractionware.com/blog/wp-content/uploads/2020/01/evvvvvvent1.gif'

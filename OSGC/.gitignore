@@ -1,0 +1,6 @@
+_build/
+.env/
+.venv/
+.vs/
+node_modules/
+*.pyc

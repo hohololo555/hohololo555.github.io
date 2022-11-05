@@ -1,0 +1,152 @@
+{% import 'templates/video.html' as video %}
+{% import 'templates/tags.html' as tags %}
+
+{% macro render_name(name, game, first, show_details) %}
+  {%- if show_details -%}
+    {% set link = game.wikilink %}
+  {%- else -%}
+    {% set link = "/" + game.slug %}
+  {%- endif -%}
+  <dt {% if first %}id="{{ show_id(name) }}"{% endif %} class="searchable">
+    <a href="{{ link }}">{{ name }}</a>
+    {% if first %}
+      {{ tags.render_tag_groups('genres', game.meta['genres']) }}
+      {{ tags.render_tag_groups('subgenres', game.meta['subgenres']) }}
+      {{ tags.render_tag_groups('themes', game.meta['themes']) }}
+      {% if show_details %}
+        <a class="add-link" href="/add_original.html?data=/{{ game.slug }}/data.json" target="_blank"><i class="far fa-edit"></i>Edit</a>
+      {% endif %}
+    {% endif %}
+  </dt>
+{% endmacro %}
+
+{% macro show_id(name) -%}
+  {{ name | lower | replace(' ', '-') }}
+{%- endmacro %}
+
+{% macro show_tags(game) -%}
+  {%- if 'multiplayer' in game %}
+    {{ game.tags.append('multiplayer') }}
+  {% endif -%}
+
+  {{ game.tags | join(' ') }}
+{%- endmacro %}
+
+{% macro show_keywords_names(names) -%}
+  {% for n in names -%}
+    {% if n is not string -%}
+      {% for i in n -%}
+        {{ i | normalize -}}{{ ' ' -}}
+      {% endfor -%}
+    {% else -%}
+      {{ n | normalize -}}
+    {% endif -%}
+    {{ ' ' -}}
+  {% endfor -%}
+{%- endmacro %}
+
+{% macro show_keywords(game, names, meta) -%}
+  {{ game.name | normalize -}}{{ ' ' -}}
+  {{ game.tags | join(' ') | normalize -}}{{ ' ' -}}
+  {{ game.info | normalize -}}{{ ' ' -}}
+
+  {%- if game.new %}
+    {{ 'new updated added ' -}}
+  {% endif %}
+
+  {%- if 'multiplayer' in game -%}
+    {{ 'multiplayer ' }}
+  {%- endif -%}
+
+  {{ show_keywords_names(names) }}
+  {{ show_keywords_names(meta.names_ascii) }}
+{%- endmacro %}
+
+{% macro render_clone(names, meta, game, show_details, expand_gallery) %}
+  <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode">
+    {%- set show_gallery = show_details and ('images' in game or 'video' in game) -%}
+    <dd class="searchable {% if game.new %}new{% endif %}"
+        data-name="{{ game.name }}"
+        data-parent="
+          {%- if names.0 is string -%}
+            {% set name = names.0 %}
+          {%- else -%}
+            {% set name = names.0.0 %}
+          {%- endif -%}
+          {{ show_id(name) }}"
+        data-tags="{{ show_tags(game) }}"
+        data-index="{{ show_keywords(game, names, meta) }}"
+        data-updated="{{ game.updated }}"
+    >
+      <span class="{% if show_gallery %}toggler {% if expand_gallery %}visible{% endif %}{% else %}notoggler{% endif %}">&#x25b6;</span>
+      {%- if 'url' in game -%}
+        <a href="{{ game['url'] }}" itemprop="url"><span itemprop="name">{{ game['name'] }}</span></a>
+      {%- else -%}
+        <span itemprop="name">{{ game['name'] }}</span>
+      {%- endif %}
+      {%- if 'feed' in game %}
+        <a href="{{ game['feed'] }}" class="feed-icon" title="Feed"><span class="fas fa-rss"></span></a>
+      {%- endif %}
+      {%- if 'repo' in game %}
+        (
+        <a itemprop="codeRepository" href="{{ game['repo'] }}">repo
+        {%- if 'repoiconname' in game %}
+          <span class="repoicon {{ game['repoiconstyle'] }} fa-{{ game['repoiconname'] }}" title="{{ game['repotitle'] }}"></span>
+        {%- endif %}
+        {%- if 'repobadge' in game %}{{ game['repobadge'] }}{%- endif %}
+        </a>
+        )
+      {%- endif %}
+      {{ tags.render_tag_groups('type', game['type'] | title) if show_details }}
+      {{ tags.render_tag_groups('status', game['status'] | title) if game['type'] != 'tool' }}
+      {{ tags.render_tag_groups('development', game['development'] | title) }}
+      {{ tags.render_tag_groups('langs', game['langs']) }}
+      {{ tags.render_tag_groups('frameworks', game['frameworks']) if show_details }}
+      {{ tags.render_tag_groups('content', game['content'] | title) if show_details }}
+      {{ tags.render_tag_groups('licenses', game['licenses']) }}
+      {{ tags.render_tag_groups('multiplayer', game['multiplayer']) if 'multiplayer' in game and show_details }}
+      {% if show_details %}
+        <a class="add-link" href="/add_game.html?data=_clones/{{ game['name'] | slugify }}.json" target="_blank"><i class="far fa-edit"></i>Edit</a>
+      {% endif %}
+      {%- if 'info' in game and show_details %}
+        <div itemprop="description">{{ game['info'] }}</div>
+      {% endif %}
+      {% if show_gallery %}
+        <div class="gallery" style="display: none;"></div>
+        {% if game['images'] | length > 0 -%}
+          <script class="gallery-json" data-game="{{ game['name'] }}" type="text/json">
+            {{- game['images'] | join(', ') -}}
+          </script>
+        {% endif %}
+        <script class="gallery-raw" type="text/plain">
+          {% if 'video' in game %}
+            {% if 'youtube' in game['video'] %}{{ video.render_youtube(game['name'], game['video']['youtube']) }}{% endif %}
+            {% if 'vimeo' in game['video'] %}{{ video.render_vimeo(game['name'], game['video']['vimeo']) }}{% endif %}
+            {% if 'moddb' in game['video'] %}{{ video.render_moddb(game['name'], game['video']['moddb']) }}{% endif %}
+            {% if 'indiedb' in game['video'] %}{{ video.render_indiedb(game['name'], game['video']['indiedb']) }}{% endif %}
+          {%- endif %}
+
+          {% for imageUrl in game.get('images', []) %}
+            <a
+              href="{{ imageUrl }}"
+              data-fancybox="gallery-{{ game['name'] }}"
+            >
+              <img class="thumb" src="{{ imageUrl }}" itemprop="image" alt="{{ game['name'] }}">
+            </a>
+          {% endfor %}
+        </script>
+      {% endif %}
+    </dd>
+  </div>
+{% endmacro %}
+
+{% macro render(game, show_details) %}
+  <div class="game-spacer"></div>
+  {% for name in game.names %}
+    {{ render_name(name, game, loop.index0 == 0, show_details) }}
+  {% endfor %}
+
+  {% for clone in game.clones %}
+    {{ render_clone(game.names, game.meta, clone, show_details, show_details) }}
+  {% endfor %}
+{% endmacro %}

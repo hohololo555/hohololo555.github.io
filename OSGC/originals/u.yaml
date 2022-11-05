@@ -1,0 +1,160 @@
+- name: Ugh!
+  external:
+    wikipedia: Ugh!
+  meta:
+    genres:
+    - Arcade
+
+- name: 'Ultima II: The Revenge of the Enchantress'
+  external:
+    wikipedia: 'Ultima II: The Revenge of the Enchantress'
+  meta:
+    genres:
+    - RPG
+
+- name: 'Ultima III: Exodus'
+  external:
+    wikipedia: Ultima III
+  meta:
+    genres:
+    - RPG
+
+- name: 'Ultima IV: Quest of the Avatar'
+  external:
+    wikipedia: Ultima IV
+  meta:
+    genres:
+    - RPG
+
+- name: Ultima Online
+  external:
+    wikipedia: Ultima Online
+  meta:
+    genres:
+    - MMORPG
+    
+- name: Ultima Underworld
+  external:
+    wikipedia: Ultima_Underworld
+  platforms:
+  - DOS
+  - PlayStation
+  meta:
+    genres:
+    - RPG
+    subgenres:
+    - Action RPG
+    themes:
+    - Fantasy
+    
+- name: 'Ultima Underworld II: Labyrinth of Worlds'
+  external:
+    wikipedia: 'Ultima_Underworld_II:_Labyrinth_of_Worlds'
+  platforms:
+  - DOS
+  meta:
+    genres:
+    - RPG
+    subgenres:
+    - Action RPG
+    themes:
+    - Fantasy
+
+- name: 'Ultima V: Warriors of Destiny'
+  external:
+    wikipedia: Ultima V
+  meta:
+    genres:
+    - RPG
+
+- name: 'Ultima VI: The False Prophet'
+  external:
+    wikipedia: Ultima VI
+  meta:
+    genres:
+    - RPG
+
+- name: 'Ultima VII: The Black Gate'
+  external:
+    wikipedia: Ultima VII
+  meta:
+    genres:
+    - RPG
+
+- name: 'Ultima VIII: Pagan'
+  external:
+    wikipedia: Ultima VIII
+  meta:
+    genres:
+    - RPG
+
+- name: 'Ultima: Worlds of Adventure 2: Martian Dreams'
+  external:
+    wikipedia: 'Ultima: Worlds of Adventure 2: Martian Dreams'
+  meta:
+    genres:
+    - RPG
+
+- name: Uncharted Waters
+  external:
+    wikipedia: Uncharted Waters
+  meta:
+    genres:
+    - Adventure
+    - Strategy
+    - RPG
+    themes:
+    - Alternate Historical
+
+- name: Undertale
+  external:
+    wikipedia: Undertale
+  platforms:
+  - Linux
+  - Nintendo Switch
+  - OSX
+  - PlayStation 4
+  - PlayStation Vita
+  - Windows
+  meta:
+    genres:
+    - RPG
+    themes:
+    - Comedy
+    - Fantasy
+
+- name: Uninvited
+  external:
+    wikipedia: Uninvited (video game)
+  meta:
+    genres:
+    - Adventure
+
+- name: Unreal Tournament
+  external:
+    wikipedia: Unreal Tournament
+  platforms:
+  - Classic Mac OS
+  - Dreamcast
+  - Linux
+  - PlayStation 2
+  - Windows
+  meta:
+    genres:
+    - FPS
+    themes:
+    - Sci-Fi
+
+- name: Urban Assault
+  external:
+    wikipedia: Urban Assault
+  meta:
+    genres:
+    - FPS
+
+- name: Utopia
+  external:
+    wikipedia: Utopia (video game)
+  meta:
+    genres:
+    - Turn-Based Strategy

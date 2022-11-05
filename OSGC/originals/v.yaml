@@ -1,0 +1,45 @@
+- name: Vangers
+  external:
+    wikipedia: Vangers
+  platforms:
+  - Linux
+  - OSX
+  - Windows
+  meta:
+    genres:
+    - Racing
+    - RPG
+    subgenres:
+    - Vehicular Combat
+    themes:
+    - Sci-Fi
+
+- name: Viper
+  external:
+    website: http://www.mobygames.com/game/amiga/viper__
+  meta:
+    genres:
+    - Arcade
+
+- name: Visual Pinball
+  external:
+    wikipedia: Visual Pinball
+  meta:
+    genres:
+    - Arcade
+
+- name: Vlak
+  external:
+    website: http://www.mobygames.com/game/dos/vlak
+  meta:
+    genres:
+    - Arcade
+
+- name: VVVVVV
+  external:
+    wikipedia: VVVVVV
+  meta:
+    genres:
+    - Puzzle
+    - Platform
+

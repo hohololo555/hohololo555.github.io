@@ -1,0 +1,156 @@
+type: seq
+sequence:
+- include: game
+
+schema;game:
+  type: map
+  mapping:
+    name:
+      required: True
+      type: str
+      desc: Name of the clone
+    originals:
+      required: True
+      type: seq
+      sequence:
+      - type: str
+        unique: True
+      desc: Name(s) of games this clones
+    type:
+      required: True
+      type: str
+      enum: ['remake', 'clone', 'official', 'similar', 'tool']
+    repo:
+      required: False # Work towards making it True
+      type: str
+      desc: URL where the source code can be found; e.g. a GitHub project page
+    url:
+      type: str
+      desc: URL of the game's main page (if any; should be different from repo)
+    feed:
+      type: str
+      desc: URL of RSS/Atom feed for the game's news, or releases
+    development:
+      type: str
+      enum: ['complete', 'very active', 'active', 'sporadic', 'halted']
+      desc: |
+        Complete: development stopped but game is complete<br>
+        Very active: many commits within the past week<br>
+        Active: commits within the past month<br>
+        Sporadic: commits within the past year<br>
+        Halted: no commits within the past year
+    status:
+      type: str
+      enum: ['playable', 'semi-playable', 'unplayable']
+      desc: |
+        Playable: all major features working, full game can be completed<br>
+        Semi-playable: game runs and some parts of the game playable<br>
+        Unplayable: game cannot be played, e.g. can only load assets
+    multiplayer:
+      type: seq
+      sequence:
+      - type: str
+        enum: ['Competitive', 'Local', 'Online', 'LAN', 'Split-screen', 'Co-op', 'Hotseat', 'Matchmaking']
+        unique: True
+    content:
+      type: str
+      enum: ['commercial', 'free', 'open', 'swappable']
+      desc: |
+        Commercial: requires data from original game, which is not free<br>
+        Free: game data is free or can be obtained for free<br>
+        Open: game data has an open source license<br>
+        Swappable: game data is commercial but can be swapped with open source replacements
+    langs:
+      type: seq
+      desc: Main programming language(s) used for the game, e.g. C++
+      sequence:
+      - type: str
+        unique: True
+    frameworks:
+      type: seq
+      desc: Framework(s) or engine(s) used for the game, e.g. SDL2
+      sequence:
+      - type: str
+        unique: True
+    licenses:
+      required: True
+      type: seq
+      sequence:
+      - include: licenses
+        unique: True
+    info:
+      type: str
+      desc: Any notable information about the game
+    updated:
+      required: True
+      type: date
+      format: "%Y-%m-%d"
+      desc: Use today's date
+    images:
+      type: seq
+      sequence:
+      - type: str
+        unique: True
+      desc: URLs of screenshots for the game
+    video:
+      type: map
+      mapping:
+        youtube:
+          type: str
+          range:
+            min: 11
+            max: 11
+          desc: 11-char video ID e.g. for https://www.youtube.com/watch?v=DowgWKtGAD8, use "DowgWKtGAD8"
+        vimeo:
+          type: int
+          desc: Numeric video ID e.g. for https://vimeo.com/10245458, use "10245458"
+        moddb:
+          type: int
+          desc: Numeric video ID; copy the embed code, look for e.g. https://www.moddb.com/media/iframe/535281, use "535281"
+        indiedb:
+          type: int
+          desc: Numeric video ID; copy the embed code, look for e.g. https://www.indiedb.com/media/iframe/535281, use "535281"
+
+
+# Based on SPDX license codes
+# https://spdx.org/licenses/
+schema;licenses:
+  type: str
+  enum: [
+    'Custom', # Catch-all for custom licenses
+    'Multiple', # Catch-all for multiple licenses
+    'PD', # Public Domain
+    'As-is', # Catch-all for as-is, as-available licenses
+    'AFL3', # Academic Free License
+    'AGPL3',
+    'Apache',
+    'Artistic',
+    'BSD',
+    'BSD2',
+    'BSD4',
+    'bzip2',
+    'CC0',
+    'CC-BY',
+    'CC-BY-NC',
+    'CC-BY-NC-ND',
+    'CC-BY-NC-SA',
+    'CC-BY-SA',
+    'GPL1',
+    'GPL2',
+    'GPL3',
+    'IJG', # Independent JPEG Group License
+    'ISC',
+    'JRL', # Java Research License
+    'LGPL2',
+    'LGPL3',
+    'Libpng',
+    'MAME', # MAME or MAME-like License
+    'MIT',
+    'MPL', # Mozilla Public License
+    'MS-PL', # Microsoft Public License
+    'NGPL', # Nethack General Public License,
+    'OFL', # SIL Open Font License
+    'Unlicense',
+    'WTFPL', # Do What The F*ck You Want To Public License
+    'Zlib',
+  ]

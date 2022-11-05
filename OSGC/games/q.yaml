@@ -1,0 +1,121 @@
+- name: Q-Gears
+  images:
+  - https://a.fsdn.com/con/app/proj/q-gears/screenshots/116089.jpg/max/max/1
+  - https://a.fsdn.com/con/app/proj/q-gears/screenshots/116091.jpg/max/max/1
+  - https://a.fsdn.com/con/app/proj/q-gears/screenshots/116085.jpg/max/max/1
+  langs:
+  - C++
+  frameworks:
+  - OGRE
+  licenses:
+  - GPL2
+  content: commercial
+  development: halted
+  originals:
+  - Final Fantasy VII
+  status: unplayable
+  repo: https://github.com/q-gears/q-gears
+  type: remake
+  updated: 2021-09-29
+  url: http://q-gears.sourceforge.net/
+  video:
+    youtube: YPnej8iKMPg
+
+- name: Quadrapassel
+  originals:
+  - Tetris
+  type: clone
+  repo: https://gitlab.gnome.org/GNOME/quadrapassel
+  url: https://wiki.gnome.org/Apps/Quadrapassel
+  development: active
+  status: playable
+  content: free
+  langs:
+  - Vala
+  licenses:
+  - GPL2
+  updated: 2019-11-14
+  images:
+  - https://people.gnome.org/~mcatanzaro/quadrapassel.png
+
+- name: Quake3e
+  originals:
+  - Quake 3
+  type: remake
+  repo: 'https://github.com/ec-/Quake3e'
+  feed: 'https://github.com/ec-/Quake3e/releases.atom'
+  development: active
+  status: playable
+  multiplayer:
+  - Competitive
+  - Local
+  - LAN
+  content: commercial
+  langs:
+  - C
+  frameworks:
+  - Vulkan
+  - OpenGL
+  licenses:
+  - GPL2
+  updated: '2020-07-24'
+
+- name: QuakeJS
+  langs:
+  - JavaScript
+  licenses:
+  - MIT
+  development: halted
+  originals:
+  - Quake 3
+  status: playable
+  repo: https://github.com/inolen/quakejs
+  type: remake
+  updated: 2020-12-21
+  url: http://www.quakejs.com/
+  video:
+    youtube: FM6RldNmpPg
+
+- name: QuakeSpasm
+  langs:
+  - C
+  frameworks:
+  - SDL
+  - SDL2
+  licenses:
+  - GPL2
+  content: swappable
+  development: active
+  originals:
+  - Quake
+  status: playable
+  repo: https://sourceforge.net/projects/quakespasm/
+  type: remake
+  updated: 2022-02-14
+  url: http://quakespasm.sourceforge.net/
+  info: https://sourceforge.net/projects/quakespasm
+  images:
+  - https://a.fsdn.com/con/app/proj/quakespasm/screenshots/ad_1.png/max/max/1
+  - https://a.fsdn.com/con/app/proj/quakespasm/screenshots/spasm0000.png/max/max/1
+  - https://a.fsdn.com/con/app/proj/quakespasm/screenshots/spasm0000-2173.png/max/max/1
+
+- name: Quick Curver
+  originals:
+  - Achtung, die Kurve!
+  type: clone
+  repo: https://github.com/vimpostor/quickcurver
+  development: active
+  status: playable
+  multiplayer:
+  - Local
+  - Online
+  content: open
+  langs:
+  - C++
+  frameworks:
+  - Qt
+  licenses:
+  - GPL3
+  updated: 2022-06-05
+  images:
+  - https://user-images.githubusercontent.com/21310755/93923083-2ed2e300-fd13-11ea-86f1-d79bc09ce96a.png

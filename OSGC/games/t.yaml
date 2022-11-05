@@ -1,0 +1,801 @@
+- name: Taisei Project
+  development: active
+  feed: https://taisei-project.org/news.atom
+  images:
+  - https://taisei-project.org/static/screenshots/005_1.2/taisei_20180127_16-46-39+0200.png
+  - https://taisei-project.org/static/screenshots/005_1.2/taisei_20180127_16-52-45+0200.png
+  langs:
+  - C
+  licenses:
+  - MIT
+  content: open
+  originals:
+  - Touhou
+  repo: https://github.com/taisei-project/taisei
+  status: playable
+  type: remake
+  updated: 2018-04-12
+  url: https://taisei-project.org/
+  video:
+    youtube: P22aVi0z6b8
+
+- name: 'Tank: Zone of Death'
+  langs:
+  - C++
+  - Lua
+  licenses:
+  - GPL3
+  development: halted
+  originals:
+  - Battle City
+  repo: https://github.com/les-sosna/tzod
+  type: clone
+  updated: 2019-03-27
+  url: https://zod.fandom.com/ru/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F
+  images:
+  - https://vignette.wikia.nocookie.net/zod/images/7/76/Ss04.jpg/revision/latest?cb=20070528214052&path-prefix=ru
+
+- name: Tanks of Freedom
+  development: active
+  frameworks:
+  - Godot
+  images:
+  - https://tof.p1x.in/assets/tof_screen1.png
+  - https://tof.p1x.in/assets/tof_screen5.png
+  - https://tof.p1x.in/assets/tof_screen8.png
+  licenses:
+  - MIT
+  multiplayer:
+  - Online
+  - Hotseat
+  content: open
+  originals:
+  - Advance Wars
+  repo: https://github.com/w84death/Tanks-of-Freedom
+  type: clone
+  updated: 2019-10-22
+  url: http://tof.p1x.in
+  video:
+    youtube: Y7w5VhvG8hA
+
+- name: Tapir
+  images:
+  - https://raw.githubusercontent.com/qnighy/tapir/master/imgs/vxace-title.png
+  - https://raw.githubusercontent.com/qnighy/tapir/master/imgs/vx-title.png
+  - https://raw.githubusercontent.com/qnighy/tapir/master/imgs/xp-title.png
+  - https://raw.githubusercontent.com/qnighy/tapir/master/imgs/talk1.png
+  - https://raw.githubusercontent.com/qnighy/tapir/master/imgs/enter-battle1.png
+  - https://raw.githubusercontent.com/qnighy/tapir/master/imgs/battle1.png
+  - https://raw.githubusercontent.com/qnighy/tapir/master/imgs/talk2.png
+  info: RGSS compatible runtime (RPG Maker XP, VX, and VX Ace)
+  langs:
+  - C
+  - Ruby
+  licenses:
+  - Apache
+  - MIT
+  development: sporadic
+  status: playable
+  originals:
+  - RPG Maker
+  repo: https://github.com/qnighy/tapir
+  type: remake
+  updated: 2019-08-22
+  url: https://qnighy.github.io/tapir/
+
+- name: Terasology
+  langs:
+  - Java
+  licenses:
+  - Apache
+  development: active
+  originals:
+  - Minecraft
+  repo: https://github.com/MovingBlocks/Terasology
+  status: playable
+  type: remake
+  updated: 2014-08-20
+  url: http://terasology.org/
+  video:
+    youtube: cU6LL5BXi5E
+
+- name: TekwarGDX
+  originals:
+  - TekWar
+  type: remake
+  repo: 'https://gitlab.com/m210/TekwarGDX'
+  url: 'http://m210.duke4.net/'
+  development: active
+  status: playable
+  content: commercial
+  langs:
+  - Java
+  frameworks:
+  - LibGDX
+  licenses:
+  - Custom
+  updated: '2020-01-05'
+  video:
+    youtube: 0U7EpJlf6-o
+
+- name: terrarium
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - Terraria
+  repo: https://gitlab.com/hydren/terrarium
+  type: remake
+  updated: 2015-06-18
+
+- name: TES3MP
+  originals:
+  - 'The Elder Scrolls III: Morrowind'
+  type: remake
+  repo: 'https://github.com/TES3MP/openmw-tes3mp'
+  url: 'http://tes3mp.com/'
+  development: active
+  status: playable
+  multiplayer:
+  - Online
+  - LAN
+  content: swappable
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  info: TES3MP is a project adding multiplayer functionality to OpenMW
+  updated: '2022-02-07'
+  images:
+  - https://media.moddb.com/cache/images/engines/1/1/929/thumb_620x2000/170828b.png
+  - https://media.moddb.com/cache/images/engines/1/1/929/thumb_620x2000/vlcsnap-2983-11-27-07h06m58s509.png
+  - https://media.moddb.com/cache/images/engines/1/1/929/thumb_620x2000/vlcsnap-4274-01-22-03h12m11s414.png
+  - https://media.moddb.com/cache/images/engines/1/1/929/thumb_620x2000/vlcsnap-2432-09-08-08h21m43s889.png
+  - https://media.moddb.com/cache/images/engines/1/1/929/thumb_620x2000/vlcsnap-7947-01-28-20h26m56s612.png
+  video:
+    youtube: aZZ0piRvI58
+    moddb: 1907883
+
+- name: tetris
+  images:
+  - https://raw.githubusercontent.com/spypunk/tetris/master/img/screenshot_start.png
+  langs:
+  - Java
+  licenses:
+  - WTFPL
+  originals:
+  - Tetris
+  repo: https://github.com/spypunk/tetris
+  type: remake
+  updated: 2016-08-19
+
+- name: Tetris (in C and NCURSES)
+  originals:
+  - Tetris
+  type: remake
+  repo: https://github.com/brenns10/tetris
+  url: https://brennan.io/2015/06/12/tetris-reimplementation/
+  development: halted
+  status: playable
+  content: open
+  langs:
+  - C
+  frameworks:
+  - ncurses
+  - SDL
+  licenses:
+  - BSD
+  updated: 2019-08-28
+  images:
+  - https://raw.githubusercontent.com/brenns10/tetris/master/tetris.gif
+
+- name: The-Great-Escape-in-C
+  info: reverse engineered from binary
+  langs:
+  - C++
+  licenses:
+  - As-is
+  development: active
+  originals:
+  - The Great Escape
+  repo: https://github.com/dpt/The-Great-Escape-in-C
+  type: remake
+  updated: 2018-06-14
+
+- name: The-Trail
+  type: remake
+  originals:
+  - The Oregon Trail
+  langs:
+  - Java
+  updated: 2019-09-30
+  repo: https://github.com/TheRedSpy15/The-Trail
+  licenses:
+  - MIT
+  development: halted
+
+- name: Theme Park Builder 3D CAD
+  frameworks:
+  - OpenGL
+  - SDL
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  development: halted
+  originals:
+  - Theme Park
+  repo: svn://svn.code.sf.net/p/tpb3d/code/trunk
+  type: remake
+  updated: 2019-11-20
+  url: http://sourceforge.net/projects/tpb3d/
+
+- name: thiefcatcher
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - Where in the World Is Carmen Sandiego? (1985)
+  repo: https://github.com/Ponup/thiefcatcher
+  type: remake
+  updated: 2015-06-18
+
+- name: THREEPunchOut
+  frameworks:
+  - three.js
+  langs:
+  - JavaScript
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Punch-Out!!
+  repo: https://github.com/MattSzik/THREEPunchOut
+  type: clone
+  updated: 2015-08-15
+  url: http://matthewsziklay.github.io/THREEPunchOut/
+
+- name: Thrive
+  type: similar
+  originals:
+  - Spore
+  repo: https://github.com/Revolutionary-Games/Thrive
+  url: https://revolutionarygamesstudio.com/
+  feed: https://revolutionarygamesstudio.com/feed/
+  development: active
+  status: playable
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  content: open
+  info: Only the Microbe stage is playable now, others will come later.
+  updated: 2019-05-07
+  images:
+  - https://cdn.discordapp.com/attachments/464847270760939569/561527199090475009/image.png
+  - https://media.discordapp.net/attachments/465947671232905256/525417505284554763/Captured_frame_12202018_150119274_window1.png
+  - https://revolutionarygamesstudio.com/wp-content/uploads/Abyss.png
+  video:
+    youtube: i1BPqJjbHMw
+
+- name: thromolusng
+  langs:
+  - Python
+  licenses:
+  - GPL3
+  development: halted
+  originals:
+  - Thromolus
+  repo: https://github.com/segfaulthunter/thromolusng
+  type: remake
+  updated: 2015-06-22
+
+- name: Thrust
+  images:
+  - https://www.lysator.liu.se/~peda/thrust/thrust.gif
+  langs:
+  - C
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Thrust
+  status: playable
+  repo: https://www.lysator.liu.se/~peda/thrust/src/
+  type: remake
+  updated: 2022-07-21
+  url: https://www.lysator.liu.se/~peda/thrust/
+
+- name: Thyme
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - 'Command & Conquer: Generals'
+  repo: https://github.com/TheAssemblyArmada/Thyme
+  type: remake
+  status: playable
+  updated: 2018-11-02
+
+- name: Tile World
+  langs:
+  - C
+  licenses:
+  - GPL2
+  development: sporadic
+  originals:
+  - Chip's Challenge
+  status: playable
+  type: remake
+  updated: 2014-01-05
+  url: http://www.muppetlabs.com/~breadbox/software/tworld/
+
+- name: Tile World 2
+  langs:
+  - C
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Chip's Challenge
+  repo: https://github.com/Qalthos/Tile-World
+  status: playable
+  type: remake
+  updated: 2014-01-05
+  url: https://github.com/Qalthos/Tile-World
+
+- name: Tiny Wings
+  langs:
+  - Objective-C
+  frameworks:
+  - Cocos2d
+  licenses:
+  - MIT
+  development: halted
+  originals:
+  - Tiny Wings
+  status: semi-playable
+  repo: https://github.com/haqu/tiny-wings
+  type: remake
+  images:
+  - https://raw.githubusercontent.com/haqu/tiny-wings/master/screenshot.png
+  updated: 2022-09-12
+
+- name: TOMB5
+  type: remake
+  originals:
+  - Tomb Raider Chronicles
+  repo: https://github.com/TOMB5/TOMB5
+  development: active
+  status: semi-playable
+  langs:
+  - C
+  licenses:
+  - MIT
+  content: commercial
+  info: The project decompiles the original binaries and want to recreate the original source which is lost.
+  updated: 2019-05-28
+  images:
+  - https://camo.githubusercontent.com/e8313bb523d4cddf6de2f5992a62d992f74eb7b8/68747470733a2f2f692e696d6775722e636f6d2f79725a446c61792e706e67
+
+- name: Torrega Race
+  frameworks:
+  - "L\xD6VE"
+  images:
+  - https://i.imgur.com/qWgWeXA.png
+  langs:
+  - Lua
+  licenses:
+  - GPL3
+  development: halted
+  originals:
+  - Omega Race
+  repo: https://github.com/andwj/torrega
+  status: playable
+  type: clone
+  updated: 2015-05-02
+
+- name: Total Annihilation 3D
+  images:
+  - http://www.ta3d.org/snapshots/shoot117.jpg
+  - http://www.ta3d.org/snapshots/shoot118.jpg
+  - http://www.ta3d.org/snapshots/shoot122.jpg
+  - http://www.ta3d.org/snapshots/shoot127.jpg
+  langs:
+  - C++
+  - Lua
+  frameworks:
+  - OpenGL
+  - Qt
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Total Annihilation
+  status: semi-playable
+  repo: https://github.com/zuzuf/TA3D
+  type: remake
+  url: http://www.ta3d.org/
+  updated: 2021-04-20
+
+- name: Tower Toppler
+  images:
+  - http://toppler.sourceforge.net/images/shot1_hr.png
+  - http://toppler.sourceforge.net/images/shot2_hr.png
+  - http://toppler.sourceforge.net/images/shot3_hr.png
+  langs:
+  - C++
+  frameworks:
+  - SDL
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Nebulus
+  status: playable
+  type: remake
+  repo: https://sourceforge.net/projects/toppler/
+  updated: 2021-06-02
+  url: http://toppler.sourceforge.net/
+
+- name: Trackballs
+  images:
+  - https://trackballs.github.io/screenshots/b21.png
+  - https://trackballs.github.io/screenshots/b11.png
+  - https://trackballs.github.io/screenshots/b28.png
+  frameworks:
+  - SDL2
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: sporadic
+  originals:
+  - Marble Madness
+  repo: https://github.com/trackballs/trackballs
+  type: remake
+  updated: 2018-10-06
+  url: https://trackballs.github.io
+
+- name: Train
+  langs:
+  - Java
+  licenses:
+  - BSD
+  development: sporadic
+  originals:
+  - Vlak
+  repo: https://github.com/nenadalm/Train
+  type: remake
+  updated: 2015-05-28
+
+- name: Transfusion
+  images:
+  - http://www.transfusion-game.com/images/e1m2-00.jpg
+  - http://www.transfusion-game.com/images/e3m7-02.jpg
+  - http://www.transfusion-game.com/images/action08.jpg
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Blood
+  repo: https://sourceforge.net/projects/blood/
+  status: playable
+  type: remake
+  updated: 2013-11-12
+  url: http://www.transfusion-game.com/
+
+- name: Tranzam
+  images:
+  - https://retrospec.sgn.net/config/screenshots/tranzam.f.2.jpg
+  - https://retrospec.sgn.net/config/screenshots/tranzam.f.4.jpg
+  - https://retrospec.sgn.net/config/screenshots/tranzam.f.5.jpg
+  - https://retrospec.sgn.net/config/screenshots/tranzam.f.3.jpg
+  - https://retrospec.sgn.net/config/screenshots/tranzam.f.1.jpg
+  langs:
+  - C++
+  frameworks:
+  - Allegro
+  licenses:
+  - Custom
+  development: complete
+  originals:
+  - Tranz Am
+  status: playable
+  type: remake
+  updated: 2022-06-11
+  url: https://retrospec.sgn.net/game/tranzam
+
+- name: Tremulous
+  images:
+  - https://tremulous.net/screenshots/1.jpg
+  - https://tremulous.net/screenshots/2.jpg
+  - https://tremulous.net/screenshots/3.jpg
+  - https://tremulous.net/screenshots/6.jpg
+  langs:
+  - C
+  frameworks:
+  - SDL
+  - OpenGL
+  - OpenAL
+  licenses:
+  - GPL2
+  - CC-BY-SA
+  development: halted
+  status: playable
+  multiplayer:
+  - Online
+  - LAN
+  originals:
+  - Gloom (Quake)
+  - Natural Selection
+  repo: https://github.com/darklegion/tremulous
+  type: similar
+  updated: 2020-09-06
+  url: https://tremulous.net
+
+- name: Tron
+  frameworks:
+  - jQuery
+  langs:
+  - JavaScript
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Tron
+  repo: https://github.com/momajd/Tron
+  type: remake
+  updated: 2016-05-14
+  url: http://momajd.github.io/Tron/
+
+- name: TrueCraft
+  images:
+  - https://sr.ht/aKPe.png
+  - https://sr.ht/OGQM.png
+  langs:
+  - C#
+  licenses:
+  - MIT
+  development: halted
+  originals:
+  - Minecraft
+  repo: https://github.com/ddevault/TrueCraft
+  type: remake
+  updated: 2020-08-31
+
+- name: TTDPatch
+  originals:
+  - Transport Tycoon
+  type: tool
+  repo: https://github.com/ttdpatch/ttdpatch
+  url: https://www.ttdpatch.net/
+  development: halted
+  content: commercial
+  langs:
+  - Assembly
+  - C
+  licenses:
+  - GPL2
+  info: A patch for Transport Tycoon that adds many features
+  updated: 2019-07-09
+  images:
+  - https://www.ttdpatch.net/newgrf.png
+  - https://www.ttdpatch.net/bigstation.jpg
+  - https://www.ttdpatch.net/longtrn.jpg
+
+- name: Tumbly Towers
+  type: remake
+  originals:
+  - Tricky Towers
+  repo: https://github.com/SteveSmith16384/TumblyTowers
+  development: halted
+  status: playable
+  langs:
+  - Java
+  licenses:
+  - MIT
+  content: open
+  updated: 2019-11-20
+  images:
+  - https://i.imgur.com/CuponTl.png
+  video:
+    youtube: uFJp9MAAa4Q
+
+- name: turnabout
+  langs:
+  - Elm
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Turnabout
+  repo: https://github.com/sch/turnabout
+  type: remake
+  updated: 2015-07-19
+
+- name: TurokEX
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Turok
+  repo: https://github.com/svkaiser/TurokEX
+  type: remake
+  updated: 2016-05-28
+
+- name: TUSSLE
+  type: clone
+  originals:
+  - Super Smash Bros.
+  repo: https://github.com/digiholic/universalSmashSystem
+  url: https://projecttussle.com/
+  development: halted
+  status: playable
+  multiplayer:
+  - Competitive
+  langs:
+  - Python
+  frameworks:
+  - pygame
+  licenses:
+  - GPL3
+  content: free
+  info: TUSSLE is just an engine. You need to create your own characters or download them.
+  updated: 2019-06-11
+  images:
+  - https://i.gjcdn.net/data/games/2/53/170803/screenshots/tumblr_inline_oadma9jh9s1roqll8_1280-5fwyxvvj.png
+  - https://i.gjcdn.net/data/games/2/53/170803/screenshots/tumblr_inline_o5p6qwan9x1roqll8_1280-utuih5wt.jpg
+  - https://i.gjcdn.net/data/games/2/53/170803/screenshots/tumblr_inline_o5p6lkgowt1roqll8_1280-wbayd6jt.jpg
+  - https://i.gjcdn.net/data/games/2/53/170803/screenshots/tumblr_inline_o5p6d2ywen1roqll8_1280-cqgczxpx.jpg
+  - https://i.gjcdn.net/data/games/2/53/170803/screenshots/tumblr_inline_o5p5n7d2ri1roqll8_1280-qbyv5dtd.jpg
+
+- name: Tux Builder
+  originals:
+  - Super Mario
+  type: clone
+  repo: 'https://github.com/Alzter/TuxBuilder'
+  development: active
+  status: unplayable
+  content: open
+  langs:
+  - GDScript
+  frameworks:
+  - Godot
+  licenses:
+  - GPL3
+  info: A Godot re-implementation of SuperTux
+  updated: '2019-11-11'
+  images:
+  - >-
+    https://forum.freegamedev.net/download/file.php?id=11922&sid=0143ee722a57a6af5adca2516bfe7979&mode=view
+
+- name: Tuxemon
+  frameworks:
+  - pygame
+  images:
+  - http://www.tuxemon.org/images/featurette-01.png
+  - http://www.tuxemon.org/images/screenshot-01.png
+  - http://www.tuxemon.org/images/featurette-02.png
+  langs:
+  - Python
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - Pokémon
+  repo: https://github.com/Tuxemon/Tuxemon
+  status: playable
+  type: remake
+  updated: 2015-01-21
+  url: http://www.tuxemon.org/
+
+- name: TVTower
+  langs:
+  - Blitz BASIC
+  - C
+  licenses:
+  - Custom
+  development: active
+  originals:
+  - Mad TV
+  repo: https://github.com/TVTower/TVTower
+  type: remake
+  updated: 2021-10-17
+  url: https://www.tvtower.org/
+  images:
+  - https://user-images.githubusercontent.com/2625226/64739997-2935a100-d4f4-11e9-93e2-0b8c9ca00095.png
+
+- name: twin-e
+  development: halted
+  langs:
+  - C
+  licenses:
+  - GPL2
+  content: commercial
+  originals:
+  - Little Big Adventure
+  repo: https://github.com/xesf/twin-e
+  status: playable
+  type: remake
+  updated: 2017-10-23
+  url: https://github.com/xesf/twin-e
+
+- name: Tyger
+  type: remake
+  originals:
+  - ZZT
+  repo: https://code.google.com/archive/p/tyger/
+  development: halted
+  status: semi-playable
+  langs:
+  - Python
+  frameworks:
+  - pygame
+  licenses:
+  - MIT
+  updated: 2020-06-26
+  images:
+  - http://zzt.org/dr_dos/tyger/TygerTitle.png
+  - http://zzt.org/dr_dos/tyger/TOWN-25.png
+
+- name: TypeScript Xenon
+  type: remake
+  originals:
+  - Xenon 2 Megablast
+  repo: https://github.com/ian-wigley/Xenon
+  url: http://ianwigley.co.uk/Xenon/Xenon.html
+  development: halted
+  status: semi-playable
+  langs:
+  - TypeScript
+  licenses:
+  - As-is
+  content: free
+  updated: 2019-02-21
+  images:
+  - https://raw.githubusercontent.com/ian-wigley/Xenon/master/Xenon/Xenon.jpg
+
+- name: Tyrian Remake
+  images:
+  - http://www.b3dgs.com/v7/projects/tyrian_remake/screens/1.png
+  - http://www.b3dgs.com/v7/projects/tyrian_remake/screens/7.png
+  - http://www.b3dgs.com/v7/projects/tyrian_remake/screens/8.png
+  langs:
+  - Java
+  licenses:
+  - GPL2
+  development: sporadic
+  originals:
+  - Tyrian
+  repo: https://github.com/b3dgs/tyrian-remake
+  type: remake
+  updated: 2015-05-29
+  url: http://www.b3dgs.com
+
+- name: TyrQuake
+  langs:
+  - C
+  frameworks:
+  - OpenGL
+  licenses:
+  - GPL2
+  content: commercial
+  development: active
+  originals:
+  - Quake
+  status: playable
+  repo: https://disenchant.net/git/tyrquake.git/
+  type: remake
+  updated: 2021-11-23
+  url: https://disenchant.net/tyrquake/
+  images:
+  - https://docs.libretro.com/image/core/tyrquake/320x240.png

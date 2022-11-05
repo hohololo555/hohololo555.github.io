@@ -1,0 +1,421 @@
+- name: Jactorio
+  type: clone
+  originals:
+  - Factorio
+  repo: https://github.com/jaihysc/Jactorio
+  url: https://jaihysc.github.io/jactorio.html
+  development: active
+  status: playable
+  langs:
+  - C++
+  frameworks:
+  - SDL2
+  licenses:
+  - MIT
+  content: commercial
+  updated: 2020-11-27
+  images:
+  - https://i.imgur.com/MMwQvxn.png
+  - https://i.imgur.com/mwITVoY.png
+
+- name: Jagged Alliance 2 Stracciatella
+  images:
+  - https://ja2-stracciatella.github.io/img/features/high-res.jpg
+  - https://ja2-stracciatella.github.io/img/features/integrated-editor.jpg
+  langs:
+  - C++
+  - C
+  licenses:
+  - PD
+  development: active
+  originals:
+  - Jagged Alliance 2
+  repo: https://github.com/ja2-stracciatella/ja2-stracciatella
+  status: playable
+  type: remake
+  updated: 2019-08-17
+  url: http://ja2-stracciatella.github.io/
+
+- name: Jake2
+  images:
+  - https://bytonic.de/assets/images/db_images/db_javaquake14.jpg
+  - https://bytonic.de/assets/images/db_images/db_javaquake24.jpg
+  - https://bytonic.de/assets/images/db_images/db_snapshot206.jpg
+  langs:
+  - Java
+  frameworks:
+  - OpenGL
+  licenses:
+  - GPL2
+  content: commercial
+  development: halted
+  originals:
+  - Quake 2
+  status: playable
+  repo: https://sourceforge.net/projects/jake2/
+  type: remake
+  updated: 2021-09-28
+  url: http://bytonic.de/html/jake2.html
+  info: Java port of the Quake2 game engine
+
+- name: javascript-E.T.
+  langs:
+  - JavaScript
+  licenses:
+  - MIT
+  content: free
+  development: halted
+  originals:
+  - E.T. the Extra-Terrestrial
+  status: unplayable
+  repo: https://github.com/FranciscoG/javascript-E.T.
+  type: remake
+  updated: 2022-02-07
+
+- name: "Jazz\xB2 Resurrection"
+  development: active
+  frameworks:
+  - Mono
+  - Duality
+  images:
+  - https://raw.githubusercontent.com/deathkiller/jazz2/master/Docs/Screen2.gif
+  info: Runs on Windows, Linux, macOS and Android.
+  langs:
+  - C#
+  licenses:
+  - GPL3
+  multiplayer:
+  - Online
+  content: commercial
+  originals:
+  - Jazz Jackrabbit 2
+  repo: https://github.com/deathkiller/jazz2
+  status: playable
+  type: remake
+  updated: 2019-06-05
+  url: http://deat.tk/jazz2/
+  video:
+    youtube: M794QHwfMXg
+
+- name: JediAcademyLinux
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - 'Star Wars Jedi Knight: Jedi Academy'
+  status: playable
+  type: remake
+  updated: 2013-05-28
+  url: https://github.com/xLAva/JediAcademyLinux
+
+- name: JediOutcastLinux
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - 'Star Wars Jedi Knight II: Jedi Outcast'
+  status: playable
+  type: remake
+  updated: 2013-05-28
+  url: https://github.com/xLAva/JediOutcastLinux
+
+- name: Jet Lee
+  images:
+  - https://raw.githubusercontent.com/Uvadzucumi/JetLee/master/data/scr/scr-01.png
+  - https://raw.githubusercontent.com/Uvadzucumi/JetLee/master/data/scr/scr-03.png
+  langs:
+  - C++
+  frameworks:
+  - SDL2
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Bruce Lee
+  status: playable
+  repo: https://github.com/Uvadzucumi/JetLee
+  type: remake
+  updated: 2022-09-13
+
+- name: Jet-Story
+  langs:
+  - C++
+  licenses:
+  - MIT
+  development: sporadic
+  originals:
+  - Jet-Story
+  status: semi-playable
+  repo: https://github.com/adamenkov/jet-story
+  type: remake
+  updated: 2022-09-13
+
+- name: JetPac
+  frameworks:
+  - XNA
+  langs:
+  - C#
+  licenses:
+  - As-is
+  development: complete
+  originals:
+  - Jetpac
+  status: playable
+  repo: https://github.com/ian-wigley/JetPac
+  type: remake
+  updated: 2022-09-13
+  images:
+  - https://raw.githubusercontent.com/ian-wigley/JetPac/master/XNA_Jetpac/XNA_Jetpac_Remake.jpg
+
+- name: jewelthief
+  images:
+  - https://raw.githubusercontent.com/frittatenbank/jewelthief/master/excluded-resources/screenshots/en/device-2016-08-23-163225.png
+  - https://raw.githubusercontent.com/frittatenbank/jewelthief/master/excluded-resources/screenshots/en/device-2016-08-23-163328.png
+  - https://raw.githubusercontent.com/frittatenbank/jewelthief/master/excluded-resources/screenshots/en/device-2016-08-23-163342.png
+  - https://raw.githubusercontent.com/frittatenbank/jewelthief/master/excluded-resources/screenshots/en/device-2016-08-23-163421.png
+  langs:
+  - Java
+  licenses:
+  - CC-BY
+  content: open
+  development: halted
+  originals:
+  - Jewel Thief
+  status: playable
+  repo: https://github.com/cdetamble/jewelthief
+  url: https://goo.gl/58hR5u
+  type: remake
+  updated: 2022-09-13
+  video:
+    youtube: RObU2xX5HiE
+
+- name: JFDuke3D
+  type: remake
+  originals:
+  - Duke Nukem 3D
+  repo: https://github.com/jonof/jfduke3d
+  url: http://www.jonof.id.au/jfduke3d
+  development: halted
+  status: playable
+  multiplayer:
+  - LAN
+  langs:
+  - C
+  licenses:
+  - Custom
+  content: commercial
+  updated: 2020-08-25
+  images:
+  - http://www.jonof.id.au/jfduke3d/splash.jpg
+
+- name: jffe
+  frameworks:
+  - SDL
+  langs:
+  - C++
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Elite III
+  status: unplayable
+  repo: https://github.com/videogamepreservation/jjffe
+  type: remake
+  updated: 2022-09-13
+
+- name: JLud2D
+  images:
+  - https://raw.githubusercontent.com/rafael-esper/JLud2D/master/screenshots/Ak_1.png
+  - https://raw.githubusercontent.com/rafael-esper/JLud2D/master/screenshots/Ak_2.png
+  - https://raw.githubusercontent.com/rafael-esper/JLud2D/master/screenshots/PS_2.png
+  info: 2D old-school Engine for Games
+  langs:
+  - Java
+  licenses:
+  - As-is
+  content: commercial
+  development: halted
+  originals:
+  - Phantasy Star
+  - Alex Kidd in Miracle World
+  status: playable
+  repo: https://github.com/rafael-esper/JLud2D
+  type: remake
+  updated: 2022-09-13
+
+- name: JonoF's Shadow Warrior Port (JFSW)
+  images:
+  - http://www.jonof.id.au/jfsw/splash.jpg
+  langs:
+  - C
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Shadow Warrior
+  repo: https://github.com/jonof/jfsw
+  status: playable
+  type: remake
+  updated: 2020-08-25
+  url: http://www.jonof.id.au/jfsw
+
+- name: JonoF's Witchaven Port
+  originals:
+  - Witchaven
+  type: remake
+  repo: 'https://github.com/jonof/jfwhaven'
+  development: halted
+  status: unplayable
+  content: commercial
+  langs:
+  - C
+  frameworks:
+  - SDL2
+  licenses:
+  - As-is
+  info: A WIP incomplete port of Witchaven using JFBuild.
+  updated: 2022-02-08
+
+- name: JOverflow
+  langs:
+  - Java
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Overflow
+  status: unplayable
+  repo: https://github.com/bluepoke/JOverflow
+  type: remake
+  updated: 2022-09-13
+
+- name: JSettlers
+  development: active
+  images:
+  - https://www.settlers-android-clone.com/wp-content/uploads/2017/01/Screenshot_20170127-222244.png
+  video:
+    youtube: DdVtOhIIjow
+  langs:
+  - Java
+  licenses:
+  - MIT
+  content: commercial
+  originals:
+  - The Settlers III
+  status: playable
+  repo: https://github.com/paulwedeck/settlers-remake
+  type: remake
+  updated: 2022-10-04
+  url: https://www.settlers-android-clone.com/
+
+- name: jsFO
+  development: halted
+  langs:
+  - JavaScript
+  - Python
+  licenses:
+  - Apache
+  content: commercial
+  originals:
+  - Fallout 2
+  status: semi-playable
+  repo: https://github.com/ajxs/jsFO
+  type: remake
+  updated: 2022-04-18
+
+- name: jspacman-canvas
+  langs:
+  - JavaScript
+  frameworks:
+  - Impact
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Pac-Man
+  status: playable
+  repo: https://github.com/hguillermo/jspacman-canvas
+  type: remake
+  updated: 2022-09-13
+  url: http://www.hg10101.com/games/jspacman/index.html
+
+- name: Julius
+  langs:
+  - C
+  licenses:
+  - AGPL3
+  development: active
+  originals:
+  - Caesar III
+  repo: https://github.com/bvschaik/julius
+  status: playable
+  type: remake
+  updated: 2018-08-18
+  url: https://github.com/bvschaik/julius
+
+- name: Jump'n'Bump
+  langs:
+  - C
+  frameworks:
+  - SDL
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Jump 'n Bump
+  status: playable
+  type: remake
+  updated: 2022-08-10
+  url: https://www.icculus.org/jumpnbump/
+
+- name: 'Jumping Jack: Further Adventures'
+  langs:
+  - C++
+  licenses:
+  - Custom
+  development: complete
+  originals:
+  - Jumping Jack
+  status: playable
+  multiplayer:
+  - Competitive
+  - Local
+  type: remake
+  updated: 2022-07-06
+  url: https://retrospec.sgn.net/game/jj
+  images:
+  - https://retrospec.sgn.net/config/gamelogos/jj.gif
+
+- name: 'Jumping Jack 2: Worryingly Familiar'
+  langs:
+  - C++
+  frameworks:
+  - Allegro
+  licenses:
+  - Custom
+  development: halted
+  originals:
+  - Jumping Jack
+  status: playable
+  type: remake
+  updated: 2022-06-15
+  url: https://retrospec.sgn.net/game/jj2
+  images:
+  - https://retrospec.sgn.net/config/gamelogos/jj2.gif
+
+- name: Jumpman
+  langs:
+  - Assembly
+  licenses:
+  - PD
+  development: halted
+  originals:
+  - Jumpman
+  status: playable
+  type: remake
+  updated: 2022-09-13
+  url: http://www.oldskool.org/pc/jumpman

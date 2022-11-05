@@ -1,0 +1,6 @@
+rules:
+  key-duplicates: {}
+  indentation:
+    spaces: 2
+    indent-sequences: false
+    level: error

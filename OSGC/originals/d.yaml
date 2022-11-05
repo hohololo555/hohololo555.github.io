@@ -1,0 +1,428 @@
+- name: Dance Dance Revolution
+  external:
+    wikipedia: Dance Dance Revolution
+  meta:
+    genres:
+    - Rhythm
+
+- name: Dandy
+  external:
+    wikipedia: Dandy (video game)
+  meta:
+    genres:
+    - Arcade
+
+- name: Dangerous Dave in the Haunted Mansion
+  names:
+  - Dangerous Dave 2
+  external:
+    wikipedia: Dangerous Dave in the Haunted Mansion
+  platforms:
+  - DOS
+  - Mobile
+  meta:
+    genres:
+    - Platform
+
+- name: Dark Forces
+  external:
+    wikipedia: Dark Forces
+  meta:
+    genres:
+    - FPS
+
+- name: Dark Reign 2
+  external:
+    wikipedia: Dark Reign 2
+  meta:
+    genres:
+    - Real-Time Strategy
+    
+- name: Death Rally
+  external:
+    wikipedia: Death Rally
+  platforms:
+  - DOS
+  - Windows
+  meta:
+    genres:
+    - Racing
+    subgenres:
+    - Vehicular Combat
+
+- name: Decision in the Desert
+  external:
+    wikipedia: Decision in the Desert
+    website: https://www.mobygames.com/game/decision-in-the-desert
+  platforms:
+  - Apple II
+  - Atari
+  - Commodore 64
+  - DOS
+  meta:
+    genres:
+    - Strategy
+    themes:
+    - World War II
+
+- name: DEFCON
+  external:
+    wikipedia: DEFCON_(video_game)
+  meta:
+    genres:
+    - Real-Time Strategy
+
+- name: Defender
+  external:
+    wikipedia: Defender (video game)
+  meta:
+    genres:
+    - Arcade
+
+- name: Deflektor
+  external:
+    wikipedia: Deflektor
+  meta:
+    genres:
+    - Puzzle
+
+- name: Delver
+  external:
+    website: https://store.steampowered.com/app/249630/Delver/
+  meta:
+    genres:
+    - RPG
+    - Action
+
+- name: Descent
+  external:
+    wikipedia: Descent (video game)
+  meta:
+    genres:
+    - FPS
+
+- name: Descent II
+  external:
+    wikipedia: Descent II
+  meta:
+    genres:
+    - FPS
+
+- name: 'DesertStrike: Return to the Gulf'
+  external:
+    wikipedia: Jungle Strike
+  meta:
+    genres:
+    - Shmup
+
+- name: 'Desperados: Wanted Dead or Alive'
+  external:
+    wikipedia: 'Desperados: Wanted Dead or Alive'
+  meta:
+    genres:
+    - Real-Time Strategy
+
+- name: Destructo
+  external:
+    website: http://www.mobygames.com/game/destructo
+  meta:
+    genres:
+    - Arcade
+  names:
+  - Island of Dr. Destructo
+  - The Island of Doctor Destructo
+
+- name: Deuteros
+  external:
+    wikipedia: Deuteros
+  meta:
+    genres:
+    - Real-Time Strategy
+
+- name: Diablo
+  external:
+    wikipedia: Diablo (series)
+  meta:
+    genres:
+    - RPG
+    - Action
+    themes:
+    - Horror
+    - Fantasy
+    - Medieval
+
+- name: Diablo II
+  external:
+    wikipedia: Diablo II
+  meta:
+    genres:
+    - RPG
+    - Action
+    subgenres:
+    - Action RPG
+    themes:
+    - Fantasy
+    - Medieval
+  platforms:
+  - Windows
+
+- name: Diabolika 2
+  names:
+  - 'Diabolika 2: The Devil''s Last Stand'
+  external:
+    website: 'https://www.mobygames.com/game/diabolika-2-the-devils-last-stand'
+  platforms:
+  - Windows
+  meta:
+    genres:
+    - Puzzle
+    themes:
+    - Fantasy
+
+- name: Digger
+  external:
+    wikipedia: Digger (video game)
+  meta:
+    genres:
+    - Arcade
+
+- name: Digimon World
+  external:
+    wikipedia: Digimon World
+  meta:
+    genres:
+    - RPG
+
+- name: Dink Smallwood
+  external:
+    wikipedia: Dink Smallwood
+  meta:
+    genres:
+    - RPG
+
+- name: Dodger
+  external:
+    website: http://www.mobygames.com/game/win3x/dodger
+  meta:
+    genres:
+    - Arcade
+
+- name: Dogs of War
+  external:
+    wikipedia: Dogs of War (1989 video game)
+  meta:
+    genres:
+    - Shmup
+    
+- name: Dominion
+  external:
+    website: http://web.archive.org/web/20120621194352/http://www.kamikazegames.com/dominion/
+  meta:
+    genres:
+    - Turn-Based Strategy
+    - Strategy
+    themes:
+    - Fantasy
+
+- name: Doom
+  names:
+  - Doom II
+  external:
+    wikipedia: Doom
+  meta:
+    genres:
+    - FPS
+    themes:
+    - Sci-Fi
+
+- name: Doom 3
+  external:
+    wikipedia: Doom_3
+  meta:
+    genres:
+    - FPS
+    themes:
+    - Sci-Fi
+
+- name: Doom 64
+  external:
+    wikipedia: Doom 64
+  meta:
+    genres:
+    - FPS
+    themes:
+    - Sci-Fi
+
+- name: Double Dragon
+  external:
+    wikipedia: Double_Dragon
+  meta:
+    genres:
+    - Action
+
+- name: Dragon Age II
+  external:
+    wikipedia: Dragon Age II
+  meta:
+    genres:
+    - RPG
+    themes:
+    - Fantasy
+
+- name: 'Dragon Age: Origins'
+  external:
+    wikipedia: 'Dragon Age: Origins'
+  meta:
+    genres:
+    - RPG
+    themes:
+    - Fantasy
+
+- name: 'Drakan: Order of the Flame'
+  external:
+    wikipedia: 'Drakan: Order of the Flame'
+  meta:
+    genres:
+    - Action
+    - Adventure
+    themes:
+    - Fantasy
+    - Medieval
+  platforms:
+  - Windows
+
+- name: 'Driver 2'
+  external:
+    wikipedia: 'Driver 2'
+  meta:
+    genres:
+    - Racing
+    - Action
+  platforms:
+  - PlayStation
+
+- name: Drugwars
+  external:
+    wikipedia: Drugwars
+  meta:
+    genres:
+    - Strategy
+    - Turn-Based Strategy
+    themes:
+    - Crime
+
+- name: Duck Hunt
+  external:
+    wikipedia: Duck Hunt
+  meta:
+    genres:
+    - Arcade
+
+- name: Duke Nukem
+  external:
+    wikipedia: Duke Nukem (video game)
+  platforms:
+  - DOS
+  meta:
+    genres:
+    - Platform
+    
+- name: Duke Nukem II
+  external:
+    wikipedia: Duke Nukem II
+  platforms:
+  - DOS
+  meta:
+    genres:
+    - Platform
+    themes:
+    - Sci-Fi
+
+- name: Duke Nukem 3D
+  external:
+    wikipedia: Duke Nukem 3D
+  platforms:
+  - Android
+  - DOS
+  - iOS
+  - Linux
+  - N64
+  - OSX
+  - PlayStation
+  - PlayStation 3
+  - PlayStation 4
+  - Saturn
+  - Windows
+  - Xbox 360
+  - Xbox One
+  meta:
+    genres:
+    - FPS
+
+- name: Dune 2
+  external:
+    wikipedia: Dune 2
+  meta:
+    genres:
+    - Real-Time Strategy
+    themes:
+    - Sci-Fi
+
+- name: Dune 2000
+  external:
+    wikipedia: Dune 2000
+  meta:
+    genres:
+    - Real-Time Strategy
+    themes:
+    - Sci-Fi
+
+- name: Dungeon Keeper
+  external:
+    wikipedia: Dungeon Keeper
+  meta:
+    genres:
+    - Strategy
+    - Real-Time Strategy
+    themes:
+    - Horror
+    - Fantasy
+    - Comedy
+
+- name: Dungeon Keeper 2
+  external:
+    wikipedia: Dungeon Keeper 2
+  meta:
+    genres:
+    - Simulation
+    - Real-Time Strategy
+
+- name: Dungeon Master
+  names:
+  - Chaos Strikes Back
+  external:
+    wikipedia: Dungeon Master (video game)
+  meta:
+    genres:
+    - RPG
+    - Action
+    themes:
+    - Fantasy
+
+- name: 'Dwarf Fortress'
+  external:
+    wikipedia: 'Dwarf Fortress'
+  meta:
+    genres:
+    - Strategy
+    - RPG
+    themes:
+    - Fantasy
+
+- name: DX-Ball
+  external:
+    wikipedia: DX-Ball
+  meta:
+    genres:
+    - Arcade
+

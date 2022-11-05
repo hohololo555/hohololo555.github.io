@@ -1,0 +1,289 @@
+- name: Z Virus
+  langs:
+  - Blitz BASIC
+  licenses:
+  - As-is
+  originals:
+  - Zarch
+  repo: http://www.steviegoodwin.plus.com/Z_Virus.zip
+  type: remake
+  updated: 2015-10-09
+  url: http://www.blitzbasic.com/Community/posts.php?topic=38995
+
+- name: Z Virus V2
+  langs:
+  - Blitz BASIC
+  licenses:
+  - As-is
+  originals:
+  - Zarch
+  repo: http://www.steviegoodwin.plus.com/Z_Virus_V2.zip
+  type: remake
+  updated: 2015-10-09
+
+- name: Zatacka X
+  frameworks:
+  - SDL
+  images:
+  - https://camo.githubusercontent.com/bf7621a6846244c8f74679220aae2e66f1e5a526/687474703a2f2f666f6c6b2e75696f2e6e6f2f73696d656e6865672f7a617461636b61785f736d616c6c2e706e67
+  info: Has powerups and AI.
+  langs:
+  - C
+  licenses:
+  - GPL3
+  development: sporadic
+  originals:
+  - Achtung, die Kurve!
+  repo: https://github.com/simenheg/zatackax
+  status: playable
+  type: remake
+  updated: 2017-10-28
+
+- name: Zaz
+  images:
+  - https://a.fsdn.com/con/app/proj/zaz/screenshots/234912.jpg
+  - https://a.fsdn.com/con/app/proj/zaz/screenshots/229087.jpg
+  - https://a.fsdn.com/con/app/proj/zaz/screenshots/271617.jpg
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  content: open
+  development: halted
+  originals:
+  - Zuma
+  status: playable
+  repo: https://sourceforge.net/projects/zaz/
+  type: clone
+  updated: 2022-07-07
+  url: http://zaz.sourceforge.net/
+
+- name: ZDoom
+  images:
+  - http://zdoom.org/w/images/7/7e/AltHUD1.png
+  - http://zdoom.org/w/images/c/c4/DynamicLightOptions.png
+  - http://zdoom.org/w/images/8/8a/DOOM0003.png
+  langs:
+  - C
+  licenses:
+  - BSD
+  development: halted
+  originals:
+  - Doom
+  - Heretic
+  - Hexen
+  status: playable
+  repo: https://sourceforge.net/projects/zdoom/
+  type: remake
+  url: http://zdoom.org/
+  updated: 2021-04-22
+  info: Project discontinued, with two child projects - GZDoom (for modern systems) and LZDoom (for older systems without OpenGL)
+
+- name: zedragon
+  langs:
+  - Assembly
+  licenses:
+  - MIT
+  development: active
+  originals:
+  - Sea Dragon
+  repo: https://github.com/charlierobson/zedragon
+  type: remake
+  updated: 2017-12-12
+
+- name: Zed Online
+  originals:
+  - Z
+  type: remake
+  repo: https://sourceforge.net/projects/zedonline/
+  url: https://zzone.lewe.com/zed-online-game/
+  development: active
+  status: playable
+  multiplayer:
+  - Online
+  - LAN
+  content: free
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  updated: 2019-09-17
+  images:
+  - https://a.fsdn.com/con/app/proj/zedonline/screenshots/Screenshot%20%288%29.png/245/183/1
+  - https://a.fsdn.com/con/app/proj/zedonline/screenshots/Screenshot%20%2842%29.png/245/183/1
+  - https://a.fsdn.com/con/app/proj/zedonline/screenshots/Screenshot%20%2811%29.png/245/183/1
+  video:
+    youtube: RKmKpTe-gVo
+
+- name: Zelda Classic
+  originals:
+  - Legend of Zelda
+  type: remake
+  repo: 'https://github.com/ArmageddonGames/ZeldaClassic'
+  url: 'https://www.zeldaclassic.com/'
+  feed: 'https://www.zeldaclassic.com/feed/'
+  development: active
+  status: playable
+  content: swappable
+  langs:
+  - C++
+  frameworks:
+  - Allegro
+  licenses:
+  - GPL3
+  info: >-
+    Zelda Classic is a game and editing tool that lets you create custom Legend of
+    Zelda quests.
+  updated: '2019-11-19'
+  images:
+  - 'https://www.zeldaclassic.com/wp-content/uploads/2016/12/ss_bszelda.png'
+  - >-
+    https://www.zeldaclassic.com/wp-content/uploads/2016/12/ss_megaman_wilys_revenge.gif
+  - 'https://www.zeldaclassic.com/wp-content/uploads/2016/12/ss_hero_dreams.png'
+  - 'https://www.zeldaclassic.com/wp-content/uploads/2016/12/ss_quest744.png'
+
+- name: Zero-K
+  type: similar
+  langs:
+  - C#
+  - Lua
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - Total Annihilation
+  - Supreme Commander
+  status: playable
+  repo: https://github.com/ZeroK-RTS/Zero-K
+  url: https://zero-k.info/
+  video:
+    youtube: dyhzqcf7NJM
+  updated: 2021-11-20
+
+- name: Zeta
+  type: tool
+  originals:
+  - ZZT
+  - Super ZZT
+  repo: https://github.com/asiekierka/zeta
+  url: https://zeta.asie.pl/
+  development: complete
+  langs:
+  - C
+  frameworks:
+  - SDL2
+  licenses:
+  - MIT
+  info: Dedicated emulator
+  updated: 2020-06-26
+
+- name: ZGloom
+  originals:
+  - Gloom
+  type: remake
+  repo: 'https://github.com/Swizpig/ZGloom'
+  development: halted
+  status: playable
+  content: commercial
+  langs:
+  - C++
+  frameworks:
+  - SDL2
+  licenses:
+  - Custom
+  info: Also has a PSVita version
+  updated: 2021-12-25
+  images:
+  - 'https://raw.githubusercontent.com/Swizpig/ZGloom/master/screenshots/deluxe3.png'
+  - 'https://raw.githubusercontent.com/Swizpig/ZGloom/master/screenshots/organs.png'
+  video:
+    youtube: aLuS7MKSN-o
+
+- name: Zod Engine
+  images:
+  - http://zod.sourceforge.net/screenshots/gameplay_13.png
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - Z
+  repo: http://sourceforge.net/projects/zod/
+  type: remake
+  url: http://zod.sourceforge.net/
+  video:
+    youtube: 8VehUvuWHqw
+  updated: 2018-10-06
+
+- name: zombie apocalypse html5
+  langs:
+  - JavaScript
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Zombie Apocalypse
+  status: unplayable
+  repo: https://github.com/andymason/zombie-apocalypse-html5
+  type: remake
+  updated: 2015-05-16
+
+- name: zorkClone
+  langs:
+  - Java
+  licenses:
+  - Apache
+  development: active
+  originals:
+  - Zork
+  repo: https://github.com/vatbub/zorkClone
+  type: remake
+  updated: 2015-10-01
+
+- name: Zorkish
+  langs:
+  - C++
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Zork
+  repo: https://github.com/jgardner8/Zorkish
+  type: remake
+  updated: 2015-06-01
+
+- name: zSILENCER
+  frameworks:
+  - SDL2
+  images:
+  - http://zsilencer.com/ss9.png
+  - http://zsilencer.com/ss1.png
+  langs:
+  - C++
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Silencer
+  repo: https://github.com/zsilencer/zSILENCER
+  status: playable
+  type: remake
+  updated: 2013-09-22
+  url: http://zsilencer.com/
+  video:
+    youtube: mojUQUONp4M
+
+- name: zztgo
+  type: remake
+  originals:
+  - ZZT
+  repo: https://github.com/benhoyt/zztgo
+  url: https://benhoyt.com/writings/zzt-in-go/
+  development: halted
+  status: semi-playable
+  langs:
+  - Go
+  licenses:
+  - MIT
+  updated: 2020-12-15
+  images:
+  - https://benhoyt.com/images/zztgo.png

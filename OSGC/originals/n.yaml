@@ -1,0 +1,170 @@
+- name: Nanosaur
+  external:
+    wikipedia: Nanosaur
+  platforms:
+  - OSX
+  - Windows
+  meta:
+    genres:
+    - TPS
+    themes:
+    - Prehistoric
+    - Sci-Fi
+
+- name: Natural Selection
+  external:
+    wikipedia: Natural Selection (video game)
+  meta:
+    genres:
+    - FPS
+    - Real-Time Strategy
+    themes:
+    - Sci-Fi
+
+- name: Nebulus
+  external:
+    wikipedia: Nebulus (video game)
+  meta:
+    genres:
+    - Arcade
+
+- name: The Need for Speed
+  external:
+    wikipedia: The Need for Speed
+  meta:
+    genres:
+    - Racing
+
+- name: Need For Speed II SE
+  external:
+    wikipedia: Need For Speed II SE
+  meta:
+    genres:
+    - Racing
+    
+- name: 'Need For Speed III: Hot Pursuit'
+  external:
+    wikipedia: 'Need for Speed III: Hot Pursuit'
+  meta:
+    genres:
+    - Racing
+
+- name: NetHack
+  external:
+    wikipedia: NetHack
+  meta:
+    genres:
+    - Roguelike
+
+- name: Nether Earth
+  external:
+    wikipedia: Nether Earth
+  platforms:
+  - Amstrad CPC
+  - Commodore 64
+  - ZX Spectrum
+  meta:
+    genres:
+    - Real-Time Strategy
+    themes:
+    - Sci-Fi
+
+- name: Neverwinter Nights
+  external:
+    wikipedia: Neverwinter Nights
+  meta:
+    genres:
+    - RPG
+    themes:
+    - Fantasy
+
+- name: Neverwinter Nights 2
+  external:
+    wikipedia: Neverwinter Nights 2
+  meta:
+    genres:
+    - RPG
+    themes:
+    - Fantasy
+
+- name: Nexuiz
+  external:
+    wikipedia: Nexuiz
+  meta:
+    genres:
+    - FPS
+
+- name: Night Stalker
+  external:
+    wikipedia: Night Stalker (video game)
+  meta:
+    genres:
+    - Arcade
+
+- name: Nitemare 3D
+  names:
+  - N3D
+  external:
+    wikipedia: Nitemare 3D
+  platforms:
+  - DOS
+  - Windows
+  meta:
+    genres:
+    - FPS
+    themes:
+    - Horror
+
+- name: Nodes of Yesod
+  external:
+    wikipedia: Nodes of Yesod
+  meta:
+    genres:
+    - Platform
+
+- name: No One Lives Forever 2
+  external:
+    wikipedia: No One Lives Forever 2
+  platforms:
+  - Windows
+  - OSX
+  meta:
+    genres:
+    - FPS
+    themes:
+    - Espionage
+
+- name: Notrium
+  external:
+    website: https://www.instantkingdom.com/notrium/
+    wikipedia: Notrium
+  platforms:
+  - Windows
+  meta:
+    genres:
+    - Action
+    subgenres:
+    - Survival
+    themes:
+    - Sci-Fi
+
+- name: Nox
+  external:
+    wikipedia: Nox (video game)
+  platforms:
+  - Windows
+  meta:
+    genres:
+    - Action
+    - RPG
+    themes:
+    - Fantasy
+
+- name: Nuclear Reaction
+  external:
+    website: http://gamescoffer.co.uk/configtest.php?gd=nuclearreaction
+  meta:
+    genres:
+    - Puzzle
+  platforms:
+  - Amiga

@@ -1,0 +1,20 @@
+{%- import 'templates/common.html' as common with context %}
+{%- import 'templates/games.html' as games with context %}
+
+{# TODO: pass keywords #}
+{{- common.head(title, None, description) }}
+{{ common.nav() }}
+
+<div id="content">
+  <h2>
+    <a href="/">Back to list</a>
+    <a class="add-link" href="/add_game.html?original={{ game.names[0] | urlencode }}" target="_blank"><i class="far fa-edit"></i>Add Game</a>
+  </h2>
+
+  <dl id="list">
+    {{ games.render(game, true) }}
+  </dl>
+  <dl id="sorted"></dl>
+</div>
+
+{{ common.footer() -}}

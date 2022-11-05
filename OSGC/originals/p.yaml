@@ -1,0 +1,323 @@
+- name: Pac-Man
+  external:
+    wikipedia: Pac-Man
+  meta:
+    genres:
+    - Arcade
+
+- name: Pac-Mania
+  external:
+    wikipedia: Pac-Mania
+  platforms:
+  - Amiga
+  - Amstrad CPC
+  - Arcade
+  - Atari
+  - Commodore 64
+  - GBA
+  - Genesis
+  - iOS
+  - Master System
+  - MSX
+  - NES
+  - Nintendo Switch
+  - Windows
+  - ZX Spectrum
+  meta:
+    genres:
+    - Arcade
+
+- name: Panzer General
+  external:
+    wikipedia: Panzer General
+  meta:
+    genres:
+    - Turn-Based Strategy
+
+- name: Paradroid
+  external:
+    wikipedia: Paradroid
+  meta:
+    genres:
+    - Shmup
+    - Puzzle
+    themes:
+    - Fantasy
+    - Sci-Fi
+
+- name: Paratrooper
+  external:
+    wikipedia: Paratrooper (video game)
+  meta:
+    genres:
+    - Arcade
+    
+- name: Peg Solitaire
+  external:
+    wikipedia: Peg solitaire
+  meta:
+    genres:
+    - Puzzle
+
+- name: Phantasy Star
+  external:
+    wikipedia: Phantasy Star (video game)
+  meta:
+    genres:
+    - RPG
+
+- name: Pipe Mania
+  external:
+    wikipedia: Pipe Mania
+  meta:
+    genres:
+    - Puzzle
+
+- name: Pitfall!
+  external:
+    wikipedia: Pitfall!
+  meta:
+    genres:
+    - Arcade
+    - Platform
+
+- name: Pizza Tycoon
+  external:
+    wikipedia: Pizza Tycoon
+  meta:
+    genres:
+    - Simulation
+
+- name: 'Planescape: Torment'
+  external:
+    wikipedia: 'Planescape: Torment'
+  meta:
+    genres:
+    - RPG
+
+- name: Plasma Pong
+  external:
+    wikipedia: Plasma Pong
+  platforms:
+  - OSX
+  - Windows
+  meta:
+    genres:
+    - Arcade
+    themes:
+    - Abstract
+
+- name: Pokémon
+  external:
+    wikipedia: Pokémon (video game series)
+  meta:
+    genres:
+    - RPG
+
+- name: Pokémon Gold
+  names:
+  - Pokémon Silver
+  - Pokémon Crystal
+  external:
+    wikipedia: Pokémon Gold and Silver
+  platforms:
+  - Game Boy
+  meta:
+    genres:
+    - RPG
+
+- name: Pokémon Mystery Dungeon
+  external:
+    wikipedia: Pokémon Mystery Dungeon
+  meta:
+    genres:
+    - RPG
+
+- name: Pokémon Uranium
+  external:
+    wikipedia: Pokémon Uranium
+  platforms:
+  - Windows
+  meta:
+    genres:
+    - RPG
+
+- name: Pole Position
+  external:
+    wikipedia: Pole Position (video game)
+  meta:
+    genres:
+    - Sports
+    - Racing
+    themes:
+    - Motorsports
+
+- name: Pong
+  external:
+    wikipedia: Pong
+  platforms:
+  - Arcade
+  meta:
+    genres:
+    - Arcade
+
+- name: 'Populous: The Beginning'
+  external:
+    wikipedia: 'Populous: The Beginning'
+  meta:
+    genres:
+    - Real-Time Strategy
+
+- name: Portal
+  external:
+    wikipedia: Portal (video game)
+  meta:
+    genres:
+    - FPS
+    - Puzzle
+
+- name: Postal
+  names:
+  - Postal Plus
+  external:
+    wikipedia: Postal (video game)
+  platforms:
+  - Linux
+  - Windows
+  - OSX
+  meta:
+    genres:
+    - Shooter
+    subgenres:
+    - Run and gun
+    themes:
+    - Horror
+
+- name: Powder Game
+  names:
+  - World of Sand
+  external:
+    wikipedia: Falling-sand game
+  platforms:
+  - Web
+  meta:
+    genres:
+    - Simulation
+
+- name: Powerslave
+  names:
+  - Exhumed
+  external:
+    wikipedia: PowerSlave
+  platforms:
+  - DOS
+  - PlayStation
+  - Saturn
+  meta:
+    genres:
+    - FPS
+    themes:
+    - Egyptian
+
+- name: Powerslide
+  external:
+    wikipedia: Powerslide (video game)
+  platforms:
+  - Windows
+  meta:
+    genres:
+    - Racing
+
+- name: Prehistorik 2
+  names:
+  - Prehistorik Man
+  external:
+    wikipedia: Prehistorik 2
+  platforms:
+  - Amstrad CPC
+  - DOS
+  - Game Boy
+  meta:
+    genres:
+    - Platform
+    themes:
+    - Prehistoric
+
+- name: Prince of Persia
+  external:
+    wikipedia: Prince of Persia
+  meta:
+    genres:
+    - Platform
+  
+- name: Prince of Persia 2
+  external:
+    wikipedia: Prince of Persia 2
+  meta:
+    genres:
+    - Platform
+    
+- name: Private Eye
+  external:
+    wikipedia: Private Eye (1996 video game)
+  meta:
+    genres:
+    - Adventure
+    themes: 
+    - Crime
+  platforms:
+  - OSX
+  - Windows
+
+- name: Progress Quest
+  external:
+    wikipedia: Progress Quest
+  meta:
+    genres:
+    - MMORPG
+    themes:
+    - Comedy
+
+- name: Punch-Out!!
+  external:
+    wikipedia: Punch-Out!! (arcade game)
+  meta:
+    genres:
+    - Fighting
+    - Sports
+    subgenres:
+    - Boxing
+    themes:
+    - Comedy
+
+- name: Pushover
+  external:
+    wikipedia: Pushover (video game)
+  meta:
+    genres:
+    - Platform
+    - Puzzle
+
+- name: Puzzle Bobble
+  external:
+    wikipedia: Puzzle Bobble
+  meta:
+    genres:
+    - Puzzle
+    - Arcade
+
+- name: Puzzle Moppet
+  external:
+    website: 'https://garnetgames.com/puzzlemoppet/'
+  meta:
+    genres:
+    - Puzzle
+
+- name: Puzznic / Brix
+  external:
+    wikipedia: Brix (video game)
+  meta:
+    genres:
+    - Puzzle
+    - Arcade
+

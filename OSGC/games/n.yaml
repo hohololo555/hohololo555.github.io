@@ -1,0 +1,448 @@
+- name: Naev
+  langs:
+  - C
+  - Lua
+  frameworks:
+  - SDL2
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - Escape Velocity
+  repo: https://github.com/naev/naev
+  type: similar
+  updated: 2019-09-13
+
+- name: Nanosaur Source Port
+  originals:
+  - Nanosaur
+  type: remake
+  repo: 'https://github.com/jorio/Nanosaur'
+  development: active
+  status: playable
+  content: commercial
+  langs:
+  - C
+  frameworks:
+  - OpenGL
+  - SDL2
+  licenses:
+  - CC-BY-NC-SA
+  updated: 2021-10-14
+  images:
+  - https://raw.githubusercontent.com/jorio/Nanosaur/master/docs/screenshot.png
+  info: Nanosaur for modern operating systems (macOS, Windows, Linux), approved by Pangea Software.
+
+- name: NBlood
+  type: remake
+  originals:
+  - Blood
+  repo: https://github.com/nukeykt/NBlood
+  url: https://nukeykt.retrohost.net/
+  development: very active
+  status: playable
+  multiplayer:
+  - Online
+  - LAN
+  - Co-op
+  langs:
+  - C++
+  frameworks:
+  - SDL
+  - SDL2
+  - OpenGL
+  licenses:
+  - Custom
+  content: commercial
+  info: Blood port based on EDuke32
+  video:
+    youtube: Ocs-UDivylA
+  updated: 2020-01-05
+
+- name: Netacka
+  images:
+  - https://pwmarcz.pl/netacka/sshots.png
+  langs:
+  - C
+  frameworks:
+  - Allegro
+  licenses:
+  - MIT
+  development: halted
+  status: playable
+  multiplayer:
+  - Competitive
+  - Online
+  originals:
+  - Achtung, die Kurve!
+  repo: https://github.com/pwmarcz/netacka
+  type: remake
+  updated: 2020-12-29
+  url: https://pwmarcz.pl/netacka/
+  info: Netacka is a network multiplayer game based on Zatacka. We even have bots!
+
+- name: Nether Earth Remake
+  originals:
+  - Nether Earth
+  type: remake
+  url: https://web.archive.org/web/20190608221012/http://www.braingames.getput.com/nether/
+  development: complete
+  status: playable
+  langs:
+  - C++
+  frameworks:
+  - SDL
+  licenses:
+  - As-is
+  updated: 2020-08-25
+  images:
+  - https://web.archive.org/web/20160512160539/http://www2.braingames.getput.com/nether/images/nether00.jpg
+  - https://web.archive.org/web/20160512221659/http://www2.braingames.getput.com/nether/images/nether01.jpg
+  - https://web.archive.org/web/20160512221836/http://www2.braingames.getput.com/nether/images/nether02.jpg
+  video:
+    youtube: pJtrxzGf1L0
+
+- name: NEO-RAW
+  images:
+  - https://fabiensanglard.net/fd_proxy/anotherWorld_code_review/aw_before.jpg
+  - https://fabiensanglard.net/fd_proxy/anotherWorld_code_review/anotherWorldXP.png
+  langs:
+  - C++
+  frameworks:
+  - SDL2
+  licenses:
+  - GPL2
+  content: commercial
+  development: halted
+  originals:
+  - Another World
+  status: playable
+  repo: https://github.com/fabiensanglard/Another-World-Bytecode-Interpreter
+  type: remake
+  updated: 2021-09-13
+  url: https://fabiensanglard.net/anotherWorld_code_review/index.php
+  info: This is an Another World VM implementation. Based on Gregory Montoir's original work, the codebase has been cleaned up with legibility and readability in mind.
+
+- name: NeoLemmix
+  originals:
+  - Lemmings
+  type: clone
+  url: 'https://www.neolemmix.com/'
+  repo: https://bitbucket.org/namida42/neolemmixplayer/
+  langs:
+  - Delphi
+  frameworks:
+  - Graphics32
+  development: very active
+  status: playable
+  content: swappable
+  licenses:
+  - CC-BY-NC
+  updated: 2021-03-30
+  info: Has an active modding community (https://www.lemmingsforums.net/) and comes with an editor.
+  video:
+    youtube: i0CQtMjkyMk
+
+- name: Neverball
+  frameworks:
+  - SDL
+  images:
+  - https://i.imgur.com/4ja9xmS.jpg
+  - https://i.imgur.com/xU6TJZP.jpg
+  - https://i.imgur.com/KJG0K0C.jpg
+  - https://i.imgur.com/KpzrmNp.jpg
+  - https://i.imgur.com/4sJM8Ji.jpg
+  - https://i.imgur.com/fzcotpu.jpg
+  langs:
+  - C
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - Super Monkey Ball
+  repo: https://github.com/Neverball/neverball
+  type: clone
+  updated: 2019-11-20
+  url: http://neverball.org/
+
+- name: New RAW
+  images:
+  - https://a.fsdn.com/con/app/proj/newraw/screenshots/67451.jpg
+  - https://a.fsdn.com/con/app/proj/newraw/screenshots/67449.jpg
+  langs:
+  - C++
+  frameworks:
+  - SDL
+  licenses:
+  - GPL2
+  content: commercial
+  development: halted
+  originals:
+  - Another World
+  status: playable
+  repo: http://sourceforge.net/projects/newraw/
+  type: remake
+  updated: 2021-09-13
+  info: New RAW - an Another World / Out of this world interpreter. Based on work of Gregory Montoir
+
+- name: New Utopia
+  langs:
+  - JavaScript
+  licenses:
+  - As-is
+  content: open
+  development: halted
+  originals:
+  - Utopia
+  status: playable
+  repo: https://github.com/gamejs/newutopia
+  type: remake
+  updated: 2022-01-26
+  url: http://apps.gamejs.org/newutopia/
+
+- name: newtron
+  langs:
+  - JavaScript
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Tron
+  repo: https://github.com/sursonico/newtron
+  type: remake
+  updated: 2015-06-01
+
+- name: NFSIISE
+  development: active
+  frameworks:
+  - SDL2
+  images:
+  - https://i.imgur.com/ZL3V5XB.jpg
+  - https://i.imgur.com/DRyjX57.jpg
+  langs:
+  - C++
+  licenses:
+  - MIT
+  content: commercial
+  originals:
+  - Need For Speed II SE
+  repo: https://github.com/zaps166/NFSIISE
+  status: playable
+  type: remake
+  updated: 2016-06-02
+
+- name: Nighthawk
+  images:
+  - http://night-hawk.sourceforge.net/nh_intro_1.png
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Paradroid
+  repo: https://sourceforge.net/projects/night-hawk/
+  status: playable
+  type: remake
+  updated: 2013-05-27
+  url: http://night-hawk.sourceforge.net/
+
+- name: Nitrosharp
+  originals:
+  - Chaos;Head
+  type: remake
+  repo: 'https://github.com/CommitteeOfZero/nitrosharp'
+  development: active
+  status: semi-playable
+  content: commercial
+  langs:
+  - 'C#'
+  frameworks:
+  - .NET
+  licenses:
+  - MIT
+  updated: 2021-12-29
+
+- name: NLarn
+  langs:
+  - C
+  - Lua
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - Larn
+  repo: https://github.com/nlarn/nlarn
+  type: remake
+  updated: 2019-08-27
+  url: https://nlarn.github.io/
+
+- name: Nodes of Yesnod remake
+  frameworks:
+  - XNA
+  langs:
+  - C#
+  licenses:
+  - As-is
+  content: free
+  development: halted
+  originals:
+  - Nodes of Yesod
+  status: semi-playable
+  repo: https://github.com/ian-wigley/Nodes-of-Yesod
+  type: remake
+  updated: 2022-09-28
+  images:
+  - https://raw.githubusercontent.com/ian-wigley/Nodes-of-Yesod/master/XNA_Nodes_of_Yesod/Nodes1.jpg
+  - https://raw.githubusercontent.com/ian-wigley/Nodes-of-Yesod/master/XNA_Nodes_of_Yesod/Nodes2.jpg
+
+- name: 'NorseWorld: Ragnarok'
+  originals:
+  - Ragnarok
+  type: remake
+  repo: 'https://github.com/Serg-Norseman/NorseWorld-Ragnarok'
+  url: 'https://sourceforge.net/projects/norseworld/'
+  development: halted
+  status: playable
+  content: free
+  langs:
+  - 'C#'
+  licenses:
+  - GPL3
+  updated: '2021-08-17'
+  images:
+  - 'https://a.fsdn.com/con/app/proj/norseworld/screenshots/scr_01_en.png/max/max/1'
+  - 'https://a.fsdn.com/con/app/proj/norseworld/screenshots/scr_04_en.png/max/max/1'
+  - 'https://a.fsdn.com/con/app/proj/norseworld/screenshots/scr_05_en.png/max/max/1'
+
+- name: Nox Imperii
+  originals:
+  - Escape Velocity
+  type: similar
+  repo: 'https://github.com/Kinniken/NoxImperii'
+  url: 'http://noximperii.com/'
+  development: halted
+  status: playable
+  content: open
+  langs:
+  - C
+  frameworks:
+  - SDL
+  licenses:
+  - GPL3
+  info: Fork of Naev
+  updated: '2020-05-11'
+  images:
+  - 'http://noximperii.com/img/slideshow/1_1_planets.png'
+  - 'http://noximperii.com/img/slideshow/1_2_galaxy.png'
+  - 'http://noximperii.com/img/slideshow/1_3_commodities.png'
+  - 'http://noximperii.com/img/slideshow/1_4_planet.png'
+  - 'http://noximperii.com/img/slideshow/1_5_news.png'
+  - 'http://noximperii.com/img/slideshow/2_1_explore.png'
+  - 'http://noximperii.com/img/slideshow/2_2_natives.png'
+  - 'http://noximperii.com/img/slideshow/2_3_barbarians.png'
+  - 'http://noximperii.com/img/slideshow/2_4_survey.png'
+
+- name: NStars!
+  images:
+  - https://nstars.sourceforge.net/nstars01.png
+  - https://nstars.sourceforge.net/nstars02.png
+  - https://nstars.sourceforge.net/nstars03.png
+  langs:
+  - C#
+  frameworks:
+  - .NET
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Stars!
+  status: playable
+  repo: https://sourceforge.net/projects/nstars/
+  type: remake
+  updated: 2022-09-23
+  url: http://nstars.sourceforge.net/
+
+- name: NullpoMino
+  langs:
+  - Java
+  licenses:
+  - BSD
+  development: halted
+  originals:
+  - Tetris
+  repo: https://github.com/NullpoMino/NullpoMino
+  type: remake
+  updated: 2018-12-02
+  url: https://github.com/NullpoMino/NullpoMino
+
+- name: Nuncabola
+  type: clone
+  originals:
+  - Super Monkey Ball
+  repo: http://uppgarn.com/nuncabola/nuncabola-0.197-src.zip
+  url: http://uppgarn.com/nuncabola/
+  development: halted
+  status: playable
+  langs:
+  - Java
+  licenses:
+  - GPL2
+  content: open
+  updated: 2020-08-25
+  images:
+  - http://uppgarn.com/nuncabola/screenshot-1.png
+  - http://uppgarn.com/nuncabola/screenshot-2.png
+
+- name: Nuvie
+  images:
+  - http://nuvie.sourceforge.net/images/shots/nuvie_24.png
+  - http://nuvie.sourceforge.net/images/shots/nuvie_22.png
+  - http://nuvie.sourceforge.net/images/shots/nuvie_21.png
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - 'Ultima VI: The False Prophet'
+  - 'Ultima: Worlds of Adventure 2: Martian Dreams'
+  - 'Worlds of Ultima: The Savage Empire'
+  repo: https://github.com/nuvie/nuvie
+  type: remake
+  url: http://nuvie.sourceforge.net/
+  updated: 2020-05-19
+
+- name: NXEngine
+  development: sporadic
+  images:
+  - https://repo.openpandora.org/files/pnd/nxengine/previews/nxengine2.png
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  content: free
+  originals:
+  - Cave Story
+  repo: https://github.com/EXL/NXEngine
+  status: playable
+  type: remake
+  updated: 2019-11-20
+  url: http://nxengine.sourceforge.net/
+
+- name: NXEngine-evo
+  development: active
+  images:
+  - https://raw.githubusercontent.com/nxengine/nxengine-evo/master/screenshot.png
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  content: free
+  originals:
+  - Cave Story
+  repo: https://github.com/nxengine/nxengine-evo
+  status: playable
+  type: remake
+  updated: 2018-01-05
+  url: https://github.com/nxengine/nxengine-evo

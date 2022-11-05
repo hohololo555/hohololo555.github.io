@@ -1,0 +1,222 @@
+type: seq
+sequence:
+- type: map
+  mapping:
+    name:
+      required: True
+      type: str
+    names:
+      type: seq
+      sequence:
+      - type: str
+      desc: Alternate names for this game
+    external:
+      required: True
+      type: map
+      mapping:
+        website:
+          type: str
+          desc: URL of official website
+        wikipedia:
+          type: str
+          desc: Title of Wikipedia article
+    platforms:
+      type: seq
+      sequence:
+      - include: platforms
+        unique: True
+    meta:
+      include: meta
+
+schema;meta:
+  type: map
+  mapping:
+    genres:
+      type: seq
+      sequence:
+      - include: genres
+        unique: True
+    subgenres:
+      type: seq
+      sequence:
+      - include: subgenres
+        unique: True
+    themes:
+      type: seq
+      sequence:
+      - include: themes
+        unique: True
+
+
+schema;platforms:
+  type: str
+  enum: [
+    '3DS',
+    'Amiga',
+    'Amstrad CPC',
+    'Android',
+    'Apple II',
+    'Apple TV',
+    'Arcade',
+    'Atari',
+    'Classic Mac OS',
+    'Commodore 64',
+    'DOS',
+    'Dreamcast',
+    'DS',
+    'Game Boy',
+    'GameCube',
+    'GBA',
+    'Genesis',
+    'iOS',
+    'Linux',
+    'Lynx',
+    'Master System',
+    'Mobile',
+    'MSX',
+    'NES',
+    'N64',
+    'Nintendo Switch',
+    'OSX',
+    'PC-98',
+    'PlayStation',
+    'PlayStation 2',
+    'PlayStation 3',
+    'PlayStation 4',
+    'PlayStation Vita',
+    'PSP',
+    'Saturn',
+    'SNES',
+    'Web',
+    'Wii',
+    'Windows',
+    'Xbox',
+    'Xbox 360',
+    'Xbox One',
+    'ZX Spectrum',
+  ]
+
+# -- ADD NEW GENRES TO 'SUBGENRE' SCHEMA --
+# Based on Giant Bomb genres / Wikipedia
+# http://www.giantbomb.com/games/
+# https://en.wikipedia.org/wiki/Template:Video_game_genre
+schema;genres:
+  type: str
+  enum: [
+    'Action',
+    'Adventure',
+    'Arcade',
+    'Card Game',
+    'Compilation',
+    'Educational',
+    'Fighting',
+    'Flight',
+    'FPS',
+    'MMORPG',
+    'MOBA',
+    'Party',
+    'Platform',
+    'Puzzle',
+    'Racing',
+    'RPG',
+    'Real-Time Strategy',
+    'Real-Time Tactics',
+    'Sports',
+    'Turn-Based Strategy',
+    'Turn-Based Tactics',
+    'TPS',
+    'Rhythm',
+    'Roguelike',
+    'Shooter',
+    'Shmup',
+    'Simulation',
+    'Strategy',
+  ]
+
+schema;subgenres:
+  type: str
+  enum: [
+    '4X',
+    'Action RPG',
+    'Artillery',
+    'Baseball',
+    'Basketball',
+    'Billiards',
+    'Board Game',
+    'Bowling',
+    'Boxing',
+    'Bullet Hell',
+    'City Building',
+    'Cricket',
+    'Dual-Joystick Shooter',
+    'Fishing',
+    'Fitness',
+    'Flight Simulator',
+    'Football',
+    'Gambling',
+    'Golf',
+    'Handball',
+    'Hockey',
+    'Life',
+    'Light-Gun Shooter',
+    'Pinball',
+    'Point and click',
+    'Run and gun',
+    'Sandbox',
+    'Skateboarding',
+    'Skiing',
+    'Snowboarding',
+    'Soccer',
+    'Space Flight',
+    'Surfing',
+    'Submarine Simulator',
+    'Survival',
+    'Tennis',
+    'Text Adventure',
+    'Tower Defense',
+    'Track & Field',
+    'Train Simulator',
+    'Vehicular Combat',
+    'Visual Novel',
+    'Volleyball',
+    'Wrestling',
+  ]
+
+# Based on Giant Bomb themes
+# http://www.giantbomb.com/games/
+schema;themes:
+  type: str
+  enum: [
+    'Abstract',
+    'Adult',
+    'Alternate Historical',
+    'Anime',
+    'Aquatic',
+    'Civil War',
+    'Comedy',
+    'Comic Book',
+    'Crime',
+    'Cyberpunk',
+    'Dating',
+    'Egyptian',
+    'Espionage',
+    'Fantasy',
+    'Game Show',
+    'Horror',
+    'Management',
+    'Martial Arts',
+    'Mayan',
+    'Medieval',
+    'Meditative',
+    'Modern Military',
+    'Motorsports',
+    'Post-Apocalyptic',
+    'Prehistoric',
+    'Sci-Fi',
+    'Steampunk',
+    'Superhero',
+    'Vietnam',
+    'Western',
+    'World War I',
+    'World War II',
+  ]

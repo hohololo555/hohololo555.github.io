@@ -1,0 +1,1102 @@
+- name: Rabbit Escape
+  images:
+  - https://raw.githubusercontent.com/andybalaam/rabbit-escape/master/doc/rabbitescape-android.png
+  - https://raw.githubusercontent.com/andybalaam/rabbit-escape/master/doc/minilevel/rabbitescape-minilevel.gif
+  - https://cloud.githubusercontent.com/assets/76812/13390775/570dbafc-dec8-11e5-835f-67c6fa43a0af.gif
+  - https://cloud.githubusercontent.com/assets/9596719/12928837/a32e2270-cf67-11e5-9ef3-fb02e85f5d69.gif
+  langs:
+  - Java
+  licenses:
+  - GPL2
+  development: active
+  info: Android, Linux, Windows, Mac
+  originals:
+  - Lemmings
+  repo: https://github.com/andybalaam/rabbit-escape
+  type: clone
+  updated: 2018-08-20
+  url: http://www.artificialworlds.net/rabbit-escape/
+  video:
+    youtube: nJnkWJJ-usY
+
+- name: Race Into Space
+  images:
+  - http://www.raceintospace.org/images/screenshots/splash_screen.png
+  langs:
+  - C++
+  frameworks:
+  - SDL
+  licenses:
+  - GPL2
+  content: open
+  development: active
+  originals:
+  - Buzz Aldrin's Race Into Space
+  status: semi-playable
+  repo: https://github.com/raceintospace/raceintospace
+  type: remake
+  updated: 2022-01-24
+  url: http://www.raceintospace.org/
+
+- name: Racer
+  images:
+  - https://a.fsdn.com/con/app/proj/racer/screenshots/269275.jpg
+  - https://a.fsdn.com/con/app/proj/racer/screenshots/269265.jpg
+  - https://a.fsdn.com/con/app/proj/racer/screenshots/269271.jpg
+  - https://a.fsdn.com/con/app/proj/racer/screenshots/269273.jpg
+  - https://a.fsdn.com/con/app/proj/racer/screenshots/269267.jpg
+  langs:
+  - C++
+  - Python
+  licenses:
+  - GPL3
+  development: halted
+  originals:
+  - F-Zero
+  repo: http://sourceforge.net/projects/racer/
+  type: remake
+  updated: 2019-01-18
+  url: http://racer.sourceforge.net/
+
+- name: RacerJS
+  langs:
+  - JavaScript
+  licenses:
+  - CC-BY-SA
+  - MIT
+  development: halted
+  originals:
+  - Lotus Esprit Turbo Challenge
+  status: playable
+  repo: https://github.com/onaluf/RacerJS
+  type: clone
+  updated: 2015-05-15
+
+- name: RAD
+  originals:
+  - 'Radix: Beyond the Void'
+  type: remake
+  repo: 'https://github.com/jval1972/Rad-X'
+  url: 'https://sourceforge.net/projects/rad-x/'
+  development: complete
+  status: playable
+  content: commercial
+  langs:
+  - Delphi
+  licenses:
+  - GPL2
+  updated: '2020-12-07'
+  images:
+  - https://a.fsdn.com/con/app/proj/rad-x/screenshots/SSHOT_Doom_20200423_124105016.png/max/max/1
+  video:
+    youtube: 5aY8fUxg5iQ
+
+- name: Rampart-Android
+  info: Android
+  langs:
+  - Java
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Rampart
+  repo: https://github.com/dwmai/Rampart-Android
+  type: remake
+  updated: 2015-05-29
+
+- name: Raptor
+  originals:
+  - 'Raptor: Call of the Shadows'
+  type: remake
+  repo: 'https://github.com/skynettx/raptor'
+  development: active
+  status: playable
+  content: commercial
+  langs:
+  - C
+  licenses:
+  - GPL2
+  updated: 2022-01-02
+  info: Based on the reverse-engineered codebase from Raptor Call Of The Shadows by nukeykt
+  video:
+    youtube: Nt2HfchiudY
+
+- name: Raptor (JS)
+  info: 'Raptor: Call of the Shadows in JavaScript in 96k; complete remake of the first level of the Bravo sector'
+  langs:
+  - JavaScript
+  licenses:
+  - As-is
+  content: free
+  development: halted
+  originals:
+  - 'Raptor: Call of the Shadows'
+  status: semi-playable
+  repo: https://github.com/robgietema/raptor
+  type: remake
+  updated: 2022-09-15
+
+- name: 'Raptor: Call of the Shadows'
+  originals:
+  - 'Raptor: Call of the Shadows'
+  type: remake
+  repo: 'https://github.com/aroldanju/raptor-call-of-the-shadows'
+  development: sporadic
+  status: semi-playable
+  content: commercial
+  langs:
+  - C
+  frameworks:
+  - SDL2
+  licenses:
+  - GPL3
+  updated: '2021-01-29'
+  images:
+  - 'https://i.imgur.com/DTmUSto.png'
+
+- name: rawgl
+  langs:
+  - C++
+  licenses:
+  - As-is
+  development: active
+  originals:
+  - Another World
+  repo: https://github.com/cyxx/rawgl
+  status: playable
+  type: remake
+  updated: 2016-03-06
+
+- name: Raze
+  originals:
+  - Duke Nukem 3D
+  - Blood
+  - Redneck Rampage
+  - Shadow Warrior
+  - Powerslave
+  type: remake
+  repo: 'https://github.com/coelckers/Raze'
+  development: active
+  status: playable
+  content: commercial
+  langs:
+  - C++
+  info: Raze is a fork of Build engine games backed by GZDoom tech and combines Duke Nukem 3D, Blood, Redneck Rampage, Shadow Warrior and Exhumed/Powerslave in a single package.
+  licenses:
+  - GPL2
+  video:
+    youtube: GT4mZUwuoXQ
+  updated: 2020-10-19
+
+- name: RBDOOM-3-BFG
+  info: works with BFG edition only
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - Doom 3
+  repo: https://github.com/RobertBeckebans/RBDOOM-3-BFG
+  type: remake
+  updated: 2015-07-29
+
+- name: ReC98
+  originals:
+  - Touhou
+  type: remake
+  repo: 'https://github.com/nmlgc/ReC98'
+  url: 'https://rec98.nmlgc.net/'
+  development: very active
+  status: playable
+  content: commercial
+  langs:
+  - Assembly
+  - C++
+  licenses:
+  - As-is
+  info: Reverse engineer of Touhou 1-5
+  updated: 2021-12-20
+  images:
+  - https://rec98.nmlgc.net/blog/static/2021-11-29-TH04-NoEMS-Crash-screen.png
+  - https://rec98.nmlgc.net/blog/static/2021-11-08-TH01-Mima-three-arms.png
+  video:
+    youtube: 7-UYGhZ1sB8
+
+- name: Reconstruction of Super ZZT
+  type: remake
+  originals:
+  - Super ZZT
+  repo: https://github.com/asiekierka/reconstruction-of-super-zzt
+  development: complete
+  status: playable
+  langs:
+  - Pascal
+  licenses:
+  - MIT
+  info: Binary-accurate source code reconstruction
+  updated: 2020-06-26
+
+- name: Reconstruction of ZZT
+  type: remake
+  originals:
+  - ZZT
+  repo: https://github.com/asiekierka/reconstruction-of-zzt
+  development: complete
+  status: playable
+  langs:
+  - Pascal
+  licenses:
+  - MIT
+  info: Binary-accurate source code reconstruction
+  updated: 2020-06-26
+
+- name: RedneckGDX
+  originals:
+  - Redneck Rampage
+  type: remake
+  repo: 'https://gitlab.com/m210/RedneckGDX'
+  url: 'http://m210.duke4.net/'
+  development: active
+  status: playable
+  multiplayer:
+  - Online
+  - LAN
+  - Co-op
+  content: commercial
+  langs:
+  - Java
+  frameworks:
+  - LibGDX
+  licenses:
+  - Custom
+  updated: '2020-01-10'
+  video:
+    youtube: 0w_LI7LVb3s
+
+- name: Rednukem
+  type: remake
+  originals:
+  - Redneck Rampage
+  - Duke Nukem 3D
+  repo: https://github.com/nukeykt/NBlood
+  url: https://nukeykt.retrohost.net/
+  development: very active
+  status: playable
+  langs:
+  - C++
+  frameworks:
+  - SDL
+  - SDL2
+  - OpenGL
+  licenses:
+  - Custom
+  content: commercial
+  info: Based on EDuke32
+  updated: 2020-01-10
+  video:
+    youtube: KSoVdF9SvNY
+
+- name: REDRIVER2
+  type: remake
+  originals:
+  - Driver 2
+  repo: https://github.com/OpenDriver2/REDRIVER2
+  development: active
+  status: playable
+  langs:
+  - C
+  frameworks:
+  - SDL
+  - SDL2
+  - OpenGL
+  licenses:
+  - MIT
+  content: commercial
+  updated: 2021-07-10
+  info: Driver 2 Playstation game reverse engineering effort
+  images:
+  - https://i.ibb.co/2q1pp06/red2.png
+  - https://i.ibb.co/JxfC5xX/aaa.png
+  - https://i.ibb.co/ydLsK9z/aaa.png
+
+- name: Reevengi
+  originals:
+  - Resident Evil
+  - Resident Evil 2
+  - 'Resident Evil 3: Nemesis'
+  type: tool
+  repo: 'https://github.com/pmandin/reevengi'
+  development: sporadic
+  langs:
+  - C
+  frameworks:
+  - SDL2
+  - OpenGL
+  licenses:
+  - GPL2
+  info: A small background image viewer for Resident Evil games
+  updated: 2022-03-27
+
+- name: Reflection Keen
+  langs:
+  - C
+  licenses:
+  - GPL2
+  development: sporadic
+  originals:
+  - Commander Keen Series
+  - Catacomb 3-D
+  repo: https://github.com/NY00123/refkeen
+  type: remake
+  updated: 2019-03-12
+  info: Ports of Keen Dreams, Catacomb 3-D and the Catacomb Adventure Series
+  status: playable
+  content: commercial
+  video:
+    youtube: EeWk6WFVZ4U
+
+- name: REGoth
+  development: halted
+  langs:
+  - C++
+  licenses:
+  - MIT
+  content: commercial
+  originals:
+  - Gothic
+  repo: https://github.com/REGoth-project/REGoth-bs
+  status: playable
+  type: remake
+  images:
+  - https://user-images.githubusercontent.com/11406580/58186975-2cdbb880-7cb6-11e9-9a6d-b38326bc3edb.png
+  video:
+    youtube: DX92f8CrjrE
+  info: Project restarted from https://github.com/REGoth-project/REGoth
+  updated: 2022-04-18
+
+- name: R.E.L.I.V.E.
+  images:
+  - https://aliveteam.github.io/imgs/screenshot.webp
+  langs:
+  - C++
+  frameworks:
+  - SDL2
+  licenses:
+  - As-is
+  content: commercial
+  development: active
+  originals:
+  - "Oddworld: Abe's Oddysee"
+  - "Oddworld: Abe's Exoddus"
+  status: semi-playable
+  repo: https://github.com/AliveTeam/alive_reversing
+  url: https://aliveteam.github.io
+  type: remake
+  updated: 2022-06-25
+  video:
+    youtube: -75zRX2PdXY
+
+- name: remc2
+  type: remake
+  originals:
+  - Magic Carpet 2
+  repo: https://github.com/turican0/remc2
+  url: https://github.com/turican0/remc2/wiki
+  development: very active
+  status: unplayable
+  langs:
+  - C++
+  frameworks:
+  - SDL2
+  licenses:
+  - GPL3
+  content: commercial
+  info: Reverse engineering of game Magic Carpet 2 from assembler to c/c++ language
+  updated: 2019-05-07
+  images:
+  - https://raw.githubusercontent.com/turican0/remc2/wikiimg/2019-03-24%2016_24_21-Remake%20Magic%20Carpet%202.png
+  - https://raw.githubusercontent.com/turican0/remc2/wikiimg/2019-03-21%2020_46_03-Window.png
+  - https://raw.githubusercontent.com/turican0/remc2/wikiimg/2019-03-20%2019_20_08-Remake%20Magic%20Carpet%202.png
+  video:
+    youtube: 2g4Ro1ulMvg
+
+- name: REminiscence
+  frameworks:
+  - SDL2
+  langs:
+  - C++
+  licenses:
+  - As-is
+  content: commercial
+  images:
+  - http://cyxdown.free.fr/reminiscence/reminiscence-1.png
+  - http://cyxdown.free.fr/reminiscence/reminiscence-2.png
+  - http://cyxdown.free.fr/reminiscence/reminiscence-3.png
+  - http://cyxdown.free.fr/reminiscence/reminiscence-4.png
+  development: sporadic
+  originals:
+  - Flashback
+  status: playable
+  type: remake
+  url: http://cyxdown.free.fr/reminiscence/
+  updated: 2021-04-16
+
+- name: Remnants of the Precursors
+  originals:
+  - Master of Orion
+  type: clone
+  repo: 'https://github.com/rayfowler/rotp-public'
+  url: 'https://www.remnantsoftheprecursors.com/'
+  development: active
+  status: playable
+  content: free
+  langs:
+  - Java
+  licenses:
+  - CC-BY-NC-ND
+  - GPL3
+  info: A Java-based modernization of the original Master of Orion game from 1993.
+  updated: '2022-01-16'
+  images:
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODY4NC5qcGc=/original/udnpsm.jpg'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM2My5qcGc=/original/f7%2Fd9g.jpg'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM3Mi5wbmc=/original/%2B6nY1p.png'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM2Mi5wbmc=/original/jQZ1yC.png'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM3My5wbmc=/original/hR1W%2Bh.png'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM1Ni5qcGc=/original/wfdokK.jpg'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM1Ny5qcGc=/original/FdNZv8.jpg'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM4MS5qcGc=/original/od2np6.jpg'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM1OS5qcGc=/original/ZjvKd0.jpg'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODY3NS5qcGc=/original/LwUhQf.jpg'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODY3NC5qcGc=/original/Ege7kB.jpg'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM3MS5wbmc=/original/WqkHBc.png'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM3OS5qcGc=/original/oyIQ20.jpg'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM2MC5qcGc=/original/lQxpp4.jpg'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM4MC5qcGc=/original/cAan3m.jpg'
+  - 'https://img.itch.zone/aW1hZ2UvMTc1MzcwLzgxODM1OC5qcGc=/original/vsaKTk.jpg'
+  video:
+    youtube: VusDAxLpJ9I
+
+- name: reone
+  frameworks:
+  - SDL2
+  - OpenGL
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  content: commercial
+  development: active
+  originals:
+  - 'Star Wars: Knights of the Old Republic'
+  - "Star Wars: Knights of the Old Republic II \u2013 The Sith Lords"
+  status: semi-playable
+  type: remake
+  url: https://github.com/seedhartha/reone/
+  updated: 2021-06-30
+  video:
+    youtube: U80-mOOxmDM
+
+- name: ReQbert
+  licenses:
+  - GPL3
+  content: open
+  langs:
+  - JavaScript
+  development: halted
+  originals:
+  - Q*bert
+  status: semi-playable
+  repo: https://github.com/leonicolas/ReQbert
+  url: https://leonicolas.github.io/ReQbert/
+  type: remake
+  updated: 2022-10-14
+  images:
+  - https://raw.githubusercontent.com/leonicolas/ReQbert/master/etc/resources/last_build_screenshot.png
+
+- name: Rescue! Max
+  images:
+  - http://rescue.sourceforge.net/screenshots/rescue1.0a.png
+  - http://rescue.sourceforge.net/screenshots/rescue1.0b.png
+  langs:
+  - Java
+  licenses:
+  - GPL3
+  development: halted
+  originals:
+  - Rescue!
+  repo: https://sourceforge.net/projects/rescue/
+  type: remake
+  updated: 2021-11-20
+  url: http://rescue.sourceforge.net/
+
+- name: ResidualVM
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - Grim Fandango
+  - Escape from Monkey Island
+  - 'Myst III: Exile'
+  type: remake
+  repo: https://github.com/residualvm/residualvm
+  updated: 2018-10-06
+  url: http://residualvm.org/
+
+- name: Return of Dr. Destructo
+  frameworks:
+  - Allegro
+  langs:
+  - C++
+  licenses:
+  - MIT
+  development: complete
+  originals:
+  - Destructo
+  repo: https://github.com/MaxSavenkov/drdestructo2
+  type: remake
+  updated: 2019-09-13
+  video:
+    youtube: aruCsdxWCCQ
+
+- name: Return to the Roots
+  images:
+  - http://www.siedler25.org/gallery/2011/2011.01.19_12.jpg
+  - http://www.siedler25.org/gallery/2011/2011.01.19_8.jpg
+  - http://www.siedler25.org/gallery/2011/2011.01.19_3.jpg
+  - http://www.siedler25.org/gallery/2011/2011.01.19_10.jpg
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  development: active
+  status: playable
+  multiplayer:
+  - Online
+  - LAN
+  originals:
+  - The Settlers II
+  repo: https://github.com/Return-To-The-Roots/s25client
+  type: remake
+  updated: 2019-06-09
+  url: http://www.siedler25.org/
+
+- name: ReTux
+  originals:
+  - Super Mario
+  type: clone
+  repo: 'https://savannah.nongnu.org/projects/retux'
+  url: 'http://retux.nongnu.org/'
+  feed: 'https://savannah.nongnu.org/news/atom.php?group=retux'
+  development: halted
+  status: playable
+  content: open
+  langs:
+  - Python
+  frameworks:
+  - pygame
+  licenses:
+  - CC0
+  - CC-BY
+  - CC-BY-SA
+  - GPL2
+  - GPL3
+  info: >-
+    Loosely inspired by the Mario games, utilizing the art assets from the
+    SuperTux project. 
+  updated: '2019-11-15'
+  images:
+  - 'http://retux.nongnu.org/screenshots/screenshot1.jpg'
+  - 'http://retux.nongnu.org/screenshots/screenshot2.jpg'
+  - 'http://retux.nongnu.org/screenshots/screenshot3.jpg'
+
+- name: re-private-eye
+  originals:
+  - 'Private Eye'
+  type: remake
+  repo: 'https://github.com/neuromancer/re-private-eye'
+  development: active
+  status: playable
+  content: commercial
+  langs:
+  - Python
+  licenses:
+  - BSD2
+  updated: '2020-12-07'
+  images:
+  - https://raw.githubusercontent.com/neuromancer/re-private-eye/main/screen-1.png
+  - https://raw.githubusercontent.com/neuromancer/re-private-eye/main/screen-2.png
+  - https://raw.githubusercontent.com/neuromancer/re-private-eye/main/screen-3.png
+
+- name: rfk-inform
+  images:
+  - http://robotfindskitten.org/shots/Inform/rfk-inform01.png
+  - http://robotfindskitten.org/shots/Inform/rfk-inform02.png
+  - http://robotfindskitten.org/shots/Inform/rfk-inform03.png
+  langs:
+  - Perl
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Robotfindskitten
+  repo: https://gitlab.com/DavidGriffith/rfk-inform
+  type: remake
+  updated: 2018-10-06
+
+- name: RickyD
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Rick Dangerous
+  status: playable
+  type: remake
+  updated: 2015-04-03
+  url: http://sourceforge.net/projects/rickyd/
+
+- name: Rigel Engine
+  type: remake
+  originals:
+  - Duke Nukem II
+  repo: https://github.com/lethal-guitar/RigelEngine
+  development: active
+  status: playable
+  langs:
+  - C++
+  frameworks:
+  - SDL2
+  licenses:
+  - GPL2
+  content: commercial
+  updated: 2019-05-30
+  video:
+    youtube: Z3gCS5LvC2s
+
+- name: Rigs of Rods
+  frameworks:
+  - OGRE
+  images:
+  - https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rigs_of_Rods.jpg/320px-Rigs_of_Rods.jpg
+  - https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Rigs_of_Rods_Beam.png/320px-Rigs_of_Rods_Beam.png
+  - https://upload.wikimedia.org/wikipedia/commons/a/ac/Rigs_of_Rods_TurboTwin.jpg
+  - https://docs.rigsofrods.org/images/rail-vehicles-tutorial-railrunner.jpg
+  langs:
+  - C
+  - C++
+  - AngelScript
+  - Python
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - BeamNG.drive
+  repo: https://github.com/RigsOfRods/rigs-of-rods
+  status: playable
+  multiplayer:
+  - Online
+  type: similar
+  content: open
+  info: BeamNG.drive was launched later by former developers of Rigs of Rods
+  updated: 2019-03-07
+  url: http://rigsofrods.org/
+  video:
+    youtube: bRbQ4OaljWs
+
+- name: Riiablo
+  type: remake
+  originals:
+  - Diablo II
+  repo: https://github.com/collinsmith/riiablo
+  development: active
+  status: semi-playable
+  langs:
+  - Java
+  frameworks:
+  - LibGDX
+  licenses:
+  - Apache
+  content: commercial
+  updated: 2020-08-31
+  images:
+  - https://raw.githubusercontent.com/collinsmith/diablo/master/screenshots/Clipboard-2.png
+  - https://raw.githubusercontent.com/collinsmith/diablo/master/screenshots/Clipboard-1.png
+
+- name: Rise of the Triad for Linux
+  langs:
+  - C
+  frameworks:
+  - SDL
+  licenses:
+  - GPL2
+  content: commercial
+  development: halted
+  originals:
+  - Rise of the Triad
+  status: playable
+  repo: http://svn.icculus.org/rott/trunk/
+  type: remake
+  updated: 2013-05-27
+  url: http://icculus.org/rott/
+  images:
+  - https://i.stack.imgur.com/Nz443.png
+  - https://icculus.org/~ravage/rott/rott_installer.jpg
+
+- name: rlvm
+  originals:
+  - RealLive
+  type: remake
+  repo: 'https://github.com/eglaysher/rlvm'
+  development: halted
+  status: playable
+  content: commercial
+  langs:
+  - C++
+  frameworks:
+  - SDL
+  licenses:
+  - GPL3
+  info: An interpreter for the RealLive engine. There is an android port floating out there, but the main one is for MacOS and Linux.
+  updated: 2022-04-05
+  url: http://www.rlvm.net/index.html
+  images:
+  - https://image.winudf.com/v2/image/aXMueHl6LnJsdm1fc2NyZWVuc2hvdHNfMF8zYTYzNGJhYg/screen-0.jpg?fakeurl=1&type=.jpg
+  - https://image.winudf.com/v2/image/aXMueHl6LnJsdm1fc2NyZWVuc2hvdHNfMV83MjAxZTU5ZQ/screen-1.jpg?fakeurl=1&type=.jpg
+
+- name: roadfighter
+  originals:
+  - Road Fighter
+  type: remake
+  repo: 'https://github.com/ptitSeb/roadfighter'
+  development: complete
+  status: playable
+  content: free
+  langs:
+  - C++
+  frameworks:
+  - SDL
+  - SDL2
+  licenses:
+  - As-is
+  info: 'Port of Roadfighter from Brain Games to the OpenPandora, ODroid and Linux'
+  updated: '2022-08-04'
+  images:
+  - 'https://raw.githubusercontent.com/ptitSeb/roadfighter/master/screenshot.png'
+
+- name: Robbo
+  langs:
+  - JavaScript
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - The Adventures of Robbo
+  repo: https://github.com/Zibx/robbo
+  status: playable
+  type: remake
+  updated: 2014-03-21
+  url: http://dizaina.net/z/robbo/
+
+- name: Robot Redemption
+  originals:
+  - Hovertank 3D
+  type: remake
+  repo: 'https://github.com/retrozombie/RobotRedemption'
+  url: 'https://www.moddb.com/mods/robot-redemption'
+  development: complete
+  status: playable
+  content: open
+  langs:
+  - C++
+  licenses:
+  - CC-BY-NC-SA
+  - GPL2
+  info: Free game based on Hovertank 3D source code with similar mechanics.
+  updated: 2021-08-21
+  video:
+    moddb: 1193156
+  images:
+  - https://media.moddb.com/cache/images/mods/1/27/26076/thumb_620x2000/04-Survivors.png
+  - https://media.moddb.com/cache/images/mods/1/27/26076/thumb_620x2000/03-Mutant.png
+
+- name: Robotron
+  langs:
+  - JavaScript
+  licenses:
+  - As-is
+  development: complete
+  originals:
+  - 'Robotron: 2084'
+  status: playable
+  type: remake
+  updated: 2022-01-31
+  repo: https://github.com/Ernir/robotron
+  url: https://notendur.hi.is/~odv1/Robotron/
+
+- name: rock-raiders-remake
+  langs:
+  - JavaScript
+  licenses:
+  - MIT
+  development: active
+  originals:
+  - Lego Rock Raiders
+  repo: https://github.com/rystills/rock-raiders-remake
+  type: remake
+  updated: 2015-09-21
+  url: http://rystills.github.io/rock-raiders-remake/
+
+- name: Rockbot
+  frameworks:
+  - SDL
+  images:
+  - http://rockbot.upperland.net/wp-content/uploads/2010/12/game_0021.png
+  - http://rockbot.upperland.net/wp-content/uploads/2014/01/game_1.0RC1_016.png
+  - http://rockbot.upperland.net/wp-content/uploads/2014/01/game_1.0RC1_010.png
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - MegaMan
+  repo: https://github.com/protoman/rockbot
+  type: remake
+  updated: 2017-10-20
+  url: http://rockbot.upperland.net/
+
+- name: Rocks'n'Diamonds
+  frameworks:
+  - SDL2
+  images:
+  - http://www.artsoft.org/rocksndiamonds/screenshots/mainmenu.gif
+  - http://www.artsoft.org/rocksndiamonds/screenshots/emeraldmine.gif
+  - http://www.artsoft.org/rocksndiamonds/screenshots/editor1.gif
+  langs:
+  - C
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - Boulder Dash
+  - Supaplex
+  repo: https://git.artsoft.org/rocksndiamonds.git/
+  status: playable
+  type: remake
+  updated: 2019-08-27
+  url: http://www.artsoft.org/rocksndiamonds/
+
+- name: Rot Magus
+  originals:
+  - Magus
+  type: remake
+  repo: 'https://github.com/kosinaz/Rot-Magus'
+  url: 'https://gamejolt.com/games/rm/41491'
+  feed: 'https://github.com/kosinaz/Rot-Magus/releases.atom'
+  development: active
+  status: playable
+  content: open
+  langs:
+  - JavaScript
+  frameworks:
+  - Phaser
+  - rot.js
+  licenses:
+  - Apache
+  - CC0
+  info: >-
+    An extended, browser-based remake of Ronny Wester's Magus built with rot.js
+    and Phaser.
+  updated: '2019-11-25'
+  images:
+  - >-
+    https://raw.githubusercontent.com/kosinaz/Rot-Magus/master/misc/2019%20v060%20thumbnail.png
+  - 'https://m.gjcdn.net/screenshot-thumbnail/1700x2000/766023-v4.jpg'
+  - 'https://m.gjcdn.net/screenshot-thumbnail/1700x2000/766021-v4.jpg'
+
+- name: Rott94
+  originals:
+  - Rise of the Triad
+  type: remake
+  repo: 'https://github.com/h4mu/rott94'
+  development: sporadic
+  status: playable
+  content: commercial
+  langs:
+  - C
+  frameworks:
+  - SDL2
+  licenses:
+  - GPL2
+  info: 'Rise of the Triad source port to SDL2, Android and WinRT'
+  updated: '2021-06-12'
+  video:
+    youtube: dtvGNKuiQQ0
+
+- name: rottexpr
+  originals:
+  - Rise of the Triad
+  type: remake
+  repo: 'https://github.com/LTCHIPS/rottexpr'
+  development: sporadic
+  status: playable
+  content: commercial
+  langs:
+  - C
+  frameworks:
+  - SDL2
+  licenses:
+  - GPL2
+  info: A Rise Of The Triad Source Port with additional gameplay options and more...
+  updated: '2021-06-04'
+  images:
+  - >-
+    https://64.media.tumblr.com/a0a066bce3c2c789ef48f17875360384/tumblr_oxbrxqP1tl1uohygqo1_1280.jpg
+
+- name: RPG-X
+  images:
+  - https://last-outpost.net/images/old/timewarp.jpg
+  - https://last-outpost.net/images/old/BORG.jpg
+  - https://last-outpost.net/images/old/turbomenu.jpg
+  langs:
+  - C
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - "Star Trek: Voyager \u2013 Elite Force"
+  repo: https://github.com/UberGames/rpgxEF
+  type: remake
+  updated: 2020-08-25
+  url: http://www.last-outpost.net/rpg-x/
+
+- name: Rtype
+  langs:
+  - C++
+  frameworks:
+  - SFML
+  licenses:
+  - As-is
+  content: open
+  development: halted
+  originals:
+  - R-Type
+  status: unplayable
+  repo: https://github.com/leurqum/Rtype
+  type: remake
+  updated: 2022-02-20
+
+- name: Ruby OMF 2097 Remake
+  langs:
+  - Ruby
+  licenses:
+  - BSD4
+  development: halted
+  originals:
+  - 'One Must Fall: 2097'
+  repo: http://mirrors.infowest.com/rubyforge/rubyomf2097/
+  type: remake
+  updated: 2020-08-25
+
+- name: Ruby Raid
+  langs:
+  - Ruby
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - River Raid
+  status: unplayable
+  repo: https://github.com/zukunftsalick/ruby-raid
+  type: remake
+  updated: 2015-05-15
+
+- name: RuneLite
+  originals:
+  - Old School RuneScape
+  type: remake
+  repo: 'https://github.com/runelite/runelite'
+  url: 'https://runelite.net/'
+  feed: 'https://runelite.net/atom.xml'
+  development: active
+  status: playable
+  multiplayer:
+  - Competitive
+  - Online
+  - Co-op
+  content: commercial
+  langs:
+  - Java
+  licenses:
+  - BSD2
+  info: Open source Old School RuneScape client
+  updated: 2019-10-08
+  images:
+  - 'https://runelite.net/img/blog/1.5.34-Release/bank-value-search.gif'
+  - 'https://runelite.net/img/blog/1.5.33-Release/world_map_tele_jumping.gif'
+  - 'https://runelite.net/img/blog/1.5.31-Release/lootcollapse.png'
+
+- name: The Rush
+  images:
+  - https://a.fsdn.com/con/app/proj/therush/screenshots/193556.jpg
+  - https://a.fsdn.com/con/app/proj/therush/screenshots/193554.jpg
+  langs:
+  - C++
+  frameworks:
+  - DirectX
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Wipeout
+  status: playable
+  repo: https://sourceforge.net/projects/therush/
+  type: clone
+  updated: 2022-08-14
+
+- name: RuZZT
+  type: remake
+  originals:
+  - ZZT
+  repo: https://github.com/yokljo/ruzzt
+  development: halted
+  status: playable
+  langs:
+  - Rust
+  frameworks:
+  - SDL2
+  licenses:
+  - MIT
+  updated: 2020-06-26
+  images:
+  - https://raw.githubusercontent.com/yokljo/ruzzt/master/screenshot.png
+
+- name: RxWars
+  langs:
+  - JavaScript
+  licenses:
+  - GPL3
+  development: halted
+  originals:
+  - Drugwars
+  repo: https://github.com/gtheilman/RxWars
+  type: remake
+  updated: 2015-06-25
+
+- name: Ryzom Core
+  langs:
+  - C++
+  licenses:
+  - AGPL3
+  development: active
+  originals:
+  - Ryzom
+  repo: https://gitlab.com/ryzom/ryzom-core
+  type: remake
+  updated: 2020-08-25
+  url: https://ryzom.com/

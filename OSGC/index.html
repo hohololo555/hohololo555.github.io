@@ -1,0 +1,72 @@
+{%- import 'templates/common.html' as common with context %}
+{%- import 'templates/games.html' as games with context %}
+
+{{- common.head() }}
+{{ common.nav() }}
+
+<article>
+  <h1>Open Source Game Clones</h1>
+
+  <p>
+    This site tries to gather <a href="http://en.wikipedia.org/wiki/Open_source">open-source</a> 
+    or <a href="https://en.wikipedia.org/wiki/Source-available_software">source-available</a> 
+    remakes of great old games in one place. If you think that
+    something is missing from the list - please go to
+    our <a href="http://github.com/opengaming/osgameclones/">GitHub
+    repository</a> and create an issue or even a pull request!
+  </p>
+  <p>
+    Since all these projects are open-source you can help them and make this
+    world a better place. Or at least you can play something to appreciate the
+    effort people put in them.
+  </p>
+  <p>
+    Similar resources:
+  </p>
+  <ul>
+    <li><a href="https://freegamer.blogspot.com">Free Gamer</a>, a blog dedicated to open source game news</li>
+    <li><a href="https://bronevichok.ru/ttygames/">Unix ASCII games</a>, a list of opensource text-based games</li>
+    <li><a href="https://trilarion.github.io/opensourcegames/">List of Open Source Games</a>, list of open source games in mature/beta state</li>
+    <li><a href="https://github.com/leereilly/games">Games on GitHub</a>, list of open source games and game-related projects that can be found on GitHub</li>
+    <li><a href="https://libregamewiki.org/Main_Page">LibreGameWiki</a>, the free gaming encyclopedia</li>
+  </ul>
+  <p>
+    A <span class="tag type" data-name="remake">Remake</span> is a game where the executable and sometimes the assets as well are remade open source. Some of these games aren&#39;t exact remakes but evolution of original ones, which were eventually open sourced.
+    <br />
+    A <span class="tag type" data-name="clone">Clone</span> is a game which is very similar to or heavily inspired by a game or series.
+    <br />
+    An <span class="tag type" data-name="official">Official</span> project is the official source code release for a game that was formerly closed-source, maintained by the original creators and has minimal changes.
+    <br />
+    A <span class="tag type" data-name="similar">Similar</span> game is one which has similar gameplay but is not a clone.
+    <br />
+    A <span class="tag type" data-name="tool">Tool</span> is not a game, but something that assists in playing or modding the game, such as a high resolution patch, or resource extractor.
+  </p>
+</article>
+
+<div>
+  <h2>
+    New and updated games
+    <a class="add-link" href="/feed.xml"><i class="fas fa-rss"></i></a>
+  </h2>
+  <dl>
+    {% for names, meta, clone in site.new_games.values() %}
+      {{ games.render_clone(names, meta, clone, true, false) }}
+    {% endfor %}
+  </dl>
+</div>
+
+<div id="content">
+  <h2>
+    List of games
+    <a class="add-link" href="/add_game.html" target="_blank"><i class="far fa-edit"></i>Add Game</a>
+    <a class="add-link" href="/add_original.html" target="_blank"><i class="far fa-edit"></i>Add Original Game</a>
+  </h2>
+  <dl id="list">
+    {% for game in site.games %}
+      {{ games.render(game, false) }}
+    {% endfor %}
+  </dl>
+  <dl id="sorted"></dl>
+</div>
+
+{{ common.footer() -}}

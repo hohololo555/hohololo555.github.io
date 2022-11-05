@@ -1,0 +1,129 @@
+- name: Jack in the Dark
+  external:
+    wikipedia: Jack in the Dark
+  meta:
+    genres:
+    - Action
+    - Adventure
+    themes:
+    - Horror
+    - Alternate Historical
+
+- name: Jade Empire
+  external:
+    wikipedia: Jade Empire
+  meta:
+    genres:
+    - RPG
+    themes:
+    - Martial Arts
+
+- name: Jagged Alliance 2
+  external:
+    wikipedia: Jagged Alliance 2
+  meta:
+    genres:
+    - RPG
+    - Strategy
+    - Turn-Based Tactics
+    themes:
+    - Sci-Fi
+    - Modern Military
+
+- name: 'Jak and Daxter: The Precursor Legacy'
+  external:
+    wikipedia: 'Jak and Daxter: The Precursor Legacy'
+  meta:
+    genres:
+    - Platform
+    themes:
+    - Fantasy
+    - Sci-Fi
+
+- name: Jazz Jackrabbit
+  external:
+    wikipedia: Jazz Jackrabbit
+  meta:
+    genres:
+    - Platform
+
+- name: Jazz Jackrabbit 2
+  external:
+    wikipedia: Jazz Jackrabbit 2
+  meta:
+    genres:
+    - Platform
+
+- name: Jet-Story
+  external:
+    wikipedia: Jet-Story
+  meta:
+    genres:
+    - Platform
+
+- name: Jetpac
+  external:
+    wikipedia: Jetpac
+  meta:
+    genres:
+    - Arcade
+
+- name: Jetpack
+  external:
+    website: 'https://www.adeptsoftware.com/jetpack/'
+    wikipedia: Jetpack (video game)
+  platforms:
+  - DOS
+  meta:
+    genres:
+    - Platform
+
+- name: Jewel Thief
+  external:
+    website: http://www.mobygames.com/game/win3x/jewel-thief
+  meta:
+    genres:
+    - Arcade
+
+- name: JezzBall
+  external:
+    wikipedia: JezzBall
+  meta:
+    genres:
+    - Arcade
+
+- name: Joust
+  external:
+    wikipedia: Joust (video game)
+  meta:
+    genres:
+    - Arcade
+
+- name: Jump 'n Bump
+  external:
+    wikipedia: Jump 'n Bump
+  meta:
+    genres:
+    - Platform
+
+- name: 'Jumpgate: The Reconstruction Initiative'
+  external:
+    wikipedia: 'Jumpgate: The Reconstruction Initiative'
+  meta:
+    genres:
+    - MMORPG
+
+- name: Jumping Jack
+  external:
+    wikipedia: Jumping Jack (video game)
+  meta:
+    genres:
+    - Arcade
+
+- name: Jumpman
+  external:
+    wikipedia: Jumpman
+  meta:
+    genres:
+    - Platform
+

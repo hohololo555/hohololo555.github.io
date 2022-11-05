@@ -1,0 +1,238 @@
+- name: E.T. the Extra-Terrestrial
+  external:
+    wikipedia: E.T. the Extra-Terrestrial (video game)
+  meta:
+    genres:
+    - Arcade
+    - Adventure
+
+- name: Earth Shaker
+  external:
+    wikipedia: Earth Shaker (video game)
+  meta:
+    genres:
+    - Puzzle
+
+- name: Eat The Whistle
+  external:
+    website: http://www.ggsoft.org/etw/
+  meta:
+    genres:
+    - Sports
+    subgenres:
+    - Soccer
+
+- name: Echochrome
+  external:
+    wikipedia: Echochrome
+  meta:
+    genres:
+    - Puzzle
+  names:
+  - "Mugen Kair\u014D"
+  - "\u7121\u9650\u56DE\u5ECA"
+
+- name: Elasto Mania
+  external:
+    wikipedia: Elasto Mania
+  meta:
+    genres:
+    - Platform
+
+- name: 'The Elder Scrolls II: Daggerfall'
+  external:
+    wikipedia: 'The Elder Scrolls II: Daggerfall'
+  meta:
+    genres:
+    - RPG
+
+- name: 'The Elder Scrolls III: Morrowind'
+  external:
+    wikipedia: 'The Elder Scrolls III: Morrowind'
+  meta:
+    genres:
+    - RPG
+    themes:
+    - Fantasy
+
+- name: 'The Elder Scrolls: Arena'
+  external:
+    wikipedia: 'The Elder Scrolls: Arena'
+  meta:
+    genres:
+    - RPG
+
+- name: Elements
+  external:
+    website: http://www.mobygames.com/game/browser/elements_
+  meta:
+    genres:
+    - Turn-Based Strategy
+
+- name: Elite
+  external:
+    wikipedia: Elite_(video_game)
+  meta:
+    genres:
+    - Action
+    - Simulation
+    subgenres:
+    - Flight Simulator
+    themes:
+    - Sci-Fi
+
+- name: Elite II
+  external:
+    wikipedia: 'Frontier: Elite II'
+  meta:
+    genres:
+    - Action
+    - Simulation
+    subgenres:
+    - Flight Simulator
+    themes:
+    - Sci-Fi
+    - Espionage
+
+- name: Elite III
+  external:
+    wikipedia: 'Frontier: First Encounters'
+  meta:
+    genres:
+    - Action
+    - Simulation
+    subgenres:
+    - Flight Simulator
+    themes:
+    - Sci-Fi
+    - Espionage
+  names:
+  - 'Frontier: First Encounters'
+  - FFE
+
+- name: Elona
+  external:
+    wikipedia: 'Elona (video game)'
+  meta:
+    genres:
+    - Roguelike
+    subgenres:
+    - Sandbox
+    themes:
+    - Fantasy
+  names:
+  - 'Eternal League of Nefia'
+
+- name: 'Emperor: Battle for Dune'
+  external:
+    wikipedia: 'Emperor: Battle for Dune'
+  meta:
+    genres:
+    - Real-Time Strategy
+
+- name: Emperor of the Fading Suns
+  external:
+    wikipedia: Emperor of the Fading Suns
+  meta:
+    genres:
+    - Turn-Based Strategy
+
+- name: Empire
+  names:
+  - 'VMS Empire'
+  - 'Empire: Wargame of the Century'
+  - 'Empire Deluxe'
+  external:
+    wikipedia: Empire (1977 video game)
+  meta:
+    genres:
+    - Strategy
+    - Turn-Based Strategy
+
+- name: Encounter
+  external:
+    wikipedia: Encounter (video game)
+  meta:
+    genres:
+    - Shmup
+
+- name: Enduro
+  external:
+    wikipedia: Enduro (video game)
+  platforms:
+  - Atari
+  - ZX Spectrum
+  meta:
+    genres:
+    - Racing
+
+- name: Enemy Engaged
+  names:
+  - 'Enemy Engaged: Apache vs Havoc'
+  - 'Enemy Engaged: RAH-66 Comanche vs. KA-52 Hokum'
+  external:
+    wikipedia: Enemy Engaged
+  platforms:
+  - Windows
+  - OSX
+  meta:
+    genres:
+    - Simulation
+    subgenres:
+    - Flight Simulator
+    themes:
+    - Modern Military
+
+- name: Entombed!
+  external:
+    wikipedia: Entombed (1982 video game)
+  meta:
+    genres:
+    - Adventure
+
+- name: Escape from Colditz
+  external:
+    wikipedia: Escape from Colditz
+  meta:
+    genres:
+    - Action
+    - Adventure
+
+- name: Escape from Monkey Island
+  external:
+    wikipedia: Escape from Monkey Island
+  meta:
+    genres:
+    - Adventure
+
+- name: Escape Velocity
+  external:
+    wikipedia: Escape Velocity (video game)
+  meta:
+    genres:
+    - Action
+    - Simulation
+
+- name: Exile 1988
+  external:
+    wikipedia: Exile_(1988_video_game)
+  meta:
+    genres:
+    - Action
+    - Adventure
+
+- name: Exolon
+  external:
+    wikipedia: Exolon
+  meta:
+    genres:
+    - Shmup
+
+- name: Eye of the Beholder II
+  external:
+    wikipedia: Eye of the Beholder II
+  meta:
+    genres:
+    - RPG
+    - Action
+

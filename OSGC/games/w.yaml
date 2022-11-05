@@ -1,0 +1,546 @@
+- name: WAGE
+  originals:
+  - World Builder
+  type: remake
+  repo: 'https://github.com/asvitkine/wage-engine'
+  development: halted
+  status: playable
+  content: commercial
+  langs:
+  - Java
+  licenses:
+  - MIT
+  info: A source port for World Builder engine games.
+  updated: 2022-04-06
+  images:
+  - https://raw.githubusercontent.com/asvitkine/wage-engine/master/screenshots/startrek.png
+
+- name: Walic
+  originals:
+  - Gwent
+  type: clone
+  repo: 'https://gitlab.com/mohofobodaktyl/mwalic'
+  development: halted
+  status: playable
+  multiplayer: 
+  - Online
+  - LAN
+  langs:
+  - Kotlin
+  frameworks:
+  - LibGDX
+  licenses:
+  - Apache
+  content: open
+  info: Clone of beta
+  updated: 2021-04-09
+  images:
+  - https://gitlab.com/mohofobodaktyl/mwalic/-/raw/master/Img/game.png
+
+- name: WallBall
+  originals:
+  - JezzBall
+  type: clone
+  repo: https://github.com/plainsightcollection/plainsightcollection.github.io
+  url: http://montrose.is/#wallball
+  development: complete
+  status: playable
+  content: open
+  langs:
+  - Haxe
+  frameworks:
+  - Starling
+  licenses:
+  - GPL3
+  info: Besides being playable on the development website, the game is available as a bookmarklet that lets it masquerade
+    as a pop-up ad on most commercial websites.
+  updated: 2019-07-17
+  images:
+  - https://raw.githubusercontent.com/plainsightcollection/plainsightcollection.github.io/master/web/resources/jpg/20170813_wallball.jpg
+  video:
+    youtube: n9ALgxcTBU0
+
+- name: War1
+  originals:
+  - 'Warcraft: Orcs & Humans'
+  type: remake
+  repo: 'https://github.com/acoto87/war1'
+  development: sporadic
+  status: semi-playable
+  content: commercial
+  langs:
+  - C
+  frameworks:
+  - OpenGL
+  licenses:
+  - Zlib
+  updated: '2020-07-24'
+  images:
+  - 'https://raw.githubusercontent.com/acoto87/war1/master/pics/gif1.gif'
+  - 'https://raw.githubusercontent.com/acoto87/war1/master/pics/gif2.gif'
+  - 'https://raw.githubusercontent.com/acoto87/war1/master/pics/gif3.gif'
+  - 'https://raw.githubusercontent.com/acoto87/war1/master/pics/pic1.png'
+  - 'https://raw.githubusercontent.com/acoto87/war1/master/pics/pic2.png'
+  - 'https://raw.githubusercontent.com/acoto87/war1/master/pics/pic3.png'
+  video:
+    youtube: vL0S_zVVhts
+
+- name: 'Warcraft 2000: Nuclear Epidemic'
+  originals:
+  - 'Warcraft 2000'
+  type: remake
+  repo: 'https://github.com/agend/warcraft-2000-nuclear-epidemic'
+  development: halted
+  status: playable
+  content: commercial
+  langs:
+  - C++
+  licenses:
+  - As-is
+  info: 'Source of original game, given away for free'
+  updated: '2020-09-16'
+  images:
+  - >-
+    https://www.myabandonware.com/media/screenshots/w/warcraft-2000-nuclear-epidemic-it4/warcraft-2000-nuclear-epidemic_1.jpg
+  - >-
+    https://www.myabandonware.com/media/screenshots/w/warcraft-2000-nuclear-epidemic-it4/warcraft-2000-nuclear-epidemic_2.jpg
+  - >-
+    https://www.myabandonware.com/media/screenshots/w/warcraft-2000-nuclear-epidemic-it4/warcraft-2000-nuclear-epidemic_3.jpg
+  - >-
+    https://www.myabandonware.com/media/screenshots/w/warcraft-2000-nuclear-epidemic-it4/warcraft-2000-nuclear-epidemic_4.jpg
+
+- name: warcraft-remake
+  development: active
+  langs:
+  - Java
+  licenses:
+  - GPL3
+  content: commercial
+  originals:
+  - 'Warcraft: Orcs & Humans'
+  repo: https://github.com/b3dgs/warcraft-remake
+  type: remake
+  updated: 2022-04-18
+  images:
+  - https://www.b3dgs.com/v7/projects/warcraft_remake/screens/2.png
+  - https://www.b3dgs.com/v7/projects/warcraft_remake/screens/4.png
+  - https://www.b3dgs.com/v7/projects/warcraft_remake/screens/9.png
+
+- name: Wargus
+  langs:
+  - C++
+  - Lua
+  licenses:
+  - GPL2
+  content: commercial
+  development: active
+  originals:
+  - Warcraft II
+  repo: https://github.com/Wargus/wargus
+  type: remake
+  updated: 2019-08-01
+  url: http://wargus.github.io/
+  info: Wargus is a Warcraft2 Mod that allows you to play Warcraft2 with the Stratagus engine.
+
+- name: Wario-Land-3
+  frameworks:
+  - pygame
+  langs:
+  - Python
+  licenses:
+  - MIT
+  development: active
+  originals:
+  - Wario Land 3
+  repo: https://github.com/Nearoo/Wario-Land-3
+  type: remake
+  updated: 2020-08-31
+
+- name: WarMUX
+  images:
+  - https://lgdb.org/sites/default/files/node_images/29/160.jpg
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Worms Series
+  repo: https://github.com/yeKcim/warmux
+  type: clone
+  video:
+    youtube: X3ZkTg-QkAo
+  updated: 2019-09-13
+
+- name: Warzone 2100
+  images:
+  - http://developer.wz2100.net/raw-attachment/wiki/Screenshots/elite-force.jpg
+  - http://developer.wz2100.net/raw-attachment/wiki/Screenshots/artillery-and-sensors.jpeg
+  - http://developer.wz2100.net/raw-attachment/wiki/Screenshots/new-hq-and-powergen.jpeg
+  - http://developer.wz2100.net/raw-attachment/wiki/Screenshots/highlands.jpg
+  langs:
+  - C++
+  licenses:
+  - GPL2
+  development: active
+  originals:
+  - Warzone 2100
+  repo: https://github.com/Warzone2100/warzone2100
+  type: remake
+  url: http://wz2100.net/
+  updated: 2018-10-06
+
+- name: WAtomic
+  frameworks:
+  - Kylix
+  langs:
+  - Delphi
+  licenses:
+  - GPL2
+  development: halted
+  originals:
+  - Atomix
+  status: playable
+  repo: https://sourceforge.net/projects/watomic/
+  type: remake
+  updated: 2022-03-20
+  url: http://watomic.sourceforge.net/
+  info: Windows clone of Linux KAtomic logic game, developed using the GLScene OpenGl based library for Delphi.
+  images:
+  - https://a.fsdn.com/con/app/proj/watomic/screenshots/66437.jpg/max/max/1
+  - https://cdn2.portableapps.com/WAtomicPortable.png
+  video:
+    youtube: cmS1sXWN4pE
+
+- name: wbt
+  type: clone
+  originals:
+  - Tempest
+  repo: https://github.com/awlzac/wbt
+  development: halted
+  status: playable
+  langs:
+  - Java
+  licenses:
+  - As-is
+  content: free
+  updated: 2022-05-27
+  images:
+  - https://lh3.ggpht.com/O0313eHvoYWtkWxyJ20OwEUkokDeFTbvfQCxh_dDnACCgybCbhPpIQwzkAgtYq9gPg=w300
+
+- name: wbta
+  info: Android
+  langs:
+  - Java
+  licenses:
+  - As-is
+  content: free
+  development: halted
+  status: playable
+  originals:
+  - Tempest
+  repo: https://github.com/awlzac/wbta
+  type: clone
+  updated: 2022-05-27
+  images:
+  - https://lh3.ggpht.com/O0313eHvoYWtkWxyJ20OwEUkokDeFTbvfQCxh_dDnACCgybCbhPpIQwzkAgtYq9gPg=w300
+
+- name: WebFun
+  development: active
+  images:
+  - https://media.githubusercontent.com/media/cyco/WebFun/master/docs/screenshots/game-start.png
+  - https://media.githubusercontent.com/media/cyco/WebFun/master/docs/screenshots/game-fight.png
+  langs:
+  - TypeScript
+  licenses:
+  - MIT
+  content: commercial
+  originals:
+  - 'Star Wars: Yoda Stories'
+  repo: https://github.com/cyco/WebFun
+  status: semi-playable
+  type: remake
+  updated: 2021-05-01
+  url: https://www.webfun.io/
+
+- name: WebQuake
+  originals:
+  - Quake
+  type: remake
+  repo: 'https://github.com/Triang3l/WebQuake'
+  url: https://triang3l.github.io/WebQuake/
+  development: halted
+  status: playable
+  content: commercial
+  langs:
+  - JavaScript
+  frameworks:
+  - WebGL
+  licenses:
+  - GPL2
+  info: HTML5/WebGL source port of Quake
+  updated: 2021-11-10
+  images:
+  - https://www.golem.de/1302/97509-53272-webquake_rc.jpg
+  - https://images.kartones.net/posts/kartonesblog/webquake.webp
+
+- name: Widelands
+  images:
+  - http://wl.widelands.org/wlmedia/wlscreens/screens/Current%20Developments/Completed%20barbarian%20workers.jpg
+  - http://wl.widelands.org/wlmedia/wlscreens/screens/Current%20Developments/Atlantean%20worker%20animation.jpg
+  - http://wl.widelands.org/wlmedia/wlscreens/screens/Current%20Developments/New%20Multiplayer%20UI.jpg
+  - http://wl.widelands.org/wlmedia/wlscreens/screens/Build%2016/Graphic%20improvements.png
+  langs:
+  - C++
+  - Lua
+  - Python
+  licenses:
+  - GPL2
+  development: active
+  status: playable
+  multiplayer:
+  - Online
+  - LAN
+  originals:
+  - The Settlers II
+  repo: https://github.com/widelands/widelands
+  type: clone
+  url: http://wl.widelands.org/
+  updated: 2021-11-20
+
+- name: Willow-Game-Remake
+  langs:
+  - C++
+  licenses:
+  - As-is
+  development: halted
+  originals:
+  - Willow
+  repo: https://github.com/Kwintenvdb/Willow-Game-Remake
+  type: remake
+  updated: 2015-06-28
+
+- name: Wind Waker Randomizer
+  originals:
+  - 'The Legend of Zelda: The Wind Waker'
+  type: tool
+  repo: 'https://github.com/LagoLunatic/wwrando'
+  feed: 'https://github.com/LagoLunatic/wwrando/releases.atom'
+  development: sporadic
+  content: commercial
+  langs:
+  - Python
+  - Assembly
+  licenses:
+  - MIT
+  info: >-
+    It randomizes all the items in the game so that each playthrough is unique and
+    you never know where a particular item will be.
+  updated: '2019-11-08'
+  video:
+    youtube: UuEI8h8a0zs
+
+- name: WinWar
+  development: halted
+  images:
+  - https://a.fsdn.com/con/app/proj/winwar/screenshots/winwarrt1.jpg/1
+  - https://a.fsdn.com/con/app/proj/winwar/screenshots/orc1linux.jpg/1
+  - https://a.fsdn.com/con/app/proj/winwar/screenshots/winwarrt2.jpg/1
+  - https://a.fsdn.com/con/app/proj/winwar/screenshots/winwarrt3.jpg/1
+  langs:
+  - C#
+  licenses:
+  - As-is
+  content: commercial
+  originals:
+  - 'Warcraft: Orcs & Humans'
+  repo: https://github.com/CAMongrel/WinWar
+  type: remake
+  updated: 2017-02-07
+  url: http://winwar.sourceforge.net/
+
+- name: Witch Blast
+  development: halted
+  frameworks:
+  - SFML
+  images:
+  - http://img11.hostingpics.net/pics/927609screenshot20151029203852.png
+  - http://img11.hostingpics.net/pics/267990screenshot20151029113142.png
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  - CC-BY-NC-SA
+  content: open
+  originals:
+  - The Binding of Isaac
+  repo: https://github.com/Cirrus-Minor/witchblast
+  status: playable
+  type: remake
+  updated: 2018-03-19
+  video:
+    youtube: FsHqu0JpP_k
+
+- name: WitchavenGDX
+  originals:
+  - Witchaven
+  type: remake
+  repo: 'https://gitlab.com/m210/WitchavenGDX'
+  url: 'http://m210.duke4.net/'
+  development: active
+  status: playable
+  content: commercial
+  langs:
+  - Java
+  frameworks:
+  - LibGDX
+  licenses:
+  - Custom
+  updated: '2020-01-07'
+  video:
+    youtube: GSZscLjNujo
+
+- name: Wizardry Legacy
+  images:
+  - http://wl.lariennalibrary.com/uploads/Main/ScreenShot/SShot_WL05_ActiveEffect.png
+  - http://wl.lariennalibrary.com/uploads/Main/ScreenShot/v04_combat.png
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - Wizardry
+  repo: https://gitlab.com/larienna/cppgame_wizardry
+  type: remake
+  updated: 2019-11-20
+  url: http://wl.lariennalibrary.com/
+
+- name: Wizznic!
+  frameworks:
+  - SDL
+  images:
+  - https://a.fsdn.com/con/app/proj/wizznic/screenshots/lvl0.png
+  - https://a.fsdn.com/con/app/proj/wizznic/screenshots/271261.jpg
+  - https://a.fsdn.com/con/app/proj/wizznic/screenshots/edit.png
+  langs:
+  - C
+  licenses:
+  - GPL3
+  - Multiple
+  development: active
+  originals:
+  - Puzznic / Brix
+  repo: https://github.com/DusteDdk/Wizznic
+  status: playable
+  type: remake
+  updated: 2015-03-06
+  url: http://wizznic.org
+
+- name: wkbre
+  langs:
+  - C++
+  licenses:
+  - GPL3
+  development: active
+  originals:
+  - Warrior Kings
+  repo: https://github.com/AdrienTD/wkbre
+  type: remake
+  updated: 2018-06-04
+  
+- name: Wolf3dX
+  originals:
+  - Wolfenstein 3D
+  type: remake
+  repo: https://github.com/francot514/Wolf3dX
+  development: active
+  status: playable
+  langs:
+  - C#
+  licenses:
+  - GPL2
+  info: Monogame implementation remake that works with any game version.
+  updated: 2020-03-23
+  images:
+  - https://github.com/francot514/Wolf3dX/raw/master/image1.png
+
+- name: Wolf4SDL
+  originals:
+  - Wolfenstein 3D
+  type: remake
+  repo: https://github.com/11001011101001011/Wolf4SDL
+  url: 'http://wolf3d.net/wolf4sdl/'
+  development: halted
+  status: playable
+  content: commercial
+  langs:
+  - C
+  frameworks:
+  - SDL
+  licenses:
+  - GPL2
+  info: Vanilla-style port of Wolfenstein 3D into SDL
+  updated: 2021-11-09
+  images:
+  - >-
+    https://i1.wp.com/media.moddb.com/images/members/3/2034/2033952/profile/etude3_1.jpg?ssl=1
+  video:
+    youtube: xkIEjgUm57o
+
+- name: Word War vi
+  originals:
+  - Defender
+  type: similar
+  repo: https://github.com/smcameron/wordwarvi
+  url: http://smcameron.github.io/wordwarvi/
+  development: complete
+  status: playable
+  content: open
+  langs:
+  - C
+  licenses:
+  - GPL2
+  info: Word War vi is a retro-styled old school side scrolling shooter reminiscent of Defender or Scramble, with an "Emacs vs. vi" theme.
+  updated: 2019-09-12
+  images:
+  - http://wordwarvi.sourceforge.net/wordwarvi_snap_007_3.jpg
+  - http://wordwarvi.sourceforge.net/20_wordwarvis.png
+  - http://wordwarvi.sourceforge.net/retrogreen.png
+  - http://wordwarvi.sourceforge.net/wordwarvi_brightsparks.png
+  video:
+    youtube: 9VaW2NVxpVg
+
+- name: WWW
+  langs:
+  - JavaScript
+  licenses:
+  - GPL3
+  development: halted
+  originals:
+  - VVVVVV
+  repo: https://github.com/alexdantas/www
+  type: clone
+  updated: 2015-07-02
+
+- name: wxLaserTank
+  originals:
+  - LaserTank
+  type: remake
+  repo: 'https://sourceforge.net/projects/wxlasertank/'
+  url: 'http://wxlasertank.sourceforge.net'
+  development: halted
+  status: playable
+  content: open
+  langs:
+  - C++
+  frameworks:
+  - wxWidgets
+  licenses:
+  - GPL2
+  info: wxLaserTank is a wxWidgets conversion of Laser Tank
+  updated: '2020-09-28'
+  images:
+  - 'http://wxlasertank.sourceforge.net/screenshots/main.png'
+  - 'http://wxlasertank.sourceforge.net/screenshots/game.png'
+  - 'http://wxlasertank.sourceforge.net/screenshots/game_petes.png'

@@ -1,0 +1,281 @@
+- name: R-Type
+  external:
+    wikipedia: R-Type
+  meta:
+    genres:
+    - Shmup
+
+- name: 'Radix: Beyond the Void'
+  external:
+    website: >-
+      https://web.archive.org/web/19970125103350/http://www.epicgames.com:80/radix.htm
+    wikipedia: 'Radix: Beyond the Void'
+  platforms:
+  - DOS
+  meta:
+    genres:
+    - FPS
+    - Shmup
+    themes:
+    - Sci-Fi
+
+- name: Ragnarok
+  names:
+  - Valhalla
+  external:
+    wikipedia: Ragnarok (video game)
+  platforms:
+  - DOS
+  meta:
+    genres:
+    - Roguelike
+    themes:
+    - Fantasy
+    - Medieval
+
+- name: Railroad Tycoon
+  external:
+    wikipedia: Railroad Tycoon
+  meta:
+    genres:
+    - Simulation
+    - Strategy
+    themes:
+    - Management
+
+- name: Rampart
+  external:
+    wikipedia: Rampart (video game)
+  meta:
+    genres:
+    - Shmup
+    - Puzzle
+
+- name: 'Raptor: Call of the Shadows'
+  external:
+    wikipedia: 'Raptor: Call of the Shadows'
+  meta:
+    genres:
+    - Shmup
+
+- name: Redneck Rampage
+  external:
+    wikipedia: Redneck Rampage
+  platforms:
+  - DOS
+  - OSX
+  meta:
+    genres:
+    - FPS
+
+- name: RealLive
+  external:
+    website: 'https://ja.wikipedia.org/wiki/RealLive'
+  platforms:
+  - Android
+  - Dreamcast
+  - iOS
+  - Mobile
+  - PlayStation 2
+  - PSP
+  - Windows
+  meta:
+    subgenres:
+    - Visual Novel
+
+- name: Rescue!
+  external:
+    website: https://www.macintoshrepository.org/5479-rescue-
+  meta:
+    genres:
+    - Action
+    - Adventure
+
+- name: Resident Evil
+  external:
+    wikipedia: Resident Evil (1996 video game)
+  platforms:
+  - DS
+  - PlayStation
+  - Saturn
+  - Windows
+  meta:
+    genres:
+    - Action
+    subgenres:
+    - Survival
+    themes:
+    - Horror
+
+- name: Resident Evil 2
+  names:
+  - BIOHAZARD 2
+  external:
+    wikipedia: Resident Evil 2
+  platforms:
+  - Dreamcast
+  - GameCube
+  - N64
+  - PlayStation
+  - Windows
+  meta:
+    subgenres:
+    - Survival
+    themes:
+    - Horror
+
+- name: 'Resident Evil 3: Nemesis'
+  external:
+    wikipedia: 'Resident Evil 3: Nemesis'
+  platforms:
+  - Dreamcast
+  - GameCube
+  - PlayStation
+  - Windows
+  meta:
+    genres:
+    - Action
+    subgenres:
+    - Survival
+    themes:
+    - Horror
+
+- name: 'Return of the Incredible Machine: Contraptions'
+  external:
+    wikipedia: 'Return of the Incredible Machine: Contraptions'
+  meta:
+    genres:
+    - Puzzle
+    - Simulation
+
+- name: Return to Castle Wolfenstein
+  external:
+    wikipedia: Return to Castle Wolfenstein
+  platforms:
+  - Linux
+  - OSX
+  - PlayStation 2
+  - Windows
+  - Xbox
+  meta:
+    genres:
+    - FPS
+    themes:
+    - Sci-Fi
+    - World War II
+
+- name: Rick Dangerous
+  external:
+    wikipedia: Rick Dangerous
+  meta:
+    genres:
+    - Platform
+    
+- name: RimWorld
+  external:
+    wikipedia: RimWorld
+  platforms:
+  - Windows
+  meta:
+    genres:
+    - Simulation
+    themes:
+    - Sci-Fi
+
+- name: Rise of the Triad
+  external:
+    wikipedia: Rise of the Triad
+  meta:
+    genres:
+    - FPS
+
+- name: River Raid
+  external:
+    wikipedia: River Raid
+  meta:
+    genres:
+    - Shmup
+
+- name: Road Fighter
+  external:
+    wikipedia: Road Fighter
+  meta:
+    genres:
+    - Racing
+    - Arcade
+
+- name: Robotfindskitten
+  external:
+    wikipedia: Robotfindskitten
+  meta:
+    genres:
+    - Adventure
+    - Roguelike
+    themes:
+    - Sci-Fi
+    - Meditative
+    - Comedy
+
+- name: 'Robotron: 2084'
+  external:
+    wikipedia: 'Robotron: 2084'
+  meta:
+    genres:
+    - Arcade
+
+- name: Rodent's Revenge
+  external:
+    wikipedia: Rodent's Revenge
+  meta:
+    genres:
+    - Puzzle
+
+- name: Rogue
+  external:
+    wikipedia: Rogue_(video_game)
+  meta:
+    genres:
+    - Roguelike
+
+- name: RollerCoaster Tycoon
+  external:
+    wikipedia: RollerCoaster Tycoon
+  meta:
+    genres:
+    - Simulation
+    - Strategy
+    themes:
+    - Management
+
+- name: RollerCoaster Tycoon 2
+  external:
+    wikipedia: RollerCoaster Tycoon 2
+  meta:
+    genres:
+    - Simulation
+    - Strategy
+    themes:
+    - Management
+
+- name: RPG Maker
+  external:
+    wikipedia: RPG Maker
+  meta:
+    genres:
+    - RPG
+
+- name: Runescape Classic
+  external:
+    website: 'https://classic.runescape.wiki/'
+  meta:
+    genres: 
+    - MMORPG
+    - Adventure
+
+- name: Ryzom
+  external:
+    wikipedia: Ryzom
+  meta:
+    genres:
+    - MMORPG
+
