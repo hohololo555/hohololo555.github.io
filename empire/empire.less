@@ -1,0 +1,430 @@
+div.main {
+    padding-top: 2rem;
+}
+
+.info-box {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: #ffffff;
+    border: 2px solid #300ABF;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: arial;
+}
+
+.action-box {
+    width: 25rem;
+    height: 18rem;
+}
+
+.modal {
+    button {
+        cursor: pointer;
+    }
+    .modal-dialog {
+        max-width: 34rem;
+    }
+    .workers {
+        width: 10rem;
+    }
+    
+    .progress {
+        text-align: center;
+        &.labor {
+            display: inline-flex;
+            background: none;
+            position: relative;
+            top: .1875rem;
+            width: 10rem;
+            margin: 0 .5rem;
+        }
+        .progress-bar-title {
+            position: absolute;
+            text-align: center;
+            overflow: hidden;
+            line-height: 1rem;
+            font-size: 1rem;
+            right: 0;
+            left: 0;
+            top: 0;
+            margin: 0;
+        }
+    }
+}
+
+div.menu {
+    padding-top: 1rem;
+    
+    button {
+        margin: 0 .5rem .5rem 0;
+        cursor: pointer;
+    }
+    
+    textarea {
+        width: 30rem;
+        height: 10rem;
+    }
+}
+
+div.ledger {
+    flex-flow: row wrap;
+    margin-top: 1rem;
+    
+    > div {
+        width: 20rem;
+        margin: 0 .5rem 1rem;
+        
+        span {
+            display: inline-block;
+            padding-left: .5rem;
+            background-color: #ddd;
+            width: 50%;
+        }
+        
+        :first-child {
+            width: 100%;
+            background-color: #ccc;
+            
+            span {
+                width: 50%;
+                background: none;
+                padding: 0;
+            }
+            
+            :nth-child(2) {
+                padding-left: .25rem;
+            }
+        }
+    }
+}
+
+svg {
+    path {
+        cursor: pointer;
+    }
+}
+
+div.storages  {
+    vertical-align: top;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+        
+    .label {
+        width: 10rem;
+    }
+    
+    .progress {
+        cursor: pointer;
+        margin-bottom: .5rem;
+        padding: 0;
+        height: 1.5rem;
+        
+        .progress-bar-title {
+            position: absolute;
+            text-align: center;
+            overflow: hidden;
+            line-height: 1.5rem;
+            font-size: 1rem;
+            right: 0;
+            left: 0;
+            top: 0;
+        }
+    }
+    
+    &.progress {
+        margin: 0 0 .5rem;
+    }
+}
+
+div.city {
+    vertical-align: top;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    .add,
+    .remove {
+        cursor: pointer;
+    }
+    
+    .workers {
+        margin: 0 .5rem;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    div.info_bar {
+        width: 100%;
+        margin: 1rem 0;
+        min-height: 2rem;
+        border-bottom: solid .0625rem #ddd;
+        padding-left: 1rem;
+        
+        > div > div {
+            width: 14rem;
+        }
+    }
+    
+    div.storage_bar {
+        width: 100%;
+        border-bottom: solid .0625rem #ddd;
+        padding-left: 1rem;
+    }
+    
+    > div > p.side {
+        flex-direction: column;
+        width: 8rem;
+        min-width: 8rem;
+        margin-right: 1rem;
+        margin-top: .5rem;
+        
+        a {
+            margin-top: .5rem;
+            width: 8rem;
+        }
+        a.collapsed {
+            background: #ddd;
+            color: #000;
+            border-color: #000;
+        }
+        a:focus {
+            box-shadow: none;
+        }
+    }
+    
+    div.mines,
+    div.structures,
+    div.blueprints {
+        flex-direction: column;
+        flex-flow: row wrap;
+    }
+    
+    div.storages .row {
+        margin-right: 1rem;
+    }
+    
+    div.mine,
+    div.prospect {
+        width: 15rem;
+        border: solid .0625rem grey;
+        margin: 1rem .5rem 0;
+        padding: 0 .9375rem .5rem;
+        flex-flow: row wrap;
+        
+        .header {
+            background: linear-gradient(to top, #bbb, #eee 20%, #eee 80%, #bbb);
+            border-bottom: solid .0625rem grey;
+            padding: .5rem 0;
+            font-weight: bold;
+        }
+        
+        > div {
+            text-align: center;
+        }
+    }
+    
+    div.prospect {
+        background: url("images/survey.jpg");
+        background-position: bottom;
+        filter: invert(100%);
+        cursor: pointer;
+        
+        &.offer {
+            cursor: default;
+        }
+        
+        > div {
+            text-shadow: 1px 1px #fff;
+            color: #000;
+            font-weight: bold;
+            
+            button.prospect {
+                filter: invert(100%);
+                width: 5.5rem;
+                cursor: pointer;
+            }
+        }
+        div.header {
+            filter: inherit;
+            text-shadow: none;
+        }
+    }
+    
+    div.mine .header {
+        background: linear-gradient(to top, #aba, #eee 20%, #eee 80%, #aba);
+    }
+    
+    div.blueprint {
+        background: url("images/blueprint.jpg");
+        width: 15rem;
+        border: solid .0625rem #aaa;
+        margin: 1rem .5rem 0;
+        padding: 0 .9375rem .5rem;
+        color: #000;
+        font-weight: bold;
+        flex-flow: row wrap;
+        cursor: pointer;
+        
+        .header {
+            border-bottom: solid .0625rem #fff;
+            padding: .5rem 0;
+        }
+        
+        > div {
+            text-align: center;
+            .unaffordable {
+                color: #900;
+                text-shadow: 1px 1px #fff;
+            }
+        }
+    }
+    
+    div.build {
+        cursor: pointer;
+    }
+}
+
+div.research {
+    vertical-align: top;
+    padding-top: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    > div {
+        flex-direction: column;
+        flex-flow: row wrap;
+    }
+    
+    div.tech {
+        width: 25rem;
+        text-align: center;
+        margin: 0 1rem 1rem 0;
+        border-radius: 1rem;
+        border: .0625rem solid #599e69;
+        cursor: pointer;
+        overflow: hidden;
+        
+        .name {
+            padding: .25rem 0;
+            background-color: #599e69;
+        }
+        .desc {
+            padding: .25rem;
+            background-color: #eff2de;
+        }
+        span {
+            display: inline-block;
+            text-align: center;
+            padding: .125rem 0;
+            width: 50%;
+            
+            &.unaffordable {
+                color: #900;
+            }
+        }
+    }
+}
+
+.city-hall {
+    > div {
+        flex-flow: row wrap;
+        
+        > div {
+            width: 20rem;
+            margin: 1rem 1rem 0 0;
+        }
+    }
+    
+}
+
+.slider-selection {
+    background: #bababa;
+}
+
+.svg-img {
+    cursor: pointer;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    
+    &.campfire {
+        background-image: url(svg/campfire.svg);
+    }
+    &.mine-grey {
+        background-image: url(svg/mine.svg);
+    }
+    &.cityhall {
+        background-image: url(svg/cityhall.svg);
+    }
+    &.farm {
+        background-image: url(svg/farm.svg);
+    }
+    &.tradepost {
+        background-image: url(svg/tradepost.svg);
+    }
+    &.factory {
+        background-image: url(svg/factory.svg);
+    }
+    &.lumbermill {
+        background-image: url(svg/lumbermill.svg);
+    }
+    &.cementplant {
+        background-image: url(svg/cementplant.svg);
+    }
+    &.steelmill {
+        background-image: url(svg/steelmill.svg);
+    }
+    &.university {
+        background-image: url(svg/university.svg);
+    }
+    &.hut {
+        background-image: url(svg/hut.svg);
+    }
+    &.house {
+        background-image: url(svg/house.svg);
+    }
+    &.condos {
+        background-image: url(svg/condos.svg);
+    }
+    &.shed {
+        background-image: url(svg/shed2.svg);
+    }
+    &.warehouse {
+        background-image: url(svg/warehouse.svg);
+    }
+    &.sign {
+        background-image: url(svg/sign.svg);
+    }
+    &.tree1 {
+        background-image: url(svg/tree1.svg);
+    }
+    &.tree2 {
+        background-image: url(svg/tree2.svg);
+    }
+    &.tree3 {
+        background-image: url(svg/tree3.svg);
+    }
+    &.tree4 {
+        background-image: url(svg/tree4.svg);
+    }
+    &.rock0 {
+        background-image: url(svg/rock.svg);
+    }
+    &.rock1 {
+        background-image: url(svg/rock1.svg);
+    }
+    &.rock2 {
+        background-image: url(svg/rock2.svg);
+    }
+    &.rock3 {
+        background-image: url(svg/rock3.svg);
+    }
+}

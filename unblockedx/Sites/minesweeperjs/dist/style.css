@@ -1,0 +1,110 @@
+@charset "UTF-8";
+body, html {
+  padding: 1rem;
+}
+
+#game_container {
+  float: left;
+  border: 1px solid #CCC;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 35px;
+  height: 25px;
+  border: 1px solid #CCC;
+  padding: 10px 5px 5px 5px;
+  background-color: #EEE;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: inset 5px 5px 10px #FFF, inset -3px -3px 5px #777;
+  cursor: pointer;
+  transition-property: background-color, box-shadow;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+
+.cell::-moz-selection {
+  background: transparent;
+}
+
+.cell::selection {
+  background: transparent;
+}
+
+.cell.revealed, .cell.flagged {
+  cursor: default;
+}
+
+.cell.revealed {
+  background-color: #DDD;
+  box-shadow: none;
+}
+
+.cell.adj-1 {
+  color: blue;
+}
+
+.cell.adj-2 {
+  color: green;
+}
+
+.cell.adj-3 {
+  color: red;
+}
+
+.cell.adj-4 {
+  color: purple;
+}
+
+.cell.adj-5 {
+  color: maroon;
+}
+
+.cell.adj-6 {
+  color: turquoise;
+}
+
+.cell.adj-7 {
+  color: black;
+}
+
+.cell.adj-8 {
+  color: white;
+}
+
+.cell.adj-M {
+  font-family: "FontAwesome";
+  background-color: #FFCCCC;
+}
+.cell.adj-M:after {
+  content: "";
+}
+
+.cell.flagged {
+  font-family: "FontAwesome";
+}
+.cell.flagged:after {
+  content: "";
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+.status_msg {
+  margin-bottom: 10px;
+}
+
+input[type=number] {
+  width: 50px;
+}

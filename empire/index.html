@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Empire</title>
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+    <link rel="icon" href="empire.ico" type="images/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css" crossorigin="anonymous">
+    <link rel="stylesheet/less" type="text/css" href="empire.less"/>
+    <script src="lib/less.min.js"></script>
+    <script src="lib/lz-string.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.3/svg.min.js"></script>
+    <script src="lib/less.min.js"></script>
+    <script src="lib/lz-string.min.js"></script>
+    <script src="variables.js"></script>
+    <script src="svg.js"></script>
+    <script src="doodads.js"></script>
+    <script src="resources.js"></script>
+    <script src="research.js"></script>
+    <script src="buildings.js"></script>
+    <script src="city.js"></script>
+    <script src="empire.js"></script>
+    <script src="conversion.js"></script>
+</head>
+<body>
+<div id="main" class="main container-fluid">
+    <div id="top" class="top d-flex"></div>
+    <ul id="menu" class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" href="#main_menu" data-toggle="tab" role="tab">Menu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#city" data-toggle="tab" role="tab">City</a>
+        </li>
+        <li id="research_tab" class="nav-item">
+            <a class="nav-link" href="#research" data-toggle="tab" role="tab">Research</a>
+        </li>
+    </ul>
+    <div id="game" class="tab-content">
+        <div id="main_menu" class="menu tab-pane fade" role="tabpanel">
+            <div class="saveOption">
+                <p>Game Save</p>
+                <div>
+                    <button id="export" type="button" class="btn btn-primary">Export</button>
+                    <button id="import" type="button" class="btn btn-primary">Import</button>
+                </div>
+                <textarea id="saveString" type="text"></textarea>
+            </div>    
+            <div class="resetOption">
+                <p>Reset Game</p>
+                <button id="reset" type="button" class="btn btn-danger">Reset</button>
+                <p>Warning, this can not be undone</p>
+            </div>
+            <div class="debug">
+                <button id="debug" type="button" class="btn btn-secondary">Debug Mode</button>
+            </div>
+        </div>
+        <div id="city" class="city tab-pane fade show active" role="tabpanel">
+            <div id="city_info" class="d-flex info_bar"></div>
+            <div id="storage_pane" class="storage_bar collapse fade show active"></div>
+            <div class="d-flex">
+                <p id="city_menu" class="side">
+                    <a class="btn btn-primary" data-toggle="collapse" href="#storage_pane">Storage</a>
+                    <a class="btn btn-primary c-tab" data-toggle="collapse" href="#map_pane">City Map</a>
+                    <a id="ledger_button" class="btn btn-primary c-tab collapsed" data-toggle="collapse" href="#ledger_pane">Ledger</a>
+                    <a id="expedition_button" class="btn btn-primary c-tab collapsed" data-toggle="collapse" href="#expedition_pane">Expedition</a>
+                </p>
+                <div id="sub_city">
+                    <div id="map_pane" class="collapse fade show active"></div>
+                    <div id="ledger_pane" class="collapse fade"></div>
+                    <div id="expedition_pane" class="collapse fade"></div>
+                </div>
+            </div>
+        </div>
+        <div id="research" class="research tab-pane fade" role="tabpanel">
+            <div class="d-flex"></div>
+        </div>
+        <div id="city_hall" class="city-hall tab-pane fade" role="tabpanel">
+            <div class="d-flex"></div>
+        </div>
+    </div>
+</div>
+<div id="info-box" class="info-box"></div>
+<div id="modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog h-100 d-flex flex-column justify-content-center my-0" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        <div stlye="width: 40rem;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

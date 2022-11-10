@@ -1,0 +1,47 @@
+<h2>Minesweeper JS</h2>
+
+<h5>Based on the classic game, <a target="_new" href="http://en.wikipedia.org/wiki/Minesweeper_(video_game)">Minesweeper</a></h5>
+
+<div class="clearfix">
+  <div id="game_container">
+    <!--placeholder for game -->
+  </div>
+</div>
+
+<div>
+  <div style="margin: 10px 0px;">
+    F = Flagged, M = Mine, Left Click to reveal a cell, Right Click to flag a cell
+  </div>
+
+  <div class="status_msg">
+    <strong>Mines Remaining:</strong> <span id="mine_count"></span>
+  </div>
+  <div class="status_msg">
+    <strong>Moves Made:</strong> <span id="moves_made"></span>
+  </div>
+  <div class="status_msg">
+    <strong>Game Status:</strong> <span id="game_status"></span>
+  </div>
+
+  <div style="margin: 10px 0px;">
+    <input id="validate_button" type="button" value="Did I win?" />
+  </div>
+
+
+  <div style="margin: 15px 0px;">
+    <div style="margin: 8px 0px;">
+      <label for="new_rows">Rows:</label>
+      <input type="number" id="new_rows" placeholder="rows" value="8" />
+      <label for="new_cols">Cols:</label>
+      <input type="number" id="new_cols" placeholder="cols" value="8" />
+      <label for="new_mines">Mines:</label>
+      <input type="number" id="new_mines" placeholder="mines" value="10" />
+    </div>
+    <div style="font-size: 10pt;">*max size: 19 x 19</div>
+    <input id="new_game_button" type="button" value="Create new game!" />
+  </div>
+  <div>
+    <input id="cheat_button" type="button" value="Cheat!" />
+    <div style="font-size: 10pt;">*grid layout printed to JS console</div>
+  </div>
+</div>

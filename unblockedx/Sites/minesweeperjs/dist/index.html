@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  
+  <!-- Hotjar Tracking Code for https://unblocked-x.com -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:2713784,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FV7FK089BE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FV7FK089BE');
+</script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1316476333141866"
+   crossorigin="anonymous"></script>
+	<link rel="shortcut icon" type="image/png" href="https://unblocked-x.com/Assets/image.png"/>
+  
+  
+  
+  <meta charset="UTF-8">
+  <title>Minesweeper - JS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h2>Minesweeper JS</h2>
+
+<h5>Based on the classic game, <a target="_new" href="http://en.wikipedia.org/wiki/Minesweeper_(video_game)">Minesweeper</a></h5>
+
+<div class="clearfix">
+  <div id="game_container">
+    <!--placeholder for game -->
+  </div>
+</div>
+
+<div>
+  <div style="margin: 10px 0px;">
+    F = Flagged, M = Mine, Left Click to reveal a cell, Right Click to flag a cell
+  </div>
+
+  <div class="status_msg">
+    <strong>Mines Remaining:</strong> <span id="mine_count"></span>
+  </div>
+  <div class="status_msg">
+    <strong>Moves Made:</strong> <span id="moves_made"></span>
+  </div>
+  <div class="status_msg">
+    <strong>Game Status:</strong> <span id="game_status"></span>
+  </div>
+
+  <div style="margin: 10px 0px;">
+    <input id="validate_button" type="button" value="Did I win?" />
+  </div>
+
+
+  <div style="margin: 15px 0px;">
+    <div style="margin: 8px 0px;">
+      <label for="new_rows">Rows:</label>
+      <input type="number" id="new_rows" placeholder="rows" value="8" />
+      <label for="new_cols">Cols:</label>
+      <input type="number" id="new_cols" placeholder="cols" value="8" />
+      <label for="new_mines">Mines:</label>
+      <input type="number" id="new_mines" placeholder="mines" value="10" />
+    </div>
+    <div style="font-size: 10pt;">*max size: 19 x 19</div>
+    <input id="new_game_button" type="button" value="Create new game!" />
+  </div>
+  <div>
+    <input id="cheat_button" type="button" value="Cheat!" />
+    <div style="font-size: 10pt;">*grid layout printed to JS console</div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://use.fontawesome.com/e51c6dea6f.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
