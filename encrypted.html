@@ -70,6 +70,12 @@
         }
 
         .staticrypt-body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .staticrypt-content {
+            height: 100%;
             margin-bottom: 1em;
             background: #76b852; /* fallback for old browsers */
             background: -webkit-linear-gradient(right, #76b852, #8DC26F);
@@ -125,41 +131,82 @@
         .hidden {
             display: none !important;
         }
+
+        .staticrypt-spinner-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .staticrypt-spinner {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            vertical-align: text-bottom;
+            border: 0.25em solid gray;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner-border .75s linear infinite;
+            animation: spinner-border .75s linear infinite;
+            animation-duration: 0.75s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: none;
+            animation-play-state: running;
+            animation-name: spinner-border;
+        }
+
+        @keyframes spinner-border {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
 <body class="staticrypt-body">
-<div class="staticrypt-page">
-    <div class="staticrypt-form">
-        <div class="staticrypt-instructions">
-            <p class="staticrypt-title">Protected Page</p>
-            <p></p>
+
+<div id="staticrypt_loading" class="staticrypt-spinner-container">
+    <div class="staticrypt-spinner"></div>
+</div>
+
+<div id="staticrypt_content" class="staticrypt-content hidden">
+    <div class="staticrypt-page">
+        <div class="staticrypt-form">
+            <div class="staticrypt-instructions">
+                <p class="staticrypt-title">Protected Page</p>
+                <p></p>
+            </div>
+
+            <hr class="staticrypt-hr">
+
+            <form id="staticrypt-form" action="#" method="post">
+                <input id="staticrypt-password"
+                       type="password"
+                       name="password"
+                       placeholder="Passphrase"
+                       autofocus/>
+
+                <label id="staticrypt-remember-label" class="staticrypt-remember hidden">
+                    <input id="staticrypt-remember"
+                           type="checkbox"
+                           name="remember"/>
+                    Remember me
+                </label>
+
+                <input type="submit" class="staticrypt-decrypt-button" value="DECRYPT"/>
+            </form>
         </div>
 
-        <hr class="staticrypt-hr">
-
-        <form id="staticrypt-form" action="#" method="post">
-            <input id="staticrypt-password"
-                   type="password"
-                   name="password"
-                   placeholder="Passphrase"
-                   autofocus/>
-
-            <label id="staticrypt-remember-label" class="staticrypt-remember hidden">
-                <input id="staticrypt-remember"
-                       type="checkbox"
-                       name="remember"/>
-                Remember me
-            </label>
-
-            <input type="submit" class="staticrypt-decrypt-button" value="DECRYPT"/>
-        </form>
     </div>
 
+    <footer class="staticrypt-footer">
+        <p class="pull-right">Created with <a href="https://robinmoisson.github.io/staticrypt">StatiCrypt</a></p>
+    </footer>
 </div>
-<footer class="staticrypt-footer">
-    <p class="pull-right">Created with <a href="https://robinmoisson.github.io/staticrypt">StatiCrypt</a></p>
-</footer>
 
 
 <script>/**
@@ -171,9 +218,150 @@
 //# sourceMappingURL=crypto-js.min.js.map</script>
 
 <script>
+    var cryptoEngine = 
+    ((function(){
+  const exports = {};
+  
+/**
+ * Salt and encrypt a msg with a password.
+ * Inspired by https://github.com/adonespitogo
+ */
+function encrypt(msg, hashedPassphrase) {
+  var iv = CryptoJS.lib.WordArray.random(128 / 8);
+
+  var encrypted = CryptoJS.AES.encrypt(msg, hashedPassphrase, {
+    iv: iv,
+    padding: CryptoJS.pad.Pkcs7,
+    mode: CryptoJS.mode.CBC,
+  });
+
+  // iv will be hex 16 in length (32 characters)
+  // we prepend it to the ciphertext for use in decryption
+  return iv.toString() + encrypted.toString();
+}
+exports.encrypt = encrypt;
+
+/**
+ * Decrypt a salted msg using a password.
+ * Inspired by https://github.com/adonespitogo
+ *
+ * @param {string} encryptedMsg
+ * @param {string} hashedPassphrase
+ * @returns {string}
+ */
+function decrypt(encryptedMsg, hashedPassphrase) {
+  var iv = CryptoJS.enc.Hex.parse(encryptedMsg.substr(0, 32));
+  var encrypted = encryptedMsg.substring(32);
+
+  return CryptoJS.AES.decrypt(encrypted, hashedPassphrase, {
+    iv: iv,
+    padding: CryptoJS.pad.Pkcs7,
+    mode: CryptoJS.mode.CBC,
+  }).toString(CryptoJS.enc.Utf8);
+}
+exports.decrypt = decrypt;
+
+/**
+ * Salt and hash the passphrase so it can be stored in localStorage without opening a password reuse vulnerability.
+ *
+ * @param {string} passphrase
+ * @param {string} salt
+ * @returns string
+ */
+function hashPassphrase(passphrase, salt) {
+  var hashedPassphrase = CryptoJS.PBKDF2(passphrase, salt, {
+    keySize: 256 / 32,
+    iterations: 1000,
+  });
+
+  return hashedPassphrase.toString();
+}
+exports.hashPassphrase = hashPassphrase;
+
+function generateRandomSalt() {
+  return CryptoJS.lib.WordArray.random(128 / 8).toString();
+}
+exports.generateRandomSalt = generateRandomSalt;
+
+function signMessage(hashedPassphrase, message) {
+  return CryptoJS.HmacSHA256(
+    message,
+    CryptoJS.SHA256(hashedPassphrase).toString()
+  ).toString();
+}
+exports.signMessage = signMessage;
+
+  return exports;
+})())
+
+    var codec = 
+    ((function(){
+  const exports = {};
+  /**
+ * Initialize the codec with the provided cryptoEngine - this return functions to encode and decode messages.
+ *
+ * @param cryptoEngine - the engine to use for encryption / decryption
+ */
+function init(cryptoEngine) {
+  const exports = {};
+  /**
+   * Top-level function for encoding a message.
+   * Includes passphrase hashing, encryption, and signing.
+   *
+   * @param {string} msg
+   * @param {string} passphrase
+   * @param {string} salt
+   *
+   * @returns {string} The encoded text
+   */
+  function encode(msg, passphrase, salt) {
+    const hashedPassphrase = cryptoEngine.hashPassphrase(passphrase, salt);
+    const encrypted = cryptoEngine.encrypt(msg, hashedPassphrase);
+    // we use the hashed passphrase in the HMAC because this is effectively what will be used a passphrase (so we can store
+    // it in localStorage safely, we don't use the clear text passphrase)
+    const hmac = cryptoEngine.signMessage(hashedPassphrase, encrypted);
+
+    return hmac + encrypted;
+  }
+  exports.encode = encode;
+
+  /**
+   * Top-level function for decoding a message.
+   * Includes signature check, an decryption.
+   *
+   * @param {string} signedMsg
+   * @param {string} hashedPassphrase
+   *
+   * @returns {Object} {success: true, decoded: string} | {success: false, message: string}
+   */
+  function decode(signedMsg, hashedPassphrase) {
+    const encryptedHMAC = signedMsg.substring(0, 64);
+    const encryptedMsg = signedMsg.substring(64);
+    const decryptedHMAC = cryptoEngine.signMessage(hashedPassphrase, encryptedMsg);
+
+    if (decryptedHMAC !== encryptedHMAC) {
+      return { success: false, message: "Signature mismatch" };
+    }
+    return {
+      success: true,
+      decoded: cryptoEngine.decrypt(encryptedMsg, hashedPassphrase),
+    };
+  }
+  exports.decode = decode;
+
+  return exports;
+}
+exports.init = init;
+
+  return exports;
+})())
+
+    var decode = codec.init(cryptoEngine).decode;
+
     // variables to be filled when generating the file
-    var encryptedMsg = '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',
-        salt = '69c24e5d4aaf2bf4aca0508ea4a5b160',
+    var encryptedMsg = '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',
+        salt = '44db2a4d5d78ba88ce13a896ae6fdb74',
+        labelError = '',
         isRememberEnabled = true,
         rememberDurationInDays = 0; // 0 means forever
 
@@ -182,58 +370,21 @@
         rememberExpirationKey = 'staticrypt_expiration';
 
     /**
-     * Decrypt a salted msg using a password.
-     * Inspired by https://github.com/adonespitogo
-     *
-     * @param  encryptedMsg
-     * @param  hashedPassphrase
-     * @returns 
-     */
-    function decryptMsg(encryptedMsg, hashedPassphrase) {
-        var iv = CryptoJS.enc.Hex.parse(encryptedMsg.substr(0, 32))
-        var encrypted = encryptedMsg.substring(32);
-
-        return CryptoJS.AES.decrypt(encrypted, hashedPassphrase, {
-            iv: iv,
-            padding: CryptoJS.pad.Pkcs7,
-            mode: CryptoJS.mode.CBC
-        }).toString(CryptoJS.enc.Utf8);
-    }
-
-    /**
      * Decrypt our encrypted page, replace the whole HTML.
      *
      * @param  hashedPassphrase
      * @returns 
      */
     function decryptAndReplaceHtml(hashedPassphrase) {
-        var encryptedHMAC = encryptedMsg.substring(0, 64),
-            encryptedHTML = encryptedMsg.substring(64),
-            decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(hashedPassphrase).toString()).toString();
-
-        if (decryptedHMAC !== encryptedHMAC) {
+        var result = decode(encryptedMsg, hashedPassphrase);
+        if (!result.success) {
             return false;
         }
-
-        var plainHTML = decryptMsg(encryptedHTML, hashedPassphrase);
+        var plainHTML = result.decoded;
 
         document.write(plainHTML);
         document.close();
-
         return true;
-    }
-
-    /**
-     * Salt and hash the passphrase so it can be stored in localStorage without opening a password reuse vulnerability.
-     *
-     * @param  passphrase
-     * @returns 
-     */
-    function hashPassphrase(passphrase) {
-        return CryptoJS.PBKDF2(passphrase, salt, {
-            keySize: 256 / 32,
-            iterations: 1000
-        }).toString();
     }
 
     /**
@@ -244,41 +395,83 @@
         localStorage.removeItem(rememberExpirationKey);
     }
 
+    /**
+     * To be called on load: check if we want to try to decrypt and replace the HTML with the decrypted content, and
+     * try to do it if needed.
+     *
+     * @returns  true if we derypted and replaced the whole page, false otherwise
+     */
+    function decryptOnLoadFromRememberMe() {
+        if (!isRememberEnabled) {
+            return false;
+        }
+
+        // show the remember me checkbox
+        document.getElementById('staticrypt-remember-label').classList.remove('hidden');
+
+        // if we are login out, clear the storage and terminate
+        var queryParams = new URLSearchParams(window.location.search);
+
+        if (queryParams.has("staticrypt_logout")) {
+            clearLocalStorage();
+            return false;
+        }
+
+        // if there is expiration configured, check if we're not beyond the expiration
+        if (rememberDurationInDays && rememberDurationInDays > 0) {
+            var expiration = localStorage.getItem(rememberExpirationKey),
+                isExpired = expiration && new Date().getTime() > parseInt(expiration);
+
+            if (isExpired) {
+                clearLocalStorage();
+                return false;
+            }
+        }
+
+        var hashedPassphrase = localStorage.getItem(rememberPassphraseKey);
+
+        if (hashedPassphrase) {
+            // try to decrypt
+            var isDecryptionSuccessful = decryptAndReplaceHtml(hashedPassphrase);
+
+            // if the decryption is unsuccessful the password might be wrong - silently clear the saved data and let
+            // the user fill the password form again
+            if (!isDecryptionSuccessful) {
+                clearLocalStorage();
+                return false;
+            }
+
+            return true;
+        }
+
+        return false;
+    }
+
+    function decryptOnLoadFromQueryParam() {
+        var queryParams = new URLSearchParams(window.location.search);
+        var hashedPassphrase = queryParams.get("staticrypt_pwd");
+
+        if (hashedPassphrase) {
+            return decryptAndReplaceHtml(hashedPassphrase);
+        }
+
+        return false;
+    }
+
     // try to automatically decrypt on load if there is a saved password
     window.onload = function () {
-        if (isRememberEnabled) {
-            // show the remember me checkbox
-            document.getElementById('staticrypt-remember-label').classList.remove('hidden');
+        var hasDecrypted = decryptOnLoadFromQueryParam();
 
-            // if we are login out, clear the storage and terminate
-            var queryParams = new URLSearchParams(window.location.search);
+        if (!hasDecrypted) {
+            hasDecrypted = decryptOnLoadFromRememberMe();
+        }
 
-            if (queryParams.has("staticrypt_logout")) {
-                return clearLocalStorage();
-            }
-
-            // if there is expiration configured, check if we're not beyond the expiration
-            if (rememberDurationInDays && rememberDurationInDays > 0) {
-                var expiration = localStorage.getItem(rememberExpirationKey),
-                    isExpired = expiration && new Date().getTime() > parseInt(expiration);
-
-                if (isExpired) {
-                    return clearLocalStorage();
-                }
-            }
-
-            var hashedPassphrase = localStorage.getItem(rememberPassphraseKey);
-
-            if (hashedPassphrase) {
-                // try to decrypt
-                var isDecryptionSuccessful = decryptAndReplaceHtml(hashedPassphrase);
-
-                // if the decryption is unsuccessful the password might be wrong - silently clear the saved data and let
-                // the user fill the password form again
-                if (!isDecryptionSuccessful) {
-                    return clearLocalStorage();
-                }
-            }
+        // if we didn't decrypt anything, show the password prompt. Otherwise the content has already been replaced, no
+        // need to do anything
+        if (!hasDecrypted) {
+            document.getElementById("staticrypt_loading").classList.add("hidden");
+            document.getElementById("staticrypt_content").classList.remove("hidden");
+            document.getElementById("staticrypt-password").focus();
         }
     }
 
@@ -290,7 +483,7 @@
             shouldRememberPassphrase = document.getElementById('staticrypt-remember').checked;
 
         // decrypt and replace the whole page
-        var hashedPassphrase = hashPassphrase(passphrase);
+        var hashedPassphrase = cryptoEngine.hashPassphrase(passphrase, salt);
         var isDecryptionSuccessful = decryptAndReplaceHtml(hashedPassphrase);
 
         if (isDecryptionSuccessful) {
@@ -307,7 +500,7 @@
                 }
             }
         } else {
-            alert('Bad passphrase!');
+            alert(labelError);
         }
     });
 </script>
