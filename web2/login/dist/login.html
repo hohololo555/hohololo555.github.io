@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Dashboard</title>
   <link rel="stylesheet" href="./style.css">
-
+  <script src="numSend.js"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -12,10 +12,9 @@
   <h2>Login</h2>
   <form>
     <div class="user-box">
-      <input type="number" name="" required="">
-      <label>6 Digit login code</label>
+      <input type="number" id="userNum" placeholder="6 Digit Access Code">
     </div>
-    <a href="#">
+    <a onclick="numComp()">
       <span></span>
       <span></span>
       <span></span>
