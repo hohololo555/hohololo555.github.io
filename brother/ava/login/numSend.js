@@ -258,7 +258,7 @@ function numComp(){
   var phoneNumber2 = document.getElementById("userNum").value;
   var compare1 = num2TOTP(phoneNumber1);
   var compare2 = phoneNumber2;
-  if ((phoneNumber2 === "Poopypants12") || ((compare1) === (compare2))){
+  if ((compare1) === (compare2)){
     saveSession();
     window.location.href = 'phantom/index.html';
   } else {
