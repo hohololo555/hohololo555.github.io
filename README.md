@@ -38,7 +38,7 @@ Here's my list of things to do on here, idk if I will but hey I'll try or you ca
 
  - [Staticrypt to encrypt html homepage](https://robinmoisson.github.io/staticrypt/)
  - [HTML editor I used for the main page](https://html-online.com/editor/)
-  - [The website I used to make and edit this README](https://readme.so/editor)v
+  - [The website I used to make and edit this README](https://readme.so/editor)
  - infinite credit to all the open source game websites I cloned, I kept the readme files for the majority of them so credit should be accessible where due
 
 
