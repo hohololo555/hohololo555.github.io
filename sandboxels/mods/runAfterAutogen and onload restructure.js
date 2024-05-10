@@ -869,7 +869,7 @@ window.onload = function() {
 			e.preventDefault();
 		}
 	}
-
+	/*
 	if (window.self !== window.top && !location.ancestorOrigins[0].includes("itch.io") && false) {
 		// Open a message that tells the user they aren't on the real website
 		var menuParent = document.createElement("div");
@@ -892,6 +892,7 @@ You can also join our <a href="https://discord.gg/ejUc6YPQuS" target="_blank">Di
 		document.body.appendChild(menuParent);
 		showingMenu = "alert";
 	}
+ */
 	
 	//get the first .elementButton in the first .category, and selectElement(button.element)
 	var firstDiv = document.getElementsByClassName("category")[0];
