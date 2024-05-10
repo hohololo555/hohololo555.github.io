@@ -869,30 +869,6 @@ window.onload = function() {
 			e.preventDefault();
 		}
 	}
-	/*
-	if (window.self !== window.top && !location.ancestorOrigins[0].includes("itch.io") && false) {
-		// Open a message that tells the user they aren't on the real website
-		var menuParent = document.createElement("div");
-		menuParent.className = "menuParent";
-		menuParent.style.display = "block";
-		menuParent.innerHTML = `<div class="menuScreen">
-<button class="XButton" onclick="closeMenu();">-</button>
-<span class="menuTitle">Sandboxels</span>
-<div class="menuText" style="padding-top:1em">
-You may be on a website that has embedded our game involuntarily.
-<br><br>
-The real game is at this URL: <a href="https://sandboxels.r74n.com" target="_blank">sandboxels.R74n.com</a>.
-<br><br>
-Please use the main website to support us instead.
-<br><br>
-You can also join our <a href="https://discord.gg/ejUc6YPQuS" target="_blank">Discord</a> if that isn't possible.
-</div>
-<br><br><br><br>
-</div>`
-		document.body.appendChild(menuParent);
-		showingMenu = "alert";
-	}
- */
 	
 	//get the first .elementButton in the first .category, and selectElement(button.element)
 	var firstDiv = document.getElementsByClassName("category")[0];
