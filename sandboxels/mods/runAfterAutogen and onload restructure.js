@@ -2,7 +2,13 @@ function runAfterAutogen(func) {
 	runAfterAutogenList.push(func);
 };
 
+function runAfterButtons(func) {
+	runAfterButtonsList.push(func);
+};
+
 runAfterAutogenList = [];
+
+runAfterButtonsList = [];
 
 function behaviorStringsToArrays() {
 	for (var behavior in behaviors) {
@@ -87,7 +93,7 @@ function autoGen(newname,element,autoType) {
 	newelem.colorObject = colorObjectList;
 	var multiplier = 1.1;
 	if (autoInfo.type === "high") {
-		elements[element].stateHigh = newname;
+		if (!elements[element].stateHigh) {elements[element].stateHigh = newname;}
 		newelem.temp = elements[element].tempHigh;
 		newelem.tempLow = elements[element].tempHigh+(autoInfo.tempDiff || 0);
 		newelem.stateLow = element;
@@ -95,7 +101,7 @@ function autoGen(newname,element,autoType) {
 		if (elements[element].density) { newelem.density = Math.round(elements[element].density * 0.9 * 10) / 10; }
 	}
 	else if (autoInfo.type === "low") {
-		elements[element].stateLow = newname;
+		if (!elements[element].stateLow) {elements[element].stateLow = newname;}
 		newelem.temp = elements[element].tempLow;
 		newelem.tempHigh = elements[element].tempLow+(autoInfo.tempDiff || 0);
 		newelem.stateHigh = element;
@@ -109,7 +115,7 @@ function autoGen(newname,element,autoType) {
 		newelem.viscosity = elements[element].viscosity || autoInfo.viscosity;
 	}
 	// Change by *multiplier
-	if (elements[element].conduct) { newelem.conductivity = Math.round(elements[element].conduct * multiplier * 10) / 10; }
+	if (elements[element].conduct) { newelem.conduct = Math.round(elements[element].conduct * multiplier * 10) / 10; }
 	if (elements[element].burn) { newelem.burn = Math.round(elements[element].burn * multiplier * 10) / 10; }
 	if (elements[element].burnTime) { newelem.burnTime = Math.round(elements[element].burnTime * multiplier * 10) / 10; }
 	if (elements[element].burnInto) { newelem.burnInto = elements[element].burnInto; }
@@ -135,7 +141,7 @@ function autoGen(newname,element,autoType) {
 
 function autoGenAllElements() {
 	for (element in elements) {
-		if (elements[element].tempHigh!==undefined && elements[element].stateHigh===undefined) {
+		if (elements[element].tempHigh!==undefined && (elements[element].stateHigh===undefined||elements[element].forceAutoGen)) {
 			var newname = elements[element].stateHighName;
 			if ((elements[element].state==="solid" || !elements[element].state)) { // Melting
 				if (!newname) { newname = "molten_"+element }
@@ -151,7 +157,7 @@ function autoGenAllElements() {
 				autoGen(newname,element,"evaporate");
 			}
 		}
-		if (elements[element].tempLow!==undefined && elements[element].stateLow===undefined) {
+		if (elements[element].tempLow!==undefined && (elements[element].stateLow===undefined||elements[element].forceAutoGen)) {
 			var newname = elements[element].stateLowName;
 			if (elements[element].state==="liquid") { // Freezing
 				if (!newname) {
@@ -371,12 +377,41 @@ function doFinalChecks() {
 		if (elements[key].breakInto) {
 			if (Array.isArray(elements[key].breakInto)) {
 				for (var i = 0; i < elements[key].breakInto.length; i++) {
-					if (!elements[elements[key].breakInto[i]]) { delete elements[key].breakInto[i]; }
+					if (elements[key].breakInto[i]!==null && !elements[elements[key].breakInto[i]]) { delete elements[key].breakInto[i]; }
 				}
 				if (elements[key].breakInto.length == 0) { delete elements[key].breakInto; }
 			}
 			else {
-				if (!elements[elements[key].breakInto]) { delete elements[key].breakInto; }
+				if (elements[key].breakInto[i]!==null && !elements[elements[key].breakInto]) { delete elements[key].breakInto; }
+			}
+		}
+
+		if (elements[key].colorPattern) {
+			if (!elements[key].colorKey) {
+				delete elements[key].colorPattern;
+			}
+			else {
+			var newPattern = [];
+			for (var i = 0; i < elements[key].colorPattern.length; i++) {
+				newPattern.push([]);
+				var line = elements[key].colorPattern[i];
+				// loop through each character in the line
+				for (var j = 0; j < line.length; j++) {
+					var char = line[j];
+					if (elements[key].colorKey[char]) {
+						if (elements[key].colorKey[char].startsWith("#")) {
+							var rgb = hexToRGB(elements[key].colorKey[char]);
+							elements[key].colorKey[char] = "rgb("+rgb.r+","+rgb.g+","+rgb.b+")";
+						}
+						newPattern[i].push(elements[key].colorKey[char]);
+					}
+					else {
+						newPattern[i].push("rgb(255,255,255)");
+					}
+				}
+			}
+			elements[key].colorPattern = newPattern;
+			delete elements[key].colorKey;
 			}
 		}
 	}
@@ -437,6 +472,9 @@ function setCanvasWidthAndHeight(ctx) {
 	if (window.innerWidth > 1000 && newHeight > 500) { newHeight = 500; }
 	ctx.canvas.width = newWidth;
 	ctx.canvas.height = newHeight;
+	document.getElementById("gameDiv").style.width = newWidth + "px";
+	document.getElementById("loadingP").style.display = "none";
+	document.getElementById("canvasDiv").style.display = "block";
 
 	width = Math.round(newWidth/pixelSize)-1;
 	height = Math.round(newHeight/pixelSize)-1;
@@ -503,6 +541,7 @@ function addKeyboardListeners() {
 				document.getElementById("underDiv").style.display = "block";
 				document.getElementById("pagetitle").style.display = "block";
 				document.getElementById("colorSelector").style.display = "block";
+				document.getElementById("bottomInfoBox").style.display = "block";
 			} else {
 				document.getElementById("underDiv").style.display = "none";
 				if (showingMenu) {
@@ -510,6 +549,7 @@ function addKeyboardListeners() {
 				};
 				document.getElementById("pagetitle").style.display = "none";
 				document.getElementById("colorSelector").style.display = "none";
+				document.getElementById("bottomInfoBox").style.display = "none";
 			}
 		}
 		if (showingMenu) {
@@ -674,6 +714,11 @@ function createButtonsAndCountElements() {
 	categoryList = [];
 	for (var element in elements) {
 		elementCount++;
+		if (settings.cheerful && elements[element].nocheer) {
+			elements[element].hidden = true;
+			hiddenCount++;
+			continue;
+		}
 		var category = elements[element].category;
 		if (category==null) {category="other"}
 		if (categoryList.indexOf(category) === -1) {
@@ -690,6 +735,8 @@ function createButtonsAndCountElements() {
 	// Set the first button in categoryControls div to be the current category
 	document.getElementById("categoryControls").children[0].click()
 	document.getElementById("extraInfo").innerHTML += "<small><p>There are " + elementCount + " elements, including " + hiddenCount + " hidden ones.</p><p>©2021-" + new Date().getFullYear() + ". All Rights Reserved. <a href='https://r74n.com'>R74n</a></p></small>";
+	selectElement(currentElement);
+	focusGame();
 };
 
 window.onload = function() {
@@ -808,6 +855,10 @@ window.onload = function() {
 	// For each element type in elements, create a button in controls that sets the current element to that type
 	// Alphabetically sort and loop through dictionary named "elements"
 	createButtonsAndCountElements();
+
+	for (var i = 0; i < runAfterButtonsList.length; i++) {
+		runAfterButtonsList[i]();
+	};
 
 	selectElement(currentElement);
 	focusGame();

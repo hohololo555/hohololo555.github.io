@@ -1,6 +1,14 @@
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
+
 //URL
 
 	urlParams = new URLSearchParams(window.location.search);
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
 
 //Objects
 
@@ -9,6 +17,10 @@
 	function getKeyByValue(object, value) {
 	  return Object.keys(object).find(key => object[key] === value);
 	};
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
 
 //RNG
 
@@ -39,6 +51,47 @@
 		};
 		return Math.floor(Math.random() * (max - min + 1)) + min
 	};
+
+	//cyrb128 idk where this comes from but it was in the same thread
+	function cyrb128(str) {
+		let h1 = 1779033703, h2 = 3144134277,
+			h3 = 1013904242, h4 = 2773480762;
+		for (let i = 0, k; i < str.length; i++) {
+			k = str.charCodeAt(i);
+			h1 = h2 ^ Math.imul(h1 ^ k, 597399067);
+			h2 = h3 ^ Math.imul(h2 ^ k, 2869860233);
+			h3 = h4 ^ Math.imul(h3 ^ k, 951274213);
+			h4 = h1 ^ Math.imul(h4 ^ k, 2716044179);
+		}
+		h1 = Math.imul(h3 ^ (h1 >>> 18), 597399067);
+		h2 = Math.imul(h4 ^ (h2 >>> 22), 2869860233);
+		h3 = Math.imul(h1 ^ (h3 >>> 17), 951274213);
+		h4 = Math.imul(h2 ^ (h4 >>> 19), 2716044179);
+		return [(h1^h2^h3^h4)>>>0, (h2^h1)>>>0, (h3^h1)>>>0, (h4^h1)>>>0];
+	}
+
+	function mulberry32(a) { //Mulberry32 implemented in JS from StackOverflow, https://gist.github.com/tommyettinger/46a874533244883189143505d203312c
+		return function() {
+		  var t = a += 0x6D2B79F5;
+		  t = Math.imul(t ^ t >>> 15, t | 1);
+		  t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+		  return ((t ^ t >>> 14) >>> 0) / 4294967296;
+		}
+	} //returns random function seeded with a
+
+	//Seeded randbetween
+	function seededRandBetween(min,max,randomFunction) {
+		if(min > max) {
+			var temp = max;
+			max = min;
+			min = temp;
+		};
+		return Math.floor(randomFunction() * (max - min + 1)) + min
+	};
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
 
 //Arrays
 
@@ -108,11 +161,54 @@
 		return tempArray;
 	};
 
+	function tryJoin(stringOrArray,joiner) {
+		//console.log(`tryJoin: ${stringOrArray}`);
+		if(typeof(stringOrArray) === "string") {
+			//console.log("tryJoin: String");
+			return stringOrArray;
+		} else if(Array.isArray(stringOrArray)) {
+			//console.log("tryJoin: Array");
+			return stringOrArray.join(joiner);
+		} else {
+			throw new TypeError(`Unexpected type: ${typeof(stringOrArray)}`);
+		};
+	};
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
+
 //Checks
 
 	//Element exists in the elements object
 	function elementExists(elementName) {
 		return typeof(elements[elementName]) === "object";
+	};
+
+	//Has a given state
+	function isState(elementName,inputState) {
+		if(!elementExists(elementName)) {
+			throw new Error(`Element ${elementName} doesn't exist`);
+		};
+
+		var infoState = elements[elementName].state;
+
+		if(infoState == undefined) { infoState = "undefined" };
+
+		if(inputState == undefined) { inputState = "undefined" };
+		if(inputState instanceof Array) {
+			var limit = 0;
+			while(inputState.includes(undefined) && limit < 3) {
+				inputState[inputState.indexOf(undefined)] = "undefined"
+				limit++;
+			};
+		};
+
+		if(inputState instanceof Array) {
+			return inputState.includes(infoState);
+		};
+
+		return infoState == inputState;
 	};
 
 	//Check if pixel of given element exists at given location
@@ -133,7 +229,67 @@
 		};		
 	};
 
+	//Is movable
+	var backupCategoryWhitelist = ["land","powders","weapons","food","life","corruption","states","fey","Fantastic Creatures","dyes","energy liquids","random liquids","random gases","random rocks"];
+	var backupElementWhitelist = ["mercury", "chalcopyrite_ore", "chalcopyrite_dust", "copper_concentrate", "fluxed_copper_concentrate", "unignited_pyrestone", "ignited_pyrestone", "everfire_dust", "extinguished_everfire_dust", "mistake", "polusium_oxide", "vaporized_polusium_oxide", "glowstone_dust", "redstone_dust", "soul_mud", "wet_soul_sand", "nitrogen_snow", "fusion_catalyst", "coal", "coal_coke", "blast_furnace_fuel", "molten_mythril"];
+
+	function commonMovableCriteria(name,shallowBlacklist=null) {
+		if(typeof(elements[name]) !== "object") {
+			throw new Error(`Nonexistent element ${name}`);
+		};
+		var info = elements[name];
+		//console.log(`${name} (${JSON.stringify(elements[name])})`);
+		if(typeof(info.state) === "undefined") {
+			var state = null;
+		} else {
+			var state = info.state;
+		};
+		if(typeof(info.category) === "undefined") {
+			var category = "other";
+		} else {
+			var category = info.category;
+		};
+		if(shallowBlacklist !== null && shallowBlacklist.includes(name)) {
+			return false;
+		};
+		if(elements[name].tool) {
+			return false;
+		};
+		if(elements[name].behavior && elements[name].behavior.toString() == elements.wall.behavior.toString() && !elements[name].tick) {
+			return false;
+		};
+		if(["liquid","gas"].includes(state)) {
+			return true;
+		};
+		if(info.movable) {
+			return true;
+		};
+		if(elements[name].behavior instanceof Array) {
+			var behaviorString = elements[name].behavior.toString();
+			return behaviorString.includes("M1") || behaviorString.includes("M2");
+		};
+		if(backupCategoryWhitelist.includes(category)) {
+			return true;
+		};
+		if(backupElementWhitelist.includes(name)) {
+			return true;
+		};
+		if(category.includes("mudstone")) {
+			return true;
+		};
+		return false;
+	};
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
+
 //Math(s)
+
+	//Base n logarithm from https://stackoverflow.com/a/3019290
+	function logN(number,base) { //Vulnerable to float issues
+		return Math.log(number) / Math.log(base);
+	};
 
 	//Distance between points
 	function pyth(xA,yA,xB,yB) {
@@ -147,10 +303,35 @@
 	function bound(number,lowerBound,upperBound) {
 		return Math.min(upperBound,Math.max(lowerBound,number));
 	};
+	
+	//Emergency color wrapper
+	rgbColorBound = function(color) {
+		return bound(color,0,255);
+	};
 
 	function addTwoNumbers(number1,number2) { //reducer
 		return number1 + number2
 	}
+
+	//Logistic curve
+		//x = real number
+		//L = maximum value
+		//x_0 = "the x value of the sigmoid midpoint" i.e. the x center of the bendy part
+		//k = steepness
+	function logisticCurve(x,L,k,x0) {
+		return L/(   1 + (  Math.E ** ( -k * (x - x0) )  )   );
+	};
+
+	// https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
+	// Function from August Miller
+	//Map a range of numbers to another range of numbers
+	function scale (number, inMin, inMax, outMin, outMax) {
+		return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+	}
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
 
 //Color
 
@@ -410,7 +591,7 @@
 				};
 			};
 		} else if(typeof(color) === "object") {
-			if(!color.r || !color.g || !color.b) {
+			if(typeof(color.r) === "undefined" || typeof(color.g) === "undefined" || typeof(color.b) === "undefined") {
 				throw new Error("Color must be of the form {r: red, g: green, b: blue}");
 			};
 			
@@ -553,8 +734,10 @@
 		return convertColorFormats(color,"rgb");
 	};
 
-	function averageColorObjects(color1,color2,weight1=0.5) { /*third argument is for color1 and expects a float from 0
-																  to 1, where 0 means "all color2" and 1 means "all color1"*/
+	
+	function averageColorObjects(color1,color2,weight1=0.5) { //misnomer, actually a linear interpolation but it's too late to rename that
+		//third argument is for color1 and expects a float from 0 to 1, where 0 means "all color2" and 1 means "all color1"
+		//(backwards from how it should work)
 		var w1 = Math.min(Math.max(weight1,0),1)
 		var red1 = color1.r
 		var green1 = color1.g
@@ -566,6 +749,13 @@
 		var green3 = (green1 * w1) + (green2 * (1 - w1))
 		var blue3 = (blue1 * w1) + (blue2 * (1 - w1))
 		return {r: red3, g: green3, b: blue3}
+	};
+
+	function lerpColors(color1,color2,outputType="rgb",weight1=0.5) {
+		color1 = convertColorFormats(color1,"json");
+		color2 = convertColorFormats(color2,"json");
+		theColor = averageColorObjects(color1,color2,weight1);
+		return convertColorFormats(theColor,outputType);
 	};
 
 	function multiplyColors(color1,color2,outputType="rgb") {
@@ -634,7 +824,7 @@
 			color2 = convertColorFormats(color2,"json");
 		};
 		var finalR = bound(Math.round(color1.r + color2.r),0,255)
-		var finalG = bound(Math.round(color1.g + color2.b),0,255)
+		var finalG = bound(Math.round(color1.g + color2.g),0,255)
 		var finalB = bound(Math.round(color1.b + color2.b),0,255)
 		var finalColor = {r: finalR, g: finalG, b: finalB};
 		switch(outputType.toLowerCase()) {
@@ -661,7 +851,7 @@
 			color2 = convertColorFormats(color2,"json");
 		};
 		var finalR = bound(Math.round(color1.r - color2.r),0,255)
-		var finalG = bound(Math.round(color1.g - color2.b),0,255)
+		var finalG = bound(Math.round(color1.g - color2.g),0,255)
 		var finalB = bound(Math.round(color1.b - color2.b),0,255)
 		var finalColor = {r: finalR, g: finalG, b: finalB};
 		switch(outputType.toLowerCase()) {
@@ -864,15 +1054,32 @@
 				color.s -= saturationChange;
 				break;
 			case "*":
+			case "x":
+			case "×":
 			case "multiply":
 				color.s *= saturationChange;
 				break;
 			case "/":
+			case "÷":
 			case "divide":
 				color.s /= saturationChange;
 				break;
+			case "=":
+			case "set":
+				color.s = saturationChange;
+				break;
+			case ">":
+			case ">=":
+			case "min": //lower-bounds the color
+				color.s = Math.max(color.s,saturationChange); //math.max to bound it to the higher of the input number or the existing color
+				break;
+			case "<":
+			case "<=":
+			case "max": //upper-bounds the color
+				color.s = Math.min(color.s,saturationChange); //math.min to bound it to the lower of the input number or the existing color
+				break;
 			default:
-				throw new Error("operationType must be \"add\", \"subtract\", \"multiply\", or \"divide\"");
+				throw new Error("Operation must be \"add\", \"subtract\", \"multiply\", \"divide\", \"set\", \"min\", or \"max\"");
 		};
 		
 		color.h = Math.round(color.h % 360);
@@ -890,22 +1097,39 @@
 		switch(operationType.toLowerCase()) {
 			case "+":
 			case "add":
-				color.s += luminanceChange;
+				color.l += luminanceChange;
 				break;
 			case "-":
 			case "subtract":
-				color.s -= luminanceChange;
+				color.l -= luminanceChange;
 				break;
 			case "*":
+			case "x":
+			case "×":
 			case "multiply":
-				color.s *= luminanceChange;
+				color.l *= luminanceChange;
 				break;
 			case "/":
+			case "÷":
 			case "divide":
-				color.s /= luminanceChange;
+				color.l /= luminanceChange;
+				break;
+			case "=":
+			case "set":
+				color.l = luminanceChange;
+				break;
+			case ">":
+			case ">=":
+			case "min":
+				color.l = Math.max(color.l,luminanceChange);
+				break;
+			case "<":
+			case "<=":
+			case "max":
+				color.l = Math.min(color.l,luminanceChange);
 				break;
 			default:
-				throw new Error("operationType must be \"add\", \"subtract\", \"multiply\", or \"divide\"");
+				throw new Error("Operation must be \"add\", \"subtract\", \"multiply\", \"divide\", \"set\", \"min\", or \"max\"");
 		};
 		
 		color.h = Math.round(color.h % 360);
@@ -915,9 +1139,60 @@
 		return convertHslObjects(color,outputType);
 	};
 
-	function colorToHsl(color,outputType) {
+	function changeHue(color,hueChange,operationType="add",outputType="rgb",arrayType=null) {
+		color = normalizeColorToHslObject(color,arrayType);
+		//only {h,s,l} should exist now
+		
+		//Math
+		switch(operationType.toLowerCase()) {
+			case "+":
+			case "add":
+				color.h += hueChange;
+				break;
+			case "-":
+			case "subtract":
+				color.h -= hueChange;
+				break;
+			case "*":
+			case "x":
+			case "×":
+			case "multiply":
+				color.h *= hueChange;
+				break;
+			case "/":
+			case "÷":
+			case "divide":
+				color.h /= hueChange;
+				break;
+			case "=":
+			case "set":
+				color.h = hueChange;
+				break;
+			case ">":
+			case ">=":
+			case "min":
+				color.h = Math.max(color.h,hueChange);
+				break;
+			case "<":
+			case "<=":
+			case "max":
+				color.h = Math.min(color.h,hueChange);
+				break;
+			default:
+				throw new Error("Operation must be \"add\", \"subtract\", \"multiply\", \"divide\", \"set\", \"min\", or \"max\"");
+		};
+		
+		color.h = Math.round(color.h % 360);
+		color.s = Math.round(bound(color.s,0,100));
+		color.l = Math.round(bound(color.l,0,100));
+		
+		return convertHslObjects(color,outputType);
+	};
+
+	function colorToHsl(color,outputType="rgb") {
 		color = convertColorFormats(color,"rgb");
-		color = rgbStringToHSL("color",)
+		color = rgbStringToHSL(color,outputType);
+		return color;
 	};
 
 	//https://stackoverflow.com/questions/36721830/convert-hsl-to-rgb-and-hex
@@ -935,7 +1210,11 @@
 	  //console.log(`Hexed to #${f(0)}${f(8)}${f(4)}`)
 	  return `#${f(0)}${f(8)}${f(4)}`;
 	};
-		
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
+
 //Pixels
 
 	function exposedToAir(pixel) {	
@@ -984,6 +1263,119 @@
 		};
 	};
 
+	function tryCreatePixelReturn(elementInput,x,y) {
+		//array handling
+		if(elementInput.includes(",")) { //CSTA
+			elementInput = elementInput.split(",");
+		};
+		if(Array.isArray(elementInput)) { //if element list
+			elementInput = elementInput.filter(function(e) {
+				return elementExists(e);
+			});
+			if(elementInput.length === 0) { throw new Error("elementInput has no existing elements") };
+			elementInput = randomChoice(elementInput);
+		};
+
+		//existence check
+		if(!elementExists(elementInput)) {
+			throw new Error("Element " + elementInput + " doesn't exist!");
+		};
+
+		//actual creation check
+		if(isEmpty(x,y)) {
+			return createPixelReturn(elementInput,x,y);
+		} else {
+			return false;
+		};
+	};
+
+	function createPixelReturn(element,x,y) { //sugar
+		var newPixel = new Pixel(x, y, element);
+		currentPixels.push(newPixel);
+		checkUnlock(element);
+		return newPixel;
+	};
+
+	function changePixelReturn(pixel,element,changetemp=true) {
+		pixel.element = element;
+		pixel.color = pixelColorPick(pixel);
+		pixel.start = pixelTicks;
+		var elementInfo = elements[element];
+		if (elementInfo.burning == true) {
+			pixel.burning = true;
+			pixel.burnStart = pixelTicks;
+		}
+		else if (pixel.burning && !elementInfo.burn) {
+			delete pixel.burning;
+			delete pixel.burnStart;
+		}
+		delete pixel.origColor; // remove stain
+		if (pixel.r && !elementInfo.rotatable) {
+			delete pixel.r;
+		}
+		if (pixel.flipX && !elementInfo.flippableX) {
+			delete pixel.flipX;
+		}
+		if (pixel.flipY && !elementInfo.flippableY) {
+			delete pixel.flipY;
+		}
+		// If elementInfo.flippableX, set it to true or false randomly
+		if (elementInfo.flipX !== undefined) { pixel.flipX = elementInfo.flipX }
+		else if (elementInfo.flippableX) {
+			pixel.flipX = Math.random() >= 0.5;
+		}
+		// If elementInfo.flippableY, set it to true or false randomly
+		if (elementInfo.flipY !== undefined) { pixel.flipY = elementInfo.flipY }
+		else if (elementInfo.flippableY) {
+			pixel.flipY = Math.random() >= 0.5;
+		}
+		if (elementInfo.temp != undefined && changetemp) {
+			pixel.temp = elementInfo.temp;
+			pixelTempCheck(pixel)
+		}
+		// If elementInfo.properties, set each key to its value
+		if (elementInfo.properties !== undefined) {
+			for (var key in elementInfo.properties) {
+				// If it is an array or object, make a copy of it
+				if (typeof elementInfo.properties[key] == "object") {
+					pixel[key] = JSON.parse(JSON.stringify(elementInfo.properties[key]));
+				}
+				else {
+					pixel[key] = elementInfo.properties[key];
+				}
+			}
+		}
+		checkUnlock(element);
+		return pixel;
+	};
+
+	function storeFirstTouchingElement(pixel,propertyName,copyTemp=true,spread=true) {
+		var info = elements[pixel.element];
+		if(pixel[propertyName]) {
+			return false;
+		};
+		for(i = 0; i < adjacentCoords.length; i++) {
+			var newCoords = {x: pixel.x+adjacentCoords[i][0], y: pixel.y+adjacentCoords[i][1]};
+
+			if (!isEmpty(newCoords.x,newCoords.y,true)) {
+				newPixel = pixelMap[newCoords.x][newCoords.y];
+				if (info.ignore && info.ignore.indexOf(newPixel.element) !== -1) {
+					continue;
+				};
+				if (newPixel.element != pixel.element && newPixel.element != "wire") {
+					pixel[propertyName] = newPixel.element;
+					if(copyTemp) { pixel.temp = newPixel.temp };
+					return newPixel.element;
+				}
+				else if (newPixel[propertyName] && spread) {
+					pixel[propertyName] = newPixel[propertyName];
+					pixel.temp = newPixel.temp;
+					return newPixel[propertyName];
+				}
+			}
+		};
+	};
+
 	function breakPixel(pixel,changetemp=false) {
 		var info = elements[pixel.element];
 		if(typeof(info.breakInto) === "undefined") {
@@ -1010,6 +1402,283 @@
 		};
 	};
 
+	function reactionStealer(pixel,newPixel,reactionTarget) {
+		if(!elements[reactionTarget]) {
+			throw new Error(`No such element ${reactionTarget}!`);
+		};
+		if(typeof(newPixel) === "undefined") { //timing issue?
+			return false;
+		};
+		var newElement = newPixel.element;
+		var newInfo = elements[newElement];
+		if(typeof(newInfo.reactions) === "undefined") {
+			return false;
+		};
+		if(typeof(newInfo.reactions[reactionTarget]) === "undefined") {
+			return false;
+		};
+		var pixel2 = pixel;
+		var pixel1 = newPixel;
+		var r = newInfo.reactions[reactionTarget];
+		
+		if (r.setting && settings[r.setting]===0) {
+			return false;
+		}
+		// r has the attribute "y" which is a range between two y values
+		// r.y example: [10,30]
+		// return false if y is defined and pixel1's y is not in the range
+		if (r.tempMin !== undefined && pixel1.temp < r.tempMin) {
+			return false;
+		}
+		if (r.tempMax !== undefined && pixel1.temp > r.tempMax) {
+			return false;
+		}
+		if (r.charged && !pixel.charge) {
+			return false;
+		}
+		if (r.chance !== undefined && Math.random() > r.chance) {
+			return false;
+		}
+		if (r.y !== undefined && (pixel1.y < r.y[0] || pixel1.y > r.y[1])) {
+			return false;
+		}
+		if (r.elem1 !== undefined) {
+			// if r.elem1 is an array, set elem1 to a random element from the array, otherwise set it to r.elem1
+			if (Array.isArray(r.elem1)) {
+				var elem1 = r.elem1[Math.floor(Math.random() * r.elem1.length)];
+			} else { var elem1 = r.elem1; }
+			
+			if (elem1 == null) {
+				deletePixel(pixel1.x,pixel1.y);
+			}
+			else {
+				changePixel(pixel1,elem1);
+			}
+		}
+		if (r.charge1) { pixel1.charge = r.charge1; }
+		if (r.temp1) { pixel1.temp += r.temp1; pixelTempCheck(pixel1); }
+		if (r.color1) { // if it's a list, use a random color from the list, else use the color1 attribute
+			pixel1.color = pixelColorPick(pixel1, Array.isArray(r.color1) ? r.color1[Math.floor(Math.random() * r.color1.length)] : r.color1);
+		}
+		if (r.attr1) { // add each attribute to pixel1
+			for (var key in r.attr1) {
+				pixel1[key] = r.attr1[key];
+			}
+		}
+		if (r.elem2 !== undefined) {
+			// if r.elem2 is an array, set elem2 to a random element from the array, otherwise set it to r.elem2
+			if (Array.isArray(r.elem2)) {
+				var elem2 = r.elem2[Math.floor(Math.random() * r.elem2.length)];
+			} else { var elem2 = r.elem2; }
+
+			if (elem2 == null) {
+				deletePixel(pixel2.x,pixel2.y);
+			}
+			else {
+				changePixel(pixel2,elem2);
+			}
+		}
+		if (r.charge2) { pixel2.charge = r.charge2; }
+		if (r.temp2) { pixel2.temp += r.temp2; pixelTempCheck(pixel2); }
+		if (r.color2) { // if it's a list, use a random color from the list, else use the color2 attribute
+			pixel2.color = pixelColorPick(pixel2, Array.isArray(r.color2) ? r.color2[Math.floor(Math.random() * r.color2.length)] : r.color2);
+		}
+		if (r.attr2) { // add each attribute to pixel2
+			for (var key in r.attr2) {
+				pixel2[key] = r.attr2[key];
+			}
+		}
+		if (r.func) { r.func(pixel1,pixel2); }
+		return r.elem1!==undefined || r.elem2!==undefined;
+	};
+
+	function spreadingProperty(pixel,propertyName,whitelist=null) {
+		if(isNaN(pixel[propertyName])) {
+			pixel[propertyName] = 0;
+		};
+		var randomNeighborOffset = adjacentCoords[Math.floor(Math.random() * adjacentCoords.length)];
+		var rX = randomNeighborOffset[0];
+		var rY = randomNeighborOffset[1];
+		var rfX = pixel.x+rX;
+		var rfY = pixel.y+rY;
+		if(!isEmpty(rfX,rfY,true)) {
+			if(!pixelMap[rfX]) {
+				return false;
+			};
+			var rOtherPixel = pixelMap[rfX][rfY];
+			var rOtherElement = rOtherPixel.element;
+			if(whitelist === null || (whitelist !== null && whitelist.includes(rOtherElement))) {
+				if(typeof(rOtherPixel) === "undefined" || isEmpty(rfX,rfY,true)) {
+					return false;
+				};
+				if(isNaN(pixel[propertyName])) { //should include undefined
+					pixel[propertyName] = 0;
+				};
+				var averageValue = (pixel[propertyName] + rOtherPixel[propertyName]) / 2;
+				pixel[propertyName] = averageValue;
+				rOtherPixel[propertyName] = averageValue;
+			};
+		};
+		return true;
+	};
+
+	function spreadingPropertyReturn(pixel,propertyName,whitelist=null) {
+		if(isNaN(pixel[propertyName])) {
+			pixel[propertyName] = 0;
+		};
+		var recipients = []; //will never be more than one but done with [] for forEach
+		var randomNeighborOffset = adjacentCoords[Math.floor(Math.random() * adjacentCoords.length)];
+		var rX = randomNeighborOffset[0];
+		var rY = randomNeighborOffset[1];
+		var rfX = pixel.x+rX;
+		var rfY = pixel.y+rY;
+		if(!isEmpty(rfX,rfY,true)) {
+			if(!pixelMap[rfX]) {
+				return [];
+			};
+			var rOtherPixel = pixelMap[rfX][rfY];
+			var rOtherElement = rOtherPixel.element;
+			if(whitelist === null || (whitelist !== null && whitelist.includes(rOtherElement))) {
+				if(typeof(rOtherPixel) === "undefined" || isEmpty(rfX,rfY,true)) {
+					return [];
+				};
+				if(isNaN(pixel[propertyName])) { //should include undefined
+					pixel[propertyName] = 0;
+				};
+				var averageValue = (pixel[propertyName] + rOtherPixel[propertyName]) / 2;
+				pixel[propertyName] = averageValue;
+				rOtherPixel[propertyName] = averageValue;
+				recipients.push(rOtherPixel);
+			};
+		};
+		return recipients;
+	};
+
+	function swapNumericPropertyValues(pixel1,pixel2,propertyName,whitelist=null) {
+		if(!pixel1 || !pixel2) {
+			return false;
+		};
+		if(isNaN(pixel1[propertyName])) {
+			pixel1[propertyName] = 0;
+		};
+		if(isNaN(pixel2[propertyName])) {
+			pixel2[propertyName] = 0;
+		};
+		if(whitelist === null || (whitelist !== null && whitelist.includes(pixel1.element) && whitelist.includes(pixel2.element))) {
+			var temp1 = pixel1[propertyName];
+			pixel1[propertyName] = pixel2[propertyName];
+			pixel2[propertyName] = temp1;
+		};
+		return true;
+	};
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
+
+//World
+
+	function breakCircle(x,y,radius,respectHardness=false,changeTemp=false,defaultBreakIntoDust=false) {
+		var coords = circleCoords(x,y,radius);
+		for(i = 0; i < coords.length; i++) {
+			coordX = coords[i].x;
+			coordY = coords[i].y;
+			if(!isEmpty(coordX,coordY,true)) {
+				var pixel = pixelMap[coordX][coordY];
+				respectHardness ? tryBreak(pixel,changeTemp,defaultBreakIntoDust) : breakPixel(pixel,changeTemp,defaultBreakIntoDust);
+			};
+		};
+	};
+	
+	function fillCircle(element,x,y,radius,overwrite=false) {
+		var coords = circleCoords(x,y,radius);
+		var newElement = element;
+		if(Array.isArray(newElement)) {
+			newElement = newElement[Math.floor(Math.random() * newElement.length)];
+		};
+		for(i = 0; i < coords.length; i++) {
+			coordX = Math.round(coords[i].x);
+			coordY = Math.round(coords[i].y);
+			if(overwrite && !isEmpty(coordX,coordY,true)) {
+				changePixel(pixelMap[coordX][coordY],element);
+			};
+			if(isEmpty(coordX,coordY,false)) {
+				createPixel(element,coordX,coordY);
+			};
+		};
+	};
+
+	function fillCircleReturn(element,x,y,radius,overwrite=false) {
+		//console.log("fcr");
+		var pixels = [];
+		//console.log("pixels initted");
+		var coords = circleCoords(x,y,radius);
+		//console.log("coords gotten");
+		var newElement = element;
+		//console.log("element processing");
+		if(Array.isArray(newElement)) {
+			newElement = newElement[Math.floor(Math.random() * newElement.length)];
+		};
+		//console.log("element processed");
+		for(i = 0; i < coords.length; i++) {
+			//console.log("iterator through spots: " + i);
+			coordX = Math.round(coords[i].x);
+			coordY = Math.round(coords[i].y);
+			//console.log(`coord: (${coords[i].x},${coords[i].y})`);
+			if(overwrite && !isEmpty(coordX,coordY,true)) {
+				//console.log("replaced pixel");
+				pixels.push(changePixelReturn(pixelMap[coordX][coordY],newElement));
+			};
+			if(isEmpty(coordX,coordY,false)) {
+				//console.log("created pixel");
+				pixels.push(createPixelReturn(newElement,coordX,coordY));
+			};
+		};
+		//console.log("fcr finished");
+		//console.log(pixels.map(x => x.element));
+		return pixels;
+	};
+
+	function isOpenAndOnSurface(x,y,includeBottomBound=true) {
+		if(!isEmpty(x,y,false)) {
+			return false;
+		};
+		if(y + 1 == height) {
+			return includeBottomBound;
+		};
+		return !isEmpty(x,y+1,true);
+	};
+
+	//Freeze pixel
+	function freezePixel(pixel,changetemp=true) {
+		var info = elements[pixel.element];
+		var result = info.stateLow;
+		if (!result) {
+			return false
+		};
+		if(result instanceof Array) {
+			result = result.filter(elementExists);
+			if(result.length == 0) {
+				return false;
+			};
+		} else {
+			if(!(elementExists(result))) {
+				return false;
+			};
+		};
+		
+		while(result instanceof Array) {
+			result = randomChoice(result);
+		};
+		
+		changePixel(pixel,result,changetemp);
+		return true;
+	};
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
+
 //Logic
 
 	function xor(c1,c2) {
@@ -1021,3 +1690,125 @@
 			return false;
 		};
 	};
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
+
+//currentPixels operations
+
+	function findInCurrentPixels(x,y) {
+		var pixel = currentPixels.filter(function(pixelObject) {
+			return pixelObject.x == x && pixelObject.y == y;
+		});
+		if(pixel.length <= 0) {
+			return undefined;
+		};
+		if(pixel.length > 1) {
+			pixel.length = 1;
+		};
+		pixel = pixel[0];
+		return pixel;
+	};
+
+	function filterCurrentPixels(filterFunction) {
+		return currentPixels.filter(filterFunction);
+	};
+	
+	//Filter test functions
+
+	function _filterTest_xIsTwenty(pixel) {
+		return pixel.x == 20;
+	};
+
+	function _filterTest_tempIsOdd(pixel) {
+		return Math.trunc(pixel.temp) % 2 == 1;
+	};
+
+	function _filterTest_redRock(pixel) {
+		if(typeof(convertColorFormats) === "undefined") {
+			throw new Error("code_library.js is required!");
+		};
+		var color = rgbStringToHSL(convertColorFormats(pixel.color,"rgb"),"json");
+		var isRed = ((color.h % 360) >= 350) || ((color.h % 360) <= 10);
+		var isVivid = (color.s > 30);
+		var isBright = (color.l > 20);
+		return isRed && isVivid && isBright;
+	};
+
+	//Ghost pixel repair function
+	function rebuildCurrentPixels() {
+		var currPix = []; //rebuild currentPixels from pixelMap to try to fix bug
+		for(pmi = 0; pmi < pixelMap.length; pmi++) {
+			var pixelMapPart = pixelMap[pmi];
+			for(pmj = 0; pmj < pixelMapPart.length; pmj++) {
+				var pixelMapUnit = pixelMapPart[pmj];
+				if(typeof(pixelMapUnit) === "object") {
+					if(pixelMapUnit !== null) {
+						currPix.push(pixelMapUnit);
+					};
+				};
+			};
+		};
+		currentPixels = currPix;
+	};
+
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
+
+//Sugar functions
+
+	function newElement(name="element_name",color="#FF00FF",otherProps={}) {
+		elements[name] = {
+			color: color,
+		};
+		for(property in otherProps) {
+			elements[name][property] = otherProps[property];
+		};
+		return elements[name];
+	};
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
+
+//Fixes
+
+	//fix -1-caused ghost pixels
+	function deletePixel(x,y) {
+		// remove pixelMap[x][y] from currentPixels
+		var pixelIndex = currentPixels.indexOf(pixelMap[x][y]);
+		if(pixelIndex !== -1) {
+			currentPixels.splice(pixelIndex,1)
+		};
+		if (pixelMap[x][y]) {pixelMap[x][y].del = true}
+		delete pixelMap[x][y];
+		/*for (var i = 0; i < currentPixels.length; i++) {
+			if (currentPixels[i].x == x && currentPixels[i].y == y) {
+				currentPixels.splice(i, 1);
+				break;
+			}
+		}*/
+		/*if (id != null) {
+			for (var i = 0; i < currentPixels.length; i++) {
+				if (currentPixels[i].id == id) {
+					currentPixels.splice(i, 1);
+					return;
+				}
+			}
+		}*/
+	};
+
+libraryLoaded = true;
+this.libraryLoaded = true;
+window.libraryLoaded = true;
+
+runAfterLoad(function() {
+	if(!libraryLoaded) {
+		libraryLoaded = true;
+		this.libraryLoaded = true;
+		window.libraryLoaded = true
+	}
+})

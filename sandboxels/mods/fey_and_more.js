@@ -1,13 +1,15 @@
-// Sandboxels: Fey & More, v2.1
+// Sandboxels: Fey & More, v2.1.2
 // Author: MelecieDiancie
 
 /*
 === CHANGELOG ===
-Planned additions:
-+ Solid/Liquid Darkness, maybe a way to create bleakstone?
-+ Feywood
-+ Swampland, Swampy Water, and Will o' the Wisp
-~ Gloomfly now converts Fantastic Creatures items to itself
+2.1.2 Version
+- Removed liquid light and all related elements due to another being in vanilla
+~ Yes, I know it's been so long! 3.0, a complete rewrite (and rename) is coming soon(tm)
+
+2.1.1 Version
+- Removed regular clouds
+~ Update by ryan
 
 2.1 Version
 + New fairies: Radiated, Spirit, Corrupt
@@ -121,7 +123,7 @@ elements.fairy = {
 		"petal": { "elem1": "nature_fairy",},
 		"dirt": { "elem1": "earth_fairy",},
 		"mud": { "elem1": "earth_fairy",},
-		"raincloud": { "elem1": "rain_fairy",},
+		"rain_cloud": { "elem1": "rain_fairy",},
 		"electric": { "elem1": "thunder_fairy",},
 		"little_star": { "elem1": "stellar_fairy",},
 		"moonrock": { "elem1": "lunar_fairy",},
@@ -427,6 +429,8 @@ elements.chilly_water = {
 		"quicklime": { "elem1": null, "elem2": "slaked_lime", },
     },
 };
+
+/*
 elements.liquid_light = {
     "name": "liquid light",
     "color": "#fffdde",
@@ -466,6 +470,8 @@ elements.solid_light = {
 	"tempHigh": 100,
     "stateHigh": "liquid_light"
 };
+*/
+
 elements.gloomwind = {
     "name": "gloomwind",
     "color": "#1d1530",
@@ -1569,22 +1575,6 @@ elements.snowcloud_cotton = {
 	temp: 0,
 	tempLow: -10,
 	stateLow: "snow_cloud",
-},
-elements.cloud = {
-    color: "#f0f5ff",
-    behavior: [
-        "XX|XX|XX",
-        "M1%5|XX|M1%5",
-        "XX|XX|XX",
-    ],
-    category:"gases",
-    state: "gas",
-    density: 1,
-    conduct: 0.03,
-	reactions: {
-		"water": { "elem1": "raincloud", "elem2": null },
-		"snow": { "elem1": "snowcloud", "elem2": null },
-	}
 },
 elements.frostbomb = {
 	color: "#72dfed",

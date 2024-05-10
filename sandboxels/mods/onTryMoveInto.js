@@ -9,6 +9,8 @@ elements.on_try_move_into_test = {
 		"dirt": { elem1: "diamond" },
 	},
 	state: "solid",
+	hidden: true,
+	excludeRandom: true,
 	category: "special",
 	density: 1000,
 	tick: function(pixel) {
@@ -28,19 +30,27 @@ elements.on_try_move_into_test = {
 	related: ["debug", "ash"],
 }
 
-function tryMove(pixel,nx,ny,leaveBehind=undefined) {
+function tryMove(pixel,nx,ny,leaveBehind,force) {
+	if (pixel.drag && !force) { return true; }
 	var info = elements[pixel.element];
 	var oob = outOfBounds(nx,ny);
 	if (isEmpty(nx,ny,false,oob)) { // If coords is empty, move to coords
+		//console.log(`Moving ${pixel.element} (${pixel.x},${pixel.y}) to (${nx},${ny})`);
 		movePixel(pixel,nx,ny,leaveBehind);
 		return true;
 	}
 	else if (!oob) {
+		//console.log(`Moving ${pixel.element} (${pixel.x},${pixel.y}) to (${nx},${ny})`);
 		// Reactions
 		newPixel = pixelMap[nx][ny];
 		var newInfo = elements[newPixel.element];
+		var returnVal = false;
 		if(newInfo.onTryMoveInto !== undefined) {
 			newInfo.onTryMoveInto(newPixel,pixel);
+			if(!pixel || pixel.del) {
+				return "deleted";
+			};
+			returnVal = true;
 		}
 		var rr1 = false;
 		if (info.reactions !== undefined && info.reactions[newPixel.element] !== undefined) {
@@ -66,6 +76,9 @@ function tryMove(pixel,nx,ny,leaveBehind=undefined) {
 					}
 				}
 			}
+		}
+		if(returnVal) {
+			return true;
 		}
 	}
 	return false;

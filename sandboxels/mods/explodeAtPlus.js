@@ -1,3 +1,5 @@
+velocityBlacklist = [];
+
 function explodeAtPlus(x,y,radius,fire="fire",smoke="smoke",beforeFunction=null,afterFunction=null,changeTemp=true) {
 	// if fire contains , split it into an array
 	if(fire !== null) {
@@ -82,8 +84,15 @@ function explodeAtPlus(x,y,radius,fire="fire",smoke="smoke",beforeFunction=null,
 					else {
 						var result = info.breakInto;
 					}
+					if(typeof(breakIntoElement) === "undefined") {
+						deletePixel(pixel.x,pixel.y);
+						continue
+					};
 					// change the pixel to the result
 					changePixel(pixel,result,changeTemp);
+					if(info.onExplosionBreakOrSurvive) {
+						info.onExplosionBreakOrSurvive(pixel,x,y,radius,fire,smoke,power,damage);
+					};
 					continue;
 				}
 				else {
@@ -100,6 +109,10 @@ function explodeAtPlus(x,y,radius,fire="fire",smoke="smoke",beforeFunction=null,
 					}
 					continue;
 				}
+			} else {
+				if(info.onExplosionBreakOrSurvive) {
+					info.onExplosionBreakOrSurvive(pixel,x,y,radius,fire,smoke,power,damage);
+				};
 			}
 			if (damage > 0.75 && info.burn) {
 				pixel.burning = true;
@@ -107,6 +120,14 @@ function explodeAtPlus(x,y,radius,fire="fire",smoke="smoke",beforeFunction=null,
 			}
 			pixel.temp += damage*radius*power;
 			pixelTempCheck(pixel);
+			if(enabledMods.includes("mods/velocity.js")) {
+            // set the pixel.vx and pixel.vy depending on the angle and power
+				if (!elements[pixel.element].excludeRandom && !elements[pixel.element].excludeVelocity) {
+					var angle = Math.atan2(pixel.y-y,pixel.x-x);
+					pixel.vx = Math.round((pixel.vx|0) + Math.cos(angle) * (radius * power/10));
+					pixel.vy = Math.round((pixel.vy|0) + Math.sin(angle) * (radius * power/10));
+				}
+			};
 			if(typeof(afterFunction) === "function") {
 				//console.log(`running afterFunction ${afterFunction}`)
 				//console.log(`arguments: ${pixel}, ${x}, ${y}, ${radius}, ${fire}, ${smoke}, ${power}, ${damage}`)
@@ -115,4 +136,3 @@ function explodeAtPlus(x,y,radius,fire="fire",smoke="smoke",beforeFunction=null,
 		};
 	};
 };
-
