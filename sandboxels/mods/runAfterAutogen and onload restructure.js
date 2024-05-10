@@ -870,7 +870,7 @@ window.onload = function() {
 		}
 	}
 
-	if (window.self !== window.top && !location.ancestorOrigins[0].includes("itch.io")) {
+	if (window.self !== window.top && !location.ancestorOrigins[0].includes("itch.io") && false) {
 		// Open a message that tells the user they aren't on the real website
 		var menuParent = document.createElement("div");
 		menuParent.className = "menuParent";
